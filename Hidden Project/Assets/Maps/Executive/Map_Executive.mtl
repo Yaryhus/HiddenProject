@@ -1,0 +1,1696 @@
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_664_-124_72
+newmtl material_0
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_0.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_1600_520_-40
+newmtl material_1
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_1.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_1320_-608_-112
+newmtl material_2
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_2.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_1600_520_-40
+newmtl material_3
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_3.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_664_-124_72
+newmtl material_4
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_4.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_2528_0_52
+newmtl material_5
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_5.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_152_-120_80
+newmtl material_6
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_6.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_152_340_76
+newmtl material_7
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_7.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_152_56_-136
+newmtl material_8
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_8.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_152_340_76
+newmtl material_9
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_9.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_392_-584_80
+newmtl material_10
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_10.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-384_-1056_-136
+newmtl material_11
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_11.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-360_-120_80
+newmtl material_12
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_12.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-424_-232_-152
+newmtl material_13
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_13.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_1320_-608_-112
+newmtl material_14
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_14.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_152_-120_80
+newmtl material_15
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_15.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_664_-124_72
+newmtl material_16
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_16.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-360_-120_80
+newmtl material_17
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_17.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_24_-584_88
+newmtl material_18
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_18.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_384_-840_80
+newmtl material_19
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_19.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_296_-1360_80
+newmtl material_20
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_20.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-784_-1076_-48
+newmtl material_21
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_21.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-80_-1400_-128
+newmtl material_22
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_22.tga
+
+newmtl material_23
+Kd 1.0000 1.0000 1.0000
+illum 0
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-80_-1400_-128
+newmtl material_24
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_24.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-264_24_-136
+newmtl material_25
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_25.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-264_24_-136
+newmtl material_26
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_26.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-384_-1056_-136
+newmtl material_27
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_27.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_384_-840_80
+newmtl material_28
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_28.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_296_-1360_80
+newmtl material_29
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_29.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_392_-584_80
+newmtl material_30
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_30.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_24_-584_88
+newmtl material_31
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_31.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_664_-520_-136
+newmtl material_32
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_32.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_664_-8_-136
+newmtl material_33
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_33.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_664_-8_-136
+newmtl material_34
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_34.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_664_-520_-136
+newmtl material_35
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_35.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-168_-584_-128
+newmtl material_36
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_36.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-424_-232_-152
+newmtl material_37
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_37.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-64_-960_80
+newmtl material_38
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_38.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_1600_520_-40
+newmtl material_39
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_39.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-784_-1076_-48
+newmtl material_40
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_40.tga
+
+# maps/hdn_executive/base/hr_base_officelight_24_-584_88
+newmtl material_41
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_41.tga
+
+# maps/hdn_executive/base/hr_base_officelight_56_-824_-136
+newmtl material_42
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_42.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-104_-120_80
+newmtl material_43
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_43.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_-168_-584_-128
+newmtl material_44
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_44.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_936_-1352_8
+newmtl material_45
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_45.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-80_-1400_-128
+newmtl material_46
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_46.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_1600_520_-40
+newmtl material_47
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_47.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_936_-1352_8
+newmtl material_48
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_48.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_936_-1352_8
+newmtl material_49
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_49.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_1664_960_-80
+newmtl material_50
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_50.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-784_-1076_-48
+newmtl material_51
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_51.tga
+
+# maps/hdn_executive/base/hr_base_officelight_152_56_-136
+newmtl material_52
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_52.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_664_-124_72
+newmtl material_53
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_53.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_2528_0_52
+newmtl material_54
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_54.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_2528_0_52
+newmtl material_55
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_55.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-64_-960_80
+newmtl material_56
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_56.tga
+
+# maps/hdn_executive/floor/gen_floor_concrete_pavement02_2528_0_52
+newmtl material_57
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_57.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-384_-1056_-136
+newmtl material_58
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_58.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-80_-1400_-128
+newmtl material_59
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_59.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_152_56_-136
+newmtl material_60
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_60.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_1320_-608_-112
+newmtl material_61
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_61.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_664_-8_-136
+newmtl material_62
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_62.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_2528_0_52
+newmtl material_63
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_63.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_664_-520_-136
+newmtl material_64
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_64.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-64_-960_80
+newmtl material_65
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_65.tga
+
+# maps/hdn_executive/base/hr_base_officelight_-104_-120_80
+newmtl material_66
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_66.tga
+
+# maps/hdn_executive/base/hr_base_officelight_408_-120_80
+newmtl material_67
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_67.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_664_-520_-136
+newmtl material_68
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_68.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_1600_520_-40
+newmtl material_69
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_69.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_-784_-1076_-48
+newmtl material_70
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_70.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_1320_-608_-112
+newmtl material_71
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_71.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_936_-1352_8
+newmtl material_72
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_72.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_1320_-608_-112
+newmtl material_73
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_73.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_664_-520_-136
+newmtl material_74
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_74.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_56_-824_-136
+newmtl material_75
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_75.tga
+
+# maps/hdn_executive/base/hr_base_officelight_-168_-584_-128
+newmtl material_76
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_76.tga
+
+# maps/hdn_executive/base/hr_base_officelight_-384_-1056_-136
+newmtl material_77
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_77.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-784_-1076_-48
+newmtl material_78
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_78.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_408_-120_80
+newmtl material_79
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_79.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_1664_960_-80
+newmtl material_80
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_80.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_664_-124_72
+newmtl material_81
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_81.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_1664_960_-80
+newmtl material_82
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_82.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_1600_520_-40
+newmtl material_83
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_83.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_1320_-608_-112
+newmtl material_84
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_84.tga
+
+# maps/hdn_executive/floor/gen_floor_concrete_pavement02_1600_520_-40
+newmtl material_85
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_85.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_1600_520_-40
+newmtl material_86
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_86.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_2528_0_52
+newmtl material_87
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_87.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_936_-1352_8
+newmtl material_88
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_88.tga
+
+# maps/hdn_executive/base/hr_base_officelight_-64_-960_80
+newmtl material_89
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_89.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_1600_520_-40
+newmtl material_90
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_90.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_2528_0_52
+newmtl material_91
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_91.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_664_-8_-136
+newmtl material_92
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_92.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_2528_0_52
+newmtl material_93
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_93.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_-104_-120_80
+newmtl material_94
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_94.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted03_408_-120_80
+newmtl material_95
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_95.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_24_-584_88
+newmtl material_96
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_96.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_152_56_-136
+newmtl material_97
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_97.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_664_-520_-136
+newmtl material_98
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_98.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-168_-584_-128
+newmtl material_99
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_99.tga
+
+# maps/hdn_executive/base/hr_base_officelight_-80_-1400_-128
+newmtl material_100
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_100.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-424_-232_-152
+newmtl material_101
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_101.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_936_-1352_8
+newmtl material_102
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_102.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-264_24_-136
+newmtl material_103
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_103.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-80_-1400_-128
+newmtl material_104
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_104.tga
+
+# maps/hdn_executive/base/hr_base_officelight_-360_-120_80
+newmtl material_105
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_105.tga
+
+# maps/hdn_executive/base/hr_base_officelight_152_-120_80
+newmtl material_106
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_106.tga
+
+# maps/hdn_executive/base/hr_base_officelight_392_-584_80
+newmtl material_107
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_107.tga
+
+# maps/hdn_executive/base/hr_base_officelight_664_-124_72
+newmtl material_108
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_108.tga
+
+# maps/hdn_executive/floor/gen_floor_concrete_pavement02_1320_-608_-112
+newmtl material_109
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_109.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_1664_960_-80
+newmtl material_110
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_110.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_1664_960_-80
+newmtl material_111
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_111.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_1664_960_-80
+newmtl material_112
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_112.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_2528_0_52
+newmtl material_113
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_113.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_1600_520_-40
+newmtl material_114
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_114.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_56_-824_-136
+newmtl material_115
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_115.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-360_-120_80
+newmtl material_116
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_116.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_664_-124_72
+newmtl material_117
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_117.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_664_-124_72
+newmtl material_118
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_118.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_1664_960_-80
+newmtl material_119
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_119.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_1320_-608_-112
+newmtl material_120
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_120.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_664_-520_-136
+newmtl material_121
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_121.tga
+
+# maps/hdn_executive/floor/hr_floor_whitemarble01_56_-824_-136
+newmtl material_122
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_122.tga
+
+# BASE/GEN_BASE_CONCRETE_ROAD02
+newmtl material_123
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_123.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_1320_-608_-112
+newmtl material_124
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_124.tga
+
+# maps/hdn_executive/base/hr_base_marble01_5209_-224_-488
+newmtl material_125
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_125.tga
+
+# maps/hdn_executive/floor/hr_floor_whitetile01_1664_960_-80
+newmtl material_126
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_126.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_1664_960_-80
+newmtl material_127
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_127.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_1600_520_-40
+newmtl material_128
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_128.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_1664_960_-80
+newmtl material_129
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_129.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_2528_0_52
+newmtl material_130
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_130.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_664_-8_-136
+newmtl material_131
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_131.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_2528_0_52
+newmtl material_132
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_132.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_664_-124_72
+newmtl material_133
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_133.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_1600_520_-40
+newmtl material_134
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_134.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_1600_520_-40
+newmtl material_135
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_135.tga
+
+# maps/hdn_executive/base/hr_base_marble01_664_-8_-136
+newmtl material_136
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_136.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_664_-8_-136
+newmtl material_137
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_137.tga
+
+# maps/hdn_executive/base/hr_base_marble01_1600_520_-40
+newmtl material_138
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_138.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_664_-8_-136
+newmtl material_139
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_139.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_1320_-608_-112
+newmtl material_140
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_140.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_152_340_76
+newmtl material_141
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_141.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_152_340_76
+newmtl material_142
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_142.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_664_-124_72
+newmtl material_143
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_143.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_152_340_76
+newmtl material_144
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_144.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_152_340_76
+newmtl material_145
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_145.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_152_340_76
+newmtl material_146
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_146.tga
+
+# maps/hdn_executive/base/hr_base_marble01_152_340_76
+newmtl material_147
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_147.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_152_340_76
+newmtl material_148
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_148.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_152_340_76
+newmtl material_149
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_149.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_152_56_-136
+newmtl material_150
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_150.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-264_24_-136
+newmtl material_151
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_151.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_152_-120_80
+newmtl material_152
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_152.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_664_-124_72
+newmtl material_153
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_153.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_664_-8_-136
+newmtl material_154
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_154.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_664_-8_-136
+newmtl material_155
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_155.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_152_56_-136
+newmtl material_156
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_156.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_152_340_76
+newmtl material_157
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_157.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_152_340_76
+newmtl material_158
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_158.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_408_-120_80
+newmtl material_159
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_159.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_664_-8_-136
+newmtl material_160
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_160.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_152_56_-136
+newmtl material_161
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_161.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile02_408_-120_80
+newmtl material_162
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_162.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_152_56_-136
+newmtl material_163
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_163.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_408_-120_80
+newmtl material_164
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_164.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_152_56_-136
+newmtl material_165
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_165.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_152_-120_80
+newmtl material_166
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_166.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_152_-120_80
+newmtl material_167
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_167.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_152_-120_80
+newmtl material_168
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_168.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_152_-120_80
+newmtl material_169
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_169.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-104_-120_80
+newmtl material_170
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_170.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-264_24_-136
+newmtl material_171
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_171.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_-104_-120_80
+newmtl material_172
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_172.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile02_-104_-120_80
+newmtl material_173
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_173.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-264_24_-136
+newmtl material_174
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_174.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-264_24_-136
+newmtl material_175
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_175.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_-264_24_-136
+newmtl material_176
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_176.tga
+
+# maps/hdn_executive/base/hr_base_marble01_-264_24_-136
+newmtl material_177
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_177.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_-424_-232_-152
+newmtl material_178
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_178.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-424_-232_-152
+newmtl material_179
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_179.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_-264_24_-136
+newmtl material_180
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_180.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-424_-232_-152
+newmtl material_181
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_181.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_-264_24_-136
+newmtl material_182
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_182.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_-360_-120_80
+newmtl material_183
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_183.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_-360_-120_80
+newmtl material_184
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_184.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-360_-120_80
+newmtl material_185
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_185.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_-360_-120_80
+newmtl material_186
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_186.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-104_-120_80
+newmtl material_187
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_187.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_1320_-608_-112
+newmtl material_188
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_188.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_664_-520_-136
+newmtl material_189
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_189.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_936_-1352_8
+newmtl material_190
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_190.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_384_-840_80
+newmtl material_191
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_191.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_-64_-960_80
+newmtl material_192
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_192.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_392_-584_80
+newmtl material_193
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_193.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_384_-840_80
+newmtl material_194
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_194.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_24_-584_88
+newmtl material_195
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_195.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_392_-584_80
+newmtl material_196
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_196.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_24_-584_88
+newmtl material_197
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_197.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_296_-1360_80
+newmtl material_198
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_198.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile02_-64_-960_80
+newmtl material_199
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_199.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_24_-584_88
+newmtl material_200
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_200.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_384_-840_80
+newmtl material_201
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_201.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_936_-1352_8
+newmtl material_202
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_202.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_392_-584_80
+newmtl material_203
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_203.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_392_-584_80
+newmtl material_204
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_204.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_392_-584_80
+newmtl material_205
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_205.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_384_-840_80
+newmtl material_206
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_206.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_384_-840_80
+newmtl material_207
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_207.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_24_-584_88
+newmtl material_208
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_208.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_152_56_-136
+newmtl material_209
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_209.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_296_-1360_80
+newmtl material_210
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_210.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-64_-960_80
+newmtl material_211
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_211.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_392_-584_80
+newmtl material_212
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_212.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_24_-584_88
+newmtl material_213
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_213.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_152_-120_80
+newmtl material_214
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_214.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_56_-824_-136
+newmtl material_215
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_215.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-64_-960_80
+newmtl material_216
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_216.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_-168_-584_-128
+newmtl material_217
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_217.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_664_-520_-136
+newmtl material_218
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_218.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_56_-824_-136
+newmtl material_219
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_219.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_384_-840_80
+newmtl material_220
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_220.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_296_-1360_80
+newmtl material_221
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_221.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_296_-1360_80
+newmtl material_222
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_222.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_-168_-584_-128
+newmtl material_223
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_223.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_-168_-584_-128
+newmtl material_224
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_224.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_392_-584_80
+newmtl material_225
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_225.tga
+
+# maps/hdn_executive/floor/hr_floor_blackmarble01_56_-824_-136
+newmtl material_226
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_226.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_56_-824_-136
+newmtl material_227
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_227.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_392_-584_80
+newmtl material_228
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_228.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_384_-840_80
+newmtl material_229
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_229.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_664_-520_-136
+newmtl material_230
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_230.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_664_-124_72
+newmtl material_231
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_231.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_936_-1352_8
+newmtl material_232
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_232.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_384_-840_80
+newmtl material_233
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_233.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_936_-1352_8
+newmtl material_234
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_234.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_392_-584_80
+newmtl material_235
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_235.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_56_-824_-136
+newmtl material_236
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_236.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_1320_-608_-112
+newmtl material_237
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_237.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_296_-1360_80
+newmtl material_238
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_238.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_296_-1360_80
+newmtl material_239
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_239.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_296_-1360_80
+newmtl material_240
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_240.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_296_-1360_80
+newmtl material_241
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_241.tga
+
+# maps/hdn_executive/floor/hr_floor_patternwood01_-80_-1400_-128
+newmtl material_242
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_242.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_-80_-1400_-128
+newmtl material_243
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_243.tga
+
+# maps/hdn_executive/base/hr_base_marble01_-80_-1400_-128
+newmtl material_244
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_244.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-80_-1400_-128
+newmtl material_245
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_245.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-80_-1400_-128
+newmtl material_246
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_246.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_296_-1360_80
+newmtl material_247
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_247.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-64_-960_80
+newmtl material_248
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_248.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-64_-960_80
+newmtl material_249
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_249.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_-64_-960_80
+newmtl material_250
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_250.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_-80_-1400_-128
+newmtl material_251
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_251.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-168_-584_-128
+newmtl material_252
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_252.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-168_-584_-128
+newmtl material_253
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_253.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-784_-1076_-48
+newmtl material_254
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_254.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_-424_-232_-152
+newmtl material_255
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_255.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_-64_-960_80
+newmtl material_256
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_256.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-424_-232_-152
+newmtl material_257
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_257.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-168_-584_-128
+newmtl material_258
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_258.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-360_-120_80
+newmtl material_259
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_259.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile01_-784_-1076_-48
+newmtl material_260
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_260.tga
+
+# maps/hdn_executive/base/hr_base_marble01_-784_-1076_-48
+newmtl material_261
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_261.tga
+
+# maps/hdn_executive/floor/hr_floor_redmarble01_-784_-1076_-48
+newmtl material_262
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_262.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-384_-1056_-136
+newmtl material_263
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_263.tga
+
+# maps/hdn_executive/wall/hr_wall_marble01_-384_-1056_-136
+newmtl material_264
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_264.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_-64_-960_80
+newmtl material_265
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_265.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet01_-784_-1076_-48
+newmtl material_266
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_266.tga
+
+# maps/hdn_executive/floor/hr_floor_whitecarpet02_56_-824_-136
+newmtl material_267
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_267.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-384_-1056_-136
+newmtl material_268
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_268.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile02_56_-824_-136
+newmtl material_269
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_269.tga
+
+# maps/hdn_executive/floor/gen_floor_wood_slatted01_-384_-1056_-136
+newmtl material_270
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_270.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall02_-784_-1076_-48
+newmtl material_271
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_271.tga
+
+# maps/hdn_executive/wall/hr_wall_officewall01_-384_-1056_-136
+newmtl material_272
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_272.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile02_-80_-1400_-128
+newmtl material_273
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_273.tga
+
+# maps/hdn_executive/base/hr_base_ceilingtile02_-384_-1056_-136
+newmtl material_274
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_274.tga
+
+# maps/hdn_executive/wall/hr_wall_marble02_-784_-1076_-48
+newmtl material_275
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_275.tga
+
+# models\Executive\HR_Model_Railing
+newmtl material_276
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_276.tga
+
+# models\executive\HR_Model_FlagBanner01
+newmtl material_277
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_277.tga
+
+# models\Executive\HR_Model_Advert01
+newmtl material_278
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_278.tga
+
+# models\Executive\HR_Model_Advert02
+newmtl material_279
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_279.tga
+
+# models\Executive\HR_Model_Advert03
+newmtl material_280
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_280.tga
+
+# models\Executive\HR_Model_XBox
+newmtl material_281
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_281.tga
+
+# models\generic\jimmy
+newmtl material_282
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd Map_Executive_material_282.tga
+
