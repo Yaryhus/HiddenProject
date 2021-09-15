@@ -10,6 +10,7 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     public static string MENU_NAME_CREATEROOM = "createroom";
     public static string MENU_NAME_ROOM = "room";
     public static string MENU_NAME_ERRORMENU = "error";
+    public static string MENU_NAME_FINDROOM = "find room";
 
 
 

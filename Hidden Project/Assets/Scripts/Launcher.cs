@@ -3,15 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using TMPro;
+using Photon.Realtime;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
+    public static Launcher Instance;
+
     [SerializeField] TMP_InputField roomNameInputField;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
+    [SerializeField] Transform roomListContent;
+    [SerializeField] GameObject roomListItemPrefab;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Connecting to Master");
@@ -57,8 +65,27 @@ public class Launcher : MonoBehaviourPunCallbacks
         MenuManager.Instance.OpenMenu(GlobalVariablesAndStrings.MENU_NAME_LOADING);
     }
 
+    public void JoinRoom(RoomInfo info)
+    {
+        PhotonNetwork.JoinRoom(info.Name);
+        MenuManager.Instance.OpenMenu(GlobalVariablesAndStrings.MENU_NAME_LOADING);
+    }
+
     public override void OnLeftRoom()
     {
         MenuManager.Instance.OpenMenu(GlobalVariablesAndStrings.MENU_NAME_MAINMENU);
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        foreach (Transform t in roomListContent)
+        {
+            Destroy(t.gameObject);
+        }
+
+        foreach(RoomInfo r in roomList)
+        {
+            Instantiate(roomListItemPrefab, roomListContent).GetComponent<RoomListItem>().Setup(r);
+        }
     }
 }
