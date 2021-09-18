@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/FPS_Test.unity
+    guid: 6b10b810aa55fb044a1ca20ede97b5f0
   m_configObjects: {}

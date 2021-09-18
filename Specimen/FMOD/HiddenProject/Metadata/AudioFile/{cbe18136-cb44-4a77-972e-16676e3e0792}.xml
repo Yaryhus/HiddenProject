@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{cbe18136-cb44-4a77-972e-16676e3e0792}">
+		<property name="assetPath">
+			<value>ShotgunShell4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0938548752834465</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{59688dc7-55d8-4536-8da6-d694bfd3fa3d}</destination>
+		</relationship>
+	</object>
+</objects>

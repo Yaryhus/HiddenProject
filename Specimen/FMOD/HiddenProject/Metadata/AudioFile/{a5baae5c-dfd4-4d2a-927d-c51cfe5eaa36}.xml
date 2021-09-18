@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{a5baae5c-dfd4-4d2a-927d-c51cfe5eaa36}">
+		<property name="assetPath">
+			<value>54 Sword_ Scrape On Stone; Gritty, Long Metallic Scrape. Could Be Sword On Rock Or Brick. Close Perspective..aif</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.3733333333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{59688dc7-55d8-4536-8da6-d694bfd3fa3d}</destination>
+		</relationship>
+	</object>
+</objects>

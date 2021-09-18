@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 438117610}
   - component: {fileID: 438117609}
   - component: {fileID: 438117608}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,6 +787,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 894119202, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: deadSound.name
+      value: P_Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 894119202, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: hurtSound.name
+      value: P_ReceiveDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 894119202, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: deadSound.fmodFile
+      value: event:/Player/P_Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 894119202, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: hurtSound.fmodFile
+      value: event:/Player/P_ReceiveDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870157673947130954, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870157673947130954, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: jumpSound.fmodFile
+      value: event:/Player/P_Jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 7870157673947130954, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
+      propertyPath: walkSound.fmodFile
+      value: event:/Player/P_Steps
+      objectReference: {fileID: 0}
     - target: {fileID: 7870157673947130996, guid: 4e8c6b24ef71d084987429018ea55511, type: 3}
       propertyPath: m_RootOrder
       value: 5

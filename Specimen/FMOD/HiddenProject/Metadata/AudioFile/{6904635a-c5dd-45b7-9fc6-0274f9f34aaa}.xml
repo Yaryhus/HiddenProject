@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{6904635a-c5dd-45b7-9fc6-0274f9f34aaa}">
+		<property name="assetPath">
+			<value>12755 SFX - Footstep Hard Sole Shoes Single Step Right On Metal Surface 2.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.966530612244898</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{59688dc7-55d8-4536-8da6-d694bfd3fa3d}</destination>
+		</relationship>
+	</object>
+</objects>

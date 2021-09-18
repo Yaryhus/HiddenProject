@@ -1,5 +1,234 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8722898407604440488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/H_Steps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/H_Steps
+  guid: ad0a0f6c97c9734aac47405fe637fc34
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8659729904229244602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Idle
+  guid: 2fd72a01e3de544f9b355039c9e2998d
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8343008574954549604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Shotgun/Shotgun_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Shotgun/Shotgun_Idle
+  guid: acf0b3edbfcb1f4ba1444f1aa25b4ae2
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7502964586455113847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Empty
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Empty
+  guid: b09bd6ab2840e64f9b5d76968e617a6a
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7483874164579852752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Empty
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Empty
+  guid: 00dc34ba571aaa499e42e0c4b16394c0
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6848497284650181185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Shotgun/Shotgun_Shoot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Shotgun/Shotgun_Shoot
+  guid: 5ba7d99fec77b744aa512d551b974d9e
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6573372921060629611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Step
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Step
+  guid: a11abdf44ec2dd41a38ae97e981e4e94
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5200857830081239279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Shotgun/Shotgun_Empty
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Shotgun/Shotgun_Empty
+  guid: e31ba2c2fdc5454bbd0646444fdb28f0
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4830207021050307199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Knife/Knife_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Knife/Knife_Idle
+  guid: 7f13d3aa73869c42b90bed0ce10e1943
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4708570769754308042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Shoot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Shoot
+  guid: 8cd88e37bd1eed41936c971150a77f68
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1502534025853531834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +244,10 @@ MonoBehaviour:
   Path: FMOD/HiddenProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637672614223083792
+  lastModified: 637675230205560941
   FileSizes:
   - Name: Desktop
-    Value: 756
+    Value: 1902
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -37,13 +266,223 @@ MonoBehaviour:
   - {fileID: 2184690548152606422}
   EditorEvents:
   - {fileID: 9042600811295799827}
+  - {fileID: -7483874164579852752}
+  - {fileID: 374828399004879258}
+  - {fileID: 8260705070917747675}
+  - {fileID: -8659729904229244602}
+  - {fileID: 3684371349893776289}
+  - {fileID: 6882017928064841725}
+  - {fileID: 1655052003155285178}
+  - {fileID: 181206511062692320}
+  - {fileID: 785563332705896301}
+  - {fileID: -6848497284650181185}
+  - {fileID: 284615873353452610}
+  - {fileID: 1064094854299311605}
+  - {fileID: -4830207021050307199}
+  - {fileID: -4708570769754308042}
+  - {fileID: -8343008574954549604}
+  - {fileID: -7502964586455113847}
+  - {fileID: 8066730899702564880}
+  - {fileID: 5546067576617985938}
+  - {fileID: 4158645380460216883}
+  - {fileID: 7096658635707649309}
+  - {fileID: 5422879026423401114}
+  - {fileID: 1116179643332115906}
+  - {fileID: -5200857830081239279}
+  - {fileID: 242930199545926176}
+  - {fileID: 7374505386366800300}
+  - {fileID: -8722898407604440488}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2184690548152606422}
   StringsBanks:
   - {fileID: -1502534025853531834}
-  stringsBankWriteTime: 637672614223083792
+  stringsBankWriteTime: 637675230205560941
   cacheVersion: 8
+--- !u!114 &181206511062692320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Aim
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Aim
+  guid: 4de70cb0aeb3744296133cb4179f5287
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &242930199545926176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Idle
+  guid: f1a5c96521a0974fa50483151fb550f8
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &284615873353452610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/H_ReceiveDamage
+  m_EditorClassIdentifier: 
+  Path: event:/Player/H_ReceiveDamage
+  guid: 5f176185fb814f4ea4e5ade81b0f5bfc
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &374828399004879258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Shotgun/Shotgun_Aim
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Shotgun/Shotgun_Aim
+  guid: 09993805da794a41b73cb03925f0735c
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &785563332705896301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Shotgun/Shotgun_Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Shotgun/Shotgun_Reload
+  guid: 59c3bd84008c7c4b9ec7f13411c8d7d9
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1064094854299311605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/P_Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Player/P_Jump
+  guid: 72ba9a042d6d3644b0406bfce2ec95b2
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 503
+--- !u!114 &1116179643332115906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Knife/Knife_SpecialAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Knife/Knife_SpecialAttack
+  guid: de6beacb34765148a302d05d514d02d9
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1655052003155285178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Reload
+  guid: 4a161a5cba94a24e8e7c9ff0034a9dcc
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2184690548152606422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,11 +498,218 @@ MonoBehaviour:
   Path: FMOD/HiddenProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637672614223063790
+  lastModified: 637675230205530942
   FileSizes:
   - Name: Desktop
-    Value: 1914
+    Value: 818912
   Exists: 1
+--- !u!114 &3684371349893776289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Aim
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Aim
+  guid: 3ec2c37feffc2a4ab664101f5615cf8d
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4158645380460216883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Shoot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Shoot
+  guid: c1b2b8047bccf740bd4aff900b614bbd
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2400
+--- !u!114 &5422879026423401114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/H_Die
+  m_EditorClassIdentifier: 
+  Path: event:/Player/H_Die
+  guid: d0e1c2081a13af4695b0f6c64bca5d72
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5546067576617985938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Reload
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Reload
+  guid: bebb9c2904e09d4597ea1cf241314949
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6882017928064841725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/H_Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Player/H_Jump
+  guid: 42d766cf9373724b879a04c66723cdde
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7096658635707649309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Knife/Knife_SimpleAttack
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Knife/Knife_SimpleAttack
+  guid: c6b01114f025974eb9efc4adfca09127
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7374505386366800300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/P_Steps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/P_Steps
+  guid: a11abdf44ec2dd41a38ae97e981e4e94
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 757
+--- !u!114 &8066730899702564880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/P_Die
+  m_EditorClassIdentifier: 
+  Path: event:/Player/P_Die
+  guid: bc11d65af90d2b459c4805db55f8203f
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1000
+--- !u!114 &8260705070917747675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/P_ReceiveDamage
+  m_EditorClassIdentifier: 
+  Path: event:/Player/P_ReceiveDamage
+  guid: 16fc39544d5d6247bd8a354679f1e31d
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &9042600811295799827
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -274,7 +274,7 @@ MonoBehaviour:
   sourceProjectPath: FMOD/HiddenProject/HiddenProject.fspro
   sourceBankPath: FMOD/HiddenProject/Build
   SourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
