@@ -1,15 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class PlayerManager : MonoBehaviour
 {
-    #region Singleton
-    public static PlayerManager instance;
+
+    PhotonView PV;
+
     void Awake()
     {
-        instance = this;
+        PV = GetComponent<PhotonView>();
     }
-    #endregion
-    public GameObject Player;
+
+    void Start()
+    {
+        if(PV.IsMine)
+        {
+            CreateController();        
+        }
+    }
+    private void CreateController()
+    {
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), Vector3.zero, Quaternion.identity);
+        
+    }
+
 }

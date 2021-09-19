@@ -96,8 +96,11 @@ public class Gun : MonoBehaviour
     FPSMovementController playerController;
     void Start()
     {
-        //Get player controller
-        player = PlayerManager.instance.Player;
+        //Get player controller -- COMENTADO, no va a funcionar sin referencia al player. He añadido una de la clase global.
+        //player = PlayerManager.instance.Player;
+
+        player = GlobalVariablesAndStrings.PLAYER.gameObject;
+
         playerController = player.GetComponent<FPSMovementController>();
         //Setting up ammo
         reloadWait = new WaitForSeconds(reloadTime - .25f);

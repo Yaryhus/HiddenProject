@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(CharacterController))]
-[RequireComponent(typeof(Rigidbody))]
+using Photon.Pun;
+using EZCameraShake;
 
+//[RequireComponent(typeof(CharacterController))]
+//[RequireComponent(typeof(Rigidbody))]
 public class FPSMovementController : MonoBehaviour
 {
     //Public Variables
@@ -39,10 +41,34 @@ public class FPSMovementController : MonoBehaviour
     CharacterController controller;
     Rigidbody body;
     bool playerIsMoving = false;
-    // Start is called before the first frame update
+
+    PhotonView PV;
+
     void Start()
     {
+
+        if (!PV.IsMine)
+        {
+            Destroy(GetComponentInChildren<Camera>().gameObject);
+            Destroy(GetComponentInChildren<CameraShaker>().gameObject);
+            Destroy(body);
+        }
+
         controller = GetComponent<CharacterController>();
+        PV = GetComponent<PhotonView>();
+        body = GetComponent<Rigidbody>();
+        GlobalVariablesAndStrings.PLAYER = transform;
+
+        jumpSound.Init();
+        walkSound.Init();
+
+        InvokeRepeating("CallFootsteps", 0, timeBetweenSteps);
+    }
+
+    private void Awake()
+    {
+        controller = GetComponent<CharacterController>();
+        PV = GetComponent<PhotonView>();
         body = GetComponent<Rigidbody>();
 
         jumpSound.Init();
@@ -54,6 +80,8 @@ public class FPSMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PV.IsMine)
+            return;
         //Check if player is grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
