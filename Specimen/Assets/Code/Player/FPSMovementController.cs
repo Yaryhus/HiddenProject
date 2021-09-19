@@ -6,10 +6,11 @@ using EZCameraShake;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using ExitGames.Client.Photon;
 using Photon.Realtime;
+using UnityEngine.UI;
 
 //[RequireComponent(typeof(CharacterController))]
 //[RequireComponent(typeof(Rigidbody))]
-public class FPSMovementController : MonoBehaviourPunCallbacks
+public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 {
     //Public Variables
     [Header("Main Movement")]
@@ -45,6 +46,26 @@ public class FPSMovementController : MonoBehaviourPunCallbacks
     int itemIndex;
     int previousItemIndex = -1;
 
+    [Header("UI")]
+    [SerializeField]
+    GameObject ui;
+
+    [Header("Health Stats")]
+    [SerializeField]
+    const float maxHealth = 100f;
+
+    float currentHealth = maxHealth;
+    [SerializeField]
+    Image healthbarImage;
+
+    bool isDead = false;
+    PlayerManager playerManager;
+
+    [Header("Health Sounds")]
+    [SerializeField]
+    Sound hurtSound = null;
+    [SerializeField]
+    Sound deadSound = null;
 
     //Private variables
     Vector3 velocity;
@@ -84,6 +105,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks
         controller = GetComponent<CharacterController>();
         PV = GetComponent<PhotonView>();
         body = GetComponent<Rigidbody>();
+        playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
 
         jumpSound.Init();
         walkSound.Init();
@@ -160,6 +182,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks
                 EquipItem(itemIndex - 1);
         }
 
+        //Use item
+        if (Input.GetButtonDown("Shoot"))
+        {
+            items[itemIndex].Use();
+        }
+
     }
 
     void CallFootsteps()
@@ -195,7 +223,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks
         }
         previousItemIndex = itemIndex;
 
-        if(PV.IsMine)
+        if (PV.IsMine)
         {
             Hashtable hash = new Hashtable();
             hash.Add("itemIndex", itemIndex);
@@ -206,10 +234,36 @@ public class FPSMovementController : MonoBehaviourPunCallbacks
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
     {
-        if(!PV.IsMine && targetPlayer == PV.Owner)
+        if (!PV.IsMine && targetPlayer == PV.Owner)
         {
             EquipItem((int)changedProps["itemIndex"]);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        PV.RPC("RPC_TakeDamage", RpcTarget.All, damage);
+    }
+
+    [PunRPC]
+    void RPC_TakeDamage(float damage)
+    {
+        if (!PV.IsMine)
+            return;
+
+        currentHealth -= damage;
+
+        //healthbarImage.fillAmount = currentHealth / maxHealth;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        playerManager.Die();
     }
 
 }

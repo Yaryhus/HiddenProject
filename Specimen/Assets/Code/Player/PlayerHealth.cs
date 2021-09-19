@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,9 @@ public class PlayerHealth : MonoBehaviour
     [Header("Stats")]
     [SerializeField]
     float health = 100;
+
     bool isDead = false;
+    PlayerManager playerManager;
 
     [Header("Sounds")]
     [SerializeField]
@@ -15,19 +18,11 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     Sound deadSound = null;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-
+        //playerManager = PhotonView.Find(PV.InstantiationData[0]).GetComponent<PlayerManager>();
+    
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     public void TakeDamage(float amount)
     {
         if (!isDead)

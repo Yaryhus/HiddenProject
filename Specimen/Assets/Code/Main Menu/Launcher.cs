@@ -87,8 +87,10 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {
-        errorText.text = ("Room Creation failed: " + message);
-        //Debug.Log("Error joining room");
+        errorText.text = "Room Creation Failed: " + message;
+        Debug.LogError("Room Creation Failed: " + message);
+        MenuManager.Instance.OpenMenu(GlobalVariablesAndStrings.MENU_NAME_ERRORMENU);
+       
     }
 
     public void LeaveRoom()

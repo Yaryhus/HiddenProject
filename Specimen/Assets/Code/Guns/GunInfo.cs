@@ -5,5 +5,8 @@ using UnityEngine;
 public class GunInfo : ItemInfo
 
 {
+    [Header("Basic Stats")]
+
+    public float damage = 10f;
 
 }

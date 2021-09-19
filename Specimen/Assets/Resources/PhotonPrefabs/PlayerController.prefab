@@ -58,6 +58,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5725205328664287923}
+  - component: {fileID: 7525968622997630740}
   m_Layer: 0
   m_Name: PistolItem
   m_TagString: Untagged
@@ -80,6 +81,21 @@ Transform:
   m_Father: {fileID: 1806945495030945636}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7525968622997630740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980743566712860311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06986081ec3b69a4b95ea6aaabe48c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInfo: {fileID: 11400000, guid: bd4d8dc17f922aa48b2ae5cf126a8307, type: 2}
+  itemGameObject: {fileID: 3373473543916051196}
+  cam: {fileID: 7870157674146229273}
 --- !u!1 &2258662344156638905
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,8 +648,17 @@ MonoBehaviour:
     fmodFile: event:/Player/P_Jump
     parameters: []
   items:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8239987711844593086}
+  - {fileID: 7525968622997630740}
+  health: 100
+  hurtSound:
+    name: 
+    fmodFile: 
+    parameters: []
+  deadSound:
+    name: 
+    fmodFile: 
+    parameters: []
 --- !u!114 &894119202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -840,6 +865,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6689878975926070457}
+  - component: {fileID: 8239987711844593086}
   m_Layer: 0
   m_Name: RifleItem
   m_TagString: Untagged
@@ -862,3 +888,18 @@ Transform:
   m_Father: {fileID: 1806945495030945636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8239987711844593086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040268039457239919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06986081ec3b69a4b95ea6aaabe48c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInfo: {fileID: 11400000, guid: 62ecc4cdedc75a64d89f75ffafebc9c1, type: 2}
+  itemGameObject: {fileID: 2258662344156638905}
+  cam: {fileID: 7870157674146229273}
