@@ -1,9 +1,7 @@
-using EZCameraShake;
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using Photon.Pun;
 
 public class SingleShotGun : Gun
 {
@@ -29,6 +27,7 @@ public class SingleShotGun : Gun
         {
             hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage);
             PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
+            Debug.Log(hit.collider.gameObject.name);
         }
     }
 
@@ -39,7 +38,7 @@ public class SingleShotGun : Gun
         if (colliders.Length != 0)
         {
             GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
-            Destroy(bulletImpactObj, 10f);
+            //Destroy(bulletImpactObj, 10f);
             bulletImpactObj.transform.SetParent(colliders[0].transform);
         }
     }

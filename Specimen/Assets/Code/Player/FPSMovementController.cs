@@ -87,6 +87,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
             Destroy(body);
+            Destroy(ui);
         }
 
         controller = GetComponent<CharacterController>();
@@ -188,6 +189,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             items[itemIndex].Use();
         }
 
+        //falling off the map
+        if(transform.position.y < -100.0f)
+        {
+            Die();
+        }
+
     }
 
     void CallFootsteps()
@@ -253,7 +260,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         currentHealth -= damage;
 
-        //healthbarImage.fillAmount = currentHealth / maxHealth;
+        healthbarImage.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0)
         {
