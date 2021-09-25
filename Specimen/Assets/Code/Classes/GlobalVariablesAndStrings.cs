@@ -19,4 +19,24 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     public static int  MAP_MAINMENU = 0;
     public static int MAP_FPSTESTMAP = 1;
 
+    //----------- ANIMATIONS NAMES AND VARIABLES----------
+    // Third Person animation variables
+    public static string ANIM3_TRIGGER_SHOOTSEMI = "Shoot Semi";
+    public static string ANIM3_TRIGGER_SPECIAL_ATTACK = "Special Attack";
+    public static string ANIM3_TRIGGER_JUMP = "Jump";
+    public static string ANIM3_BOOLEAN_CROUCHED = "Crouched";
+    public static string ANIM3_BOOLEAN_SHOOTAUTO = "Shoot Auto";
+    public static string ANIM3_BOOLEAN_INAIR = "InAir";
+    public static string ANIM3_FLOAT_VERTICAL = "Vertical";
+    public static string ANIM3_FLOAT_HORIZONTAL = "Horizontal";
+    // First Person animation variables
+    public static string ANIM1_TRIGGER_SHOOT = "Shoot";
+    public static string ANIM1_TRIGGER_RELOAD = "Reload";
+    public static string ANIM1_TRIGGER_SHOWWEAPON = "ShowWeapon";
+    public static string ANIM1_TRIGGER_HIDEWEAPON = "HideWeapon";
+    public static string ANIM1_BOOLEAN_SHOOTING = "Shooting";
+    public static string ANIM1_BOOLEAN_AIM = "Aim";
+    public static string ANIM1_FLOAT_WALK = "Walk";
+
+
 }

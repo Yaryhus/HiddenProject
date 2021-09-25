@@ -8,12 +8,15 @@ public class FPSLookController : MonoBehaviour
     float mouseSensitivity = 100f;
     [SerializeField]
     Transform playerBody = null;
+    [SerializeField]
+    Transform parent;
 
     float xRotation = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        parent = this.parent.transform;
         //Hide cursor
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -25,9 +28,9 @@ public class FPSLookController : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         xRotation -= mouseY;
 
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -45f, 45f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        parent.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
     }
 }

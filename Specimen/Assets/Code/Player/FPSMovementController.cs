@@ -52,9 +52,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     [Header("Health Stats")]
     [SerializeField]
-    const float maxHealth = 100f;
+    float maxHealth = 100f;
 
-    float currentHealth = maxHealth;
+    float currentHealth;
     [SerializeField]
     Image healthbarImage;
 
@@ -67,6 +67,16 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField]
     Sound deadSound = null;
 
+    [Header("Animations")]
+    [SerializeField]
+    Animator thirdPersonAnimator;
+    Animator firstPersonAnimator;
+
+    [Header("Body for third person")]
+    [Tooltip("Temporal: With this apporach local user does not see themself but there are no shadows or legs to look locally")]
+    [SerializeField]
+    GameObject userBody;
+    
     //Private variables
     Vector3 velocity;
     bool isGrounded;
@@ -78,10 +88,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     void Start()
     {
-
+        currentHealth = maxHealth;
         if (PV.IsMine)
         {
             EquipItem(0);
+            //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows)
+            userBody.SetActive(false);
         }
         else
         {
@@ -119,31 +131,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     {
         if (!PV.IsMine)
             return;
-        //Check if player is grounded
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        if (isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2.0f;
-        }
 
-        //Input
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
-        {
-            //Debug.Log ("Player is moving");
-            playerIsMoving = true;
-        }
-        else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
-        {
-            //Debug.Log ("Player is not moving");
-            playerIsMoving = false;
-        }
-
-        //Basic Movement
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
+        //Movement
+        Move();
 
         //Jump
         if (Input.GetButton("Jump") && isGrounded)
@@ -189,11 +179,55 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             items[itemIndex].Use();
         }
 
+        //Reload item (weapon)
+        if (Input.GetButtonDown("Reload"))
+        {
+            //If it is a gun, we reload it
+            ((Gun)items[itemIndex]).Reload();
+        }
+
         //falling off the map
-        if(transform.position.y < -100.0f)
+        if (transform.position.y < -100.0f)
         {
             Die();
         }
+
+
+        //update text for ammo if the item is a SingleShotGun
+        ((SingleShotGun)items[itemIndex]).UpdateText();
+
+    }
+
+    void Move()
+    {
+        //Check if player is grounded
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2.0f;
+        }
+
+        //Input
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, x);
+        thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, z);
+
+        if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
+        {
+            //Debug.Log ("Player is moving");
+            playerIsMoving = true;
+        }
+        else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
+        {
+            //Debug.Log ("Player is not moving");
+            playerIsMoving = false;
+        }
+
+        //Basic Movement
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
 
     }
 
@@ -223,10 +257,21 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         itemIndex = _index;
         items[itemIndex].itemGameObject.SetActive(true);
+        firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
 
         if (previousItemIndex != -1)
         {
+            //Start hide weapon anim
+            //firstPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_HIDEWEAPON);
+            /*
+            //Wait until finished and deactivate object
+            while(firstPersonAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1)
+            {
+                Debug.Log("Oh no");
+            }
+            */
             items[previousItemIndex].itemGameObject.SetActive(false);
+
         }
         previousItemIndex = itemIndex;
 
