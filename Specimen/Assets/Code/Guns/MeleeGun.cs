@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class SingleShotGun : Gun
+public class MeleeGun : Gun
 {
     [Header("Required Components")]
     [SerializeField] Camera cam;
@@ -16,9 +16,7 @@ public class SingleShotGun : Gun
     [SerializeField]
     Sound shootSound = null;
     [SerializeField]
-    Sound reloadSound = null;
-    [SerializeField]
-    Sound emptySound = null;
+    Sound specialAttackSound = null;
     [SerializeField]
     Sound idleSound = null;
 
@@ -45,28 +43,12 @@ public class SingleShotGun : Gun
     [SerializeField]
     TextMeshProUGUI text;
 
-    //Reload
-    private int currentAmmo, bulletShot;
-    private WaitForSeconds reloadWait;
-    private WaitForSeconds reloadWaitTransition;
-    private bool isReloading = false;
-
-
-    //Shoot automatic
-    private float nextTimeToFire = 0f;
-    [Header("Debug options to mess around")]
-    [SerializeField]
-    float maxAmmo;
-    [SerializeField]
-    bool infiniteAmmo = false;
-
     PhotonView PV;
 
     void Start()
     {
         anim = itemGameObject.GetComponent<Animator>();
 
-        maxAmmo = ((GunInfo)itemInfo).maxAmmo;
 
     }
 
@@ -74,81 +56,45 @@ public class SingleShotGun : Gun
     {
         anim = itemGameObject.GetComponent<Animator>();
         PV = GetComponent<PhotonView>();
-
-        //Setting up ammo
-        reloadWait = new WaitForSeconds(((GunInfo)itemInfo).reloadTime - .25f);
-        reloadWaitTransition = new WaitForSeconds(.25f);
-        currentAmmo = ((GunInfo)itemInfo).magazineAmmo;
     }
 
+    //Shoot or hit
     public override void Use()
     {
-        if (!isReloading)
-        {
-            //If gun is empty
-            if (currentAmmo <= 0)
-            {
-                //Empty gun, reproduce sound/Anim
-                emptySound.Play(transform);
-            }
-
-            //Shooting is automatic
-            else if (((GunInfo)itemInfo).isAutomatic)
-            {
-                if (Time.time >= nextTimeToFire && currentAmmo > 0)
-                {
-                    bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
-                    nextTimeToFire = Time.time + 1f / ((GunInfo)itemInfo).fireRate;
-                    Shoot();
-                }
-
-            }
-            //Shooting if semiautomatic
-            else
-            {
-                if (currentAmmo > 0)
-                {
-                    bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
-                    Shoot();
-                }
-
-            }
-
-        }
-
-
+        Shoot(0);
     }
 
-    public override void Reload()
+    //Instead of aiming, melee does special attack and double damage
+    public override void Aim()
     {
-        //We are not reloading, we have less than the whole magazine and we have more than 0 bullets
-        if (currentAmmo != ((GunInfo)itemInfo).magazineAmmo && !isReloading && maxAmmo > 0)
-        {
-            StartCoroutine(ReloadW());
-        }
+        Shoot(1);
     }
 
-    //To update the ammo counter and weapon ammo
+    //To update the HUD if neccesary
     public void UpdateText()
     {
-        //update text. If max size is below 0 (should not happen), it resets to 0.
-        if (maxAmmo < 0)
-            maxAmmo = 0;
-
-        text.SetText(currentAmmo + " / " + maxAmmo);
+        text.SetText(" -  / - ");
     }
 
-    void Shoot()
+    void Shoot(int typeOfAttack)
     {
+        //Standard damage used for the attack. Will be increased if special attack
+        float damage = ((GunInfo)itemInfo).damage;
 
-        currentAmmo--;
-        bulletShot--;
         //Camera shake if any
         //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
         CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
 
         //Shoot animation
-        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+        if (typeOfAttack == 0)
+        {
+            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+        }
+        else if (typeOfAttack == 1)
+        {
+            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_SPECIALATTACK);
+            damage = ((GunInfo)itemInfo).specialDamage;
+        }
 
         //Sound
         shootSound.PlayOneShot(transform);
@@ -177,7 +123,7 @@ public class SingleShotGun : Gun
                     hit.rigidbody.AddForce(-hit.normal * ((GunInfo)itemInfo).impactForce);
                 }
 
-                hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage);
+                hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
                 PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
                 Debug.Log(hit.collider.gameObject.name);
 
@@ -187,9 +133,6 @@ public class SingleShotGun : Gun
                 Debug.Log("I missed, its too far");
             }
         }
-
-        if (bulletShot > 0 && currentAmmo > 0)
-            Invoke("Shoot", 1 / ((GunInfo)itemInfo).fireRate);
     }
 
     [PunRPC]
@@ -203,31 +146,12 @@ public class SingleShotGun : Gun
             bulletImpactObj.transform.SetParent(colliders[0].transform);
         }
     }
-
-    IEnumerator ReloadW()
+    //Instead of reload, the melee launches a taunt
+    public override void Reload()
     {
-        isReloading = true;
-        reloadSound.Play(transform);
-        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_RELOAD);
-        //wait Reload Time
-        yield return reloadWait;
-        //wait for the transition to end
-        yield return reloadWaitTransition;
-
-        currentAmmo = ((GunInfo)itemInfo).magazineAmmo;
-
-        //If we dont have the infinite ammo debug selected
-        if (!infiniteAmmo)
-        {
-            //We throw the whole mag when reloading
-            maxAmmo -= ((GunInfo)itemInfo).magazineAmmo;
-        }
-
-        isReloading = false;
+        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TAUNT);
     }
 
-    public override void Aim()
-    {
-        
-    }
+
+
 }

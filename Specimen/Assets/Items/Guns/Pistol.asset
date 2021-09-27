@@ -16,10 +16,11 @@ MonoBehaviour:
   damage: 10
   range: 10
   bulletsPerShot: 1
-  maxAmmo: 10
+  magazineAmmo: 10
+  maxAmmo: 50
   reloadTime: 2
-  spreadFactorX: 0.5
-  spreadFactorY: 0.5
+  spreadFactorX: 0.08
+  spreadFactorY: 0.05
   isAutomatic: 0
   fireRate: 15
   impactForce: 20

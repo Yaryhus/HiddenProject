@@ -389,6 +389,8 @@ MonoBehaviour:
   shakeFadeInTime: 0.1
   shakeFadeOutTime: 1
   text: {fileID: 4082954845798226717}
+  maxAmmo: 0
+  infiniteAmmo: 0
 --- !u!114 &2648254131462854574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +692,8 @@ MonoBehaviour:
   shakeFadeInTime: 0.1
   shakeFadeOutTime: 1
   text: {fileID: 4082954845798226717}
+  maxAmmo: 0
+  infiniteAmmo: 0
 --- !u!114 &3427515109950531369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -864,8 +868,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7475539465502835037}
-  - component: {fileID: 5405947359540231684}
   - component: {fileID: 6011513085705429844}
+  - component: {fileID: 2523116699889786080}
   m_Layer: 0
   m_Name: KnifeItem
   m_TagString: Untagged
@@ -888,45 +892,6 @@ Transform:
   m_Father: {fileID: 1806945495030945636}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5405947359540231684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3684549254254144930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06986081ec3b69a4b95ea6aaabe48c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemInfo: {fileID: 11400000, guid: b0bf5548178d72046ae1ad3182b28efc, type: 2}
-  itemGameObject: {fileID: 3539543702305351838}
-  bulletImpactPrefab: {fileID: 1084744828758188752, guid: 0b3d84ec48bbfa4499db15a6444071ac, type: 3}
-  cam: {fileID: 7870157674146229273}
-  anim: {fileID: 0}
-  shootSound:
-    name: 
-    fmodFile: 
-    parameters: []
-  reloadSound:
-    name: 
-    fmodFile: 
-    parameters: []
-  emptySound:
-    name: 
-    fmodFile: 
-    parameters: []
-  idleSound:
-    name: 
-    fmodFile: 
-    parameters: []
-  muzzleFlash: {fileID: 0}
-  shakeRoughness: 1
-  shakeMagnitude: 1
-  shakeFadeInTime: 0.1
-  shakeFadeOutTime: 1
-  text: {fileID: 4082954845798226717}
 --- !u!114 &6011513085705429844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +914,41 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &2523116699889786080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684549254254144930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacb87dea1d70974aa0c6aa0830367b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInfo: {fileID: 11400000, guid: b0bf5548178d72046ae1ad3182b28efc, type: 2}
+  itemGameObject: {fileID: 3539543702305351838}
+  bulletImpactPrefab: {fileID: 1084744828758188752, guid: 0b3d84ec48bbfa4499db15a6444071ac, type: 3}
+  cam: {fileID: 7870157674146229273}
+  anim: {fileID: 0}
+  shootSound:
+    name: 
+    fmodFile: 
+    parameters: []
+  specialAttackSound:
+    name: 
+    fmodFile: 
+    parameters: []
+  idleSound:
+    name: 
+    fmodFile: 
+    parameters: []
+  muzzleFlash: {fileID: 0}
+  shakeRoughness: 1
+  shakeMagnitude: 1
+  shakeFadeInTime: 0.1
+  shakeFadeOutTime: 1
+  text: {fileID: 4082954845798226717}
 --- !u!1 &6462013843787060066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   items:
   - {fileID: 8239987711844593086}
   - {fileID: 7525968622997630740}
-  - {fileID: 5405947359540231684}
+  - {fileID: 2523116699889786080}
   - {fileID: 5412994628817407632}
   ui: {fileID: 1047858506351819766}
   maxHealth: 100
@@ -1504,6 +1504,8 @@ MonoBehaviour:
   shakeFadeInTime: 0.1
   shakeFadeOutTime: 1
   text: {fileID: 4082954845798226717}
+  maxAmmo: 0
+  infiniteAmmo: 0
 --- !u!114 &5534579940689420811
 MonoBehaviour:
   m_ObjectHideFlags: 0

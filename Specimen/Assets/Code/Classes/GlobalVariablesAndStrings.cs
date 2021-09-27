@@ -31,12 +31,14 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     public static string ANIM3_FLOAT_HORIZONTAL = "Horizontal";
     // First Person animation variables
     public static string ANIM1_TRIGGER_SHOOT = "Shoot";
+    public static string ANIM1_SPECIALATTACK = "Special Attack";
     public static string ANIM1_TRIGGER_RELOAD = "Reload";
     public static string ANIM1_TRIGGER_SHOWWEAPON = "ShowWeapon";
     public static string ANIM1_TRIGGER_HIDEWEAPON = "HideWeapon";
     public static string ANIM1_BOOLEAN_SHOOTING = "Shooting";
     public static string ANIM1_BOOLEAN_AIM = "Aim";
     public static string ANIM1_FLOAT_WALK = "Walk";
+    public static string ANIM1_TAUNT = "Taunt";
 
 
 }

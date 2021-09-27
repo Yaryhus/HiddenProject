@@ -76,7 +76,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [Tooltip("Temporal: With this apporach local user does not see themself but there are no shadows or legs to look locally")]
     [SerializeField]
     GameObject userBody;
-    
+
     //Private variables
     Vector3 velocity;
     bool isGrounded;
@@ -179,6 +179,11 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             items[itemIndex].Use();
         }
 
+        if (Input.GetButtonDown("Aim"))
+        {
+            ((Gun)items[itemIndex]).Aim();
+        }
+
         //Reload item (weapon)
         if (Input.GetButtonDown("Reload"))
         {
@@ -192,10 +197,11 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             Die();
         }
 
-
         //update text for ammo if the item is a SingleShotGun
-        ((SingleShotGun)items[itemIndex]).UpdateText();
-
+        if (items[itemIndex].GetComponent<SingleShotGun>() != null)
+        {
+            ((SingleShotGun)items[itemIndex]).UpdateText();
+        }
     }
 
     void Move()
