@@ -142,7 +142,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             EquipItem(0);
             //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows)
-            userBody.SetActive(false);
+            //userBody.SetActive(false);
         }
         else
         {
@@ -256,8 +256,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //Use item or shoot semi
         if (Input.GetButtonDown("Shoot"))
         {
+            if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().isAutomatic)
+                return;
+
             items[itemIndex].Use();
         }
+
 
         //Particular case: Automatic fire
         if (Input.GetButton("Shoot") && items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().isAutomatic)
@@ -266,8 +270,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             {
                 nextTimeToFire = Time.time + 1f / items[itemIndex].GetComponent<SingleShotGun>().fireRate;
                 items[itemIndex].Use();
+                Debug.Log("Disparo");
             }
         }
+
     }
 
     void Sprint()
@@ -278,14 +284,14 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             currentSpeed = sprintSpeed;
             currentStamina -= sprintStaminaCost * Time.deltaTime;
             isSprinting = true;
-            Debug.Log("Sprinting");
+            //Debug.Log("Sprinting");
             CheckStamina();
         }
         if (Input.GetButtonUp("Sprint"))
         {
             currentSpeed = speed;
             isSprinting = false;
-            Debug.Log("Stopped Sprinting");
+            //Debug.Log("Stopped Sprinting");
             CheckStamina();
         }
     }
@@ -367,7 +373,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //Stamina lost
         currentStamina -= jumpStaminaCost;
         CheckStamina();
-        Debug.Log("Leap");
+        //Debug.Log("Leap");
 
         //After launching we reset the speed
         StartCoroutine(ResetVelocity());
@@ -377,7 +383,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     {
         yield return new WaitForSeconds(0.7f);
         velocity = Vector3.zero;
-        Debug.Log("Reseteamos velocidad!");
+        //Debug.Log("Reseteamos velocidad!");
     }
 
     void Move()
@@ -427,6 +433,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             walkSound.Play(transform);
         }
     }
+
     void OnDisable()
     {
         playerIsMoving = false;
@@ -497,7 +504,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     {
         //Activate ragdoll and detach it from the player
         PV.RPC("RPC_Die", RpcTarget.All);
-                
+
         //Die on server
         playerManager.Die();
     }
@@ -506,8 +513,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     void RPC_Die()
     {
         deadSound.Play(transform);
-        
+
         //Activate Ragdoll and unparent to all server
+        userBody.gameObject.SetActive(true);
         userBody.GetComponentInChildren<Ragdoll>().SetEnabled(true);
         userBody.transform.parent = null;
         userBody.name = "Ragdoll";

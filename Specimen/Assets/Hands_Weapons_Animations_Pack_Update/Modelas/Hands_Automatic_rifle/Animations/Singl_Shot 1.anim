@@ -51858,13 +51858,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.057542484
-    functionName: DetectDamage
-    data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 06986081ec3b69a4b95ea6aaabe48c20, type: 3}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 0.16656503
     functionName: AttackEnd
     data: 

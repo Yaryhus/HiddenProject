@@ -110,6 +110,7 @@ public class SingleShotGun : Gun
                 emptySound.Play(transform);
             }
 
+            /*
             //Shooting is automatic
             else if (((GunInfo)itemInfo).isAutomatic)
             {
@@ -120,17 +121,18 @@ public class SingleShotGun : Gun
                     Shoot();
                 }
 
-            }
+            }*/
+
             //Shooting if semiautomatic
-            else
-            {
+          //  else
+            //{
                 if (currentAmmo > 0)
                 {
                     bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
                     Shoot();
                 }
 
-            }
+           // }
 
         }
 

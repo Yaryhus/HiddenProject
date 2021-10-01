@@ -13,28 +13,25 @@ public class Ragdoll : MonoBehaviour
     void Start()
     {
         rigidbodies = transform.GetComponentsInChildren<Rigidbody>();
+        Debug.Log(rigidbodies.Length);
         SetEnabled(false);
     }
 
     public void SetEnabled(bool enabled)
     {
+        Debug.Log("I have been called");
         bool isKinematic = !enabled;
-        if (rigidbodies.Length > 1)
+        foreach (Rigidbody r in rigidbodies)
         {
-
-            foreach (Rigidbody r in rigidbodies)
-            {
-                r.isKinematic = isKinematic;
-            }
+            r.isKinematic = isKinematic;
         }
-        else
-            return;
 
         animator.enabled = !enabled;
     }
 
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.P))
         {
             SetEnabled(true);
@@ -44,6 +41,7 @@ public class Ragdoll : MonoBehaviour
         {
             SetEnabled(false);
         }
+        */
     }
 
 }
