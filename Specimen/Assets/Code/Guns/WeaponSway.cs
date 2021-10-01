@@ -25,4 +25,5 @@ public class WeaponSway : MonoBehaviour
         Vector3 lastPosition = new Vector3(x, y, 0);
         transform.localPosition = Vector3.Lerp(transform.localPosition, lastPosition + initialPosition, Time.deltaTime * smooth);
     }
+
 }

@@ -5,7 +5,7 @@
 			<value>Pistol_Empty</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{deb47ec8-532f-4e48-87b8-6845f2f94c81}</destination>
@@ -62,18 +62,18 @@
 			<destination>{eb928966-6f5c-432b-af5b-96ca8e989473}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{eba4cca9-e4cd-4f81-83ce-7c859399cc5a}" />
+	<object class="EventAutomatableProperties" id="{eba4cca9-e4cd-4f81-83ce-7c859399cc5a}">
+		<property name="maxVoices">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1ed13b3c-1a34-455b-b04a-248330bbb5c1}" />
 	<object class="GroupTrack" id="{414e8e0d-1896-4f8e-bf29-cf32fa74db04}">
 		<relationship name="mixerGroup">
 			<destination>{ea62fd0d-7f21-447f-ad32-112cb0ef2357}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{1c9eab55-3f22-4904-b0ad-3cd62182dd80}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
-	</object>
+	<object class="Timeline" id="{1c9eab55-3f22-4904-b0ad-3cd62182dd80}" />
 	<object class="ActionSheet" id="{5be03b2b-d8a1-4369-a9c8-faa5d66d3840}">
 		<relationship name="modules">
 			<destination>{ed2c49e7-7908-40f3-bc33-a772ed7be2fd}</destination>
@@ -117,7 +117,11 @@
 			<destination>{cd7d748d-2cf4-46fd-9c67-621559181abe}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{4fdaa3cc-63ac-4ce2-9e6a-6e4c8bae0a41}" />
+	<object class="MixerBusPanner" id="{4fdaa3cc-63ac-4ce2-9e6a-6e4c8bae0a41}">
+		<property name="overridingOutputFormat">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{d31f1c20-3615-4a3e-9484-c95684d7cc0a}" />
 	<object class="MixerBusEffectChain" id="{a40e32e0-16e6-4c38-a578-d5871e5ce51f}">
 		<relationship name="effects">

@@ -5,7 +5,7 @@
 			<value>Rifle_Idle</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{70f919ba-6d7e-4bdd-afdc-6c5f74505243}</destination>
@@ -62,18 +62,18 @@
 			<destination>{eb928966-6f5c-432b-af5b-96ca8e989473}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{a14534db-97ef-415b-b8e4-04a822736f8a}" />
+	<object class="EventAutomatableProperties" id="{a14534db-97ef-415b-b8e4-04a822736f8a}">
+		<property name="maxVoices">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{7c507538-4767-4e76-a927-f5fa3b60964b}" />
 	<object class="GroupTrack" id="{29b27992-3cd0-4b2a-9438-e59f2fbc81c5}">
 		<relationship name="mixerGroup">
 			<destination>{c659e2ae-6a3d-40ea-8646-4be7757799fe}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{9ec00fdb-ef7f-4b2e-8e8e-060b01dc2c74}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
-	</object>
+	<object class="Timeline" id="{9ec00fdb-ef7f-4b2e-8e8e-060b01dc2c74}" />
 	<object class="ActionSheet" id="{2188c848-d4ba-482e-96c3-f0a15263dbf7}">
 		<relationship name="modules">
 			<destination>{7eeeee27-c423-40a2-aa4f-d3005c52fbf5}</destination>
@@ -117,7 +117,11 @@
 			<destination>{c9ea93b7-521f-4136-a411-06580da6209b}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{40a6dc88-c43b-4911-bc62-eae5cac3d296}" />
+	<object class="MixerBusPanner" id="{40a6dc88-c43b-4911-bc62-eae5cac3d296}">
+		<property name="overridingOutputFormat">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{a4810f5c-ecad-4456-9ac2-29cbd4465319}" />
 	<object class="MixerBusEffectChain" id="{cce908e9-f2fb-4b9e-b52d-390dfe11ebdb}">
 		<relationship name="effects">

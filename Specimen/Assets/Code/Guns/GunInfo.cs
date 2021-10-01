@@ -10,14 +10,26 @@ public class GunInfo : ItemInfo
 
     public float damage = 10f;
 
+    public float range = 100f;
+
+    [Tooltip("Fuerza con la que mueve el ente impactado")]
+    public float impactForce = 30f;
+
+    [Header("Melee")]
+    public bool isMelee = false;
     [ShowIf("isMelee")]
     public float specialDamage = 30f;
 
-    public float range = 100f;
 
-    public bool isMelee = false;
+    [Header("Grenades and Throwables")]
+    public bool isThrowable = false;
+    [ShowIf("isThrowable")]
+    public float delay = 3f;
+    [ShowIf("isThrowable")]
+    public float radius = 20f;
 
     [HideIf("isMelee")]
+    [Header("Fire Guns")]
     public int bulletsPerShot = 1;
 
     [HideIf("isMelee")]
@@ -30,20 +42,18 @@ public class GunInfo : ItemInfo
     [HideIf("isMelee")]
     [Tooltip("Lo que varia el disparo en horizontal")]
     public float reloadTime = 1.2f;
-    [HideIf("isMelee")]
+    [HideIf("@this.isMelee || isThrowable")]
     public float spreadFactorX = 0.0f;
 
-    [HideIf("isMelee")]
+    [HideIf("@this.isMelee || isThrowable")]
     [Tooltip("Lo que varia el disparo en vertical")]
     public float spreadFactorY = 0.0f;
 
-    [HideIf("isMelee")]
+    [HideIf("@this.isMelee || isThrowable")]
     public bool isAutomatic = false;
 
     [HideIf("@this.isMelee || !isAutomatic")]
     [Tooltip("No se usa si el arma es semiauomática")]
     public float fireRate = 15f;
 
-    [Tooltip("Fuerza con la que mueve el ente impactado")]
-    public float impactForce = 30f;
 }

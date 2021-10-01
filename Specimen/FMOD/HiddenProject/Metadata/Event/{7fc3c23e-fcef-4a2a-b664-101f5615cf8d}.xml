@@ -5,7 +5,7 @@
 			<value>Rifle_Aim</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{70f919ba-6d7e-4bdd-afdc-6c5f74505243}</destination>
@@ -62,17 +62,24 @@
 			<destination>{eb928966-6f5c-432b-af5b-96ca8e989473}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{e5aa2842-4b68-4c1a-a8a2-144aa559f020}" />
+	<object class="EventAutomatableProperties" id="{e5aa2842-4b68-4c1a-a8a2-144aa559f020}">
+		<property name="maxVoices">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{6e677697-a8c6-4ace-8757-86e4e8f3ebdb}" />
 	<object class="GroupTrack" id="{18b56090-df38-4951-b86b-ff71c979af90}">
+		<relationship name="modules">
+			<destination>{65aef9fb-284b-4e7e-b2ce-4f43a00b9284}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{8f758f94-d306-4a6e-b1f1-68a8f7353923}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{1ac8cd3e-92df-4b5a-b5a2-23c155aa28cf}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{65aef9fb-284b-4e7e-b2ce-4f43a00b9284}</destination>
+		</relationship>
 	</object>
 	<object class="ActionSheet" id="{9e5d8ca2-ad2e-4b14-9804-e9c09597d2dc}">
 		<relationship name="modules">
@@ -97,6 +104,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2b05dd89-10f1-4e3b-a492-f3755faa8ddb}" />
+	<object class="SingleSound" id="{65aef9fb-284b-4e7e-b2ce-4f43a00b9284}">
+		<property name="length">
+			<value>0.41999999999999982</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>0.28000000000000003</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{e83a4389-f713-41ac-a45d-bbc8896b78d8}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{8f758f94-d306-4a6e-b1f1-68a8f7353923}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -117,7 +135,11 @@
 			<destination>{5a7b6644-7a55-4fb1-9d68-693293e0ad8e}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{38a53ca7-fc22-4722-88e9-71310c61c267}" />
+	<object class="MixerBusPanner" id="{38a53ca7-fc22-4722-88e9-71310c61c267}">
+		<property name="overridingOutputFormat">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{fe45dc4b-4b42-45b6-af68-7f31fba2a417}" />
 	<object class="MixerBusEffectChain" id="{d2c7cae7-d2d1-44d2-b382-f0f713c7f5a2}">
 		<relationship name="effects">

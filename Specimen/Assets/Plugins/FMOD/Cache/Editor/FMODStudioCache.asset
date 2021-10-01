@@ -22,7 +22,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 757
 --- !u!114 &-8659729904229244602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +68,29 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 0
+--- !u!114 &-8107187997982685004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Hide
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Hide
+  guid: a124a75870d01e4dab5a64ea21d63057
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &-7502964586455113847
 MonoBehaviour:
@@ -160,6 +183,52 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6026756271440561120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Show
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Show
+  guid: 6104619e2a6bb9498d09d18432ec92c5
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5763163063047173453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Grenade/Grenade_Show
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Grenade/Grenade_Show
+  guid: 2132f2a2a15a204bb7fa92f91135f3e0
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5200857830081239279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +291,98 @@ MonoBehaviour:
   guid: 8cd88e37bd1eed41936c971150a77f68
   Banks:
   - {fileID: 2184690548152606422}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3550
+--- !u!114 &-3703537087681999718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Grenade/Grenade_Throw
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Grenade/Grenade_Throw
+  guid: 5b6dbd123fc60746a41bd6700d57934d
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 503
+--- !u!114 &-2228607985207567194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Grenade/Grenade_Explode
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Grenade/Grenade_Explode
+  guid: a7402dcfa21a694f903456c3af61c806
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 620
+--- !u!114 &-2131432067698773831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Pistol/Pistol_Show
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Pistol/Pistol_Show
+  guid: 6218e8f633597c43ad8a1952d1757c43
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1891842144123370171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Knife/Knife_Hide
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Knife/Knife_Hide
+  guid: 005cb7a52821e74d86ce6b924da002ca
+  Banks:
+  - {fileID: 2184690548152606422}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -244,11 +405,34 @@ MonoBehaviour:
   Path: FMOD/HiddenProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637675230205560941
+  lastModified: 637685121183911161
   FileSizes:
   - Name: Desktop
-    Value: 1902
+    Value: 2346
   Exists: 1
+--- !u!114 &-1255211852624160355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Rifle/Rifle_Hide
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Rifle/Rifle_Hide
+  guid: bb39f74b9f7da942a4a70747d14ce998
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,12 +476,23 @@ MonoBehaviour:
   - {fileID: 242930199545926176}
   - {fileID: 7374505386366800300}
   - {fileID: -8722898407604440488}
+  - {fileID: -1891842144123370171}
+  - {fileID: -5763163063047173453}
+  - {fileID: 1474466764337636967}
+  - {fileID: -3703537087681999718}
+  - {fileID: -6026756271440561120}
+  - {fileID: -2131432067698773831}
+  - {fileID: 3075967085747773104}
+  - {fileID: -8107187997982685004}
+  - {fileID: -2228607985207567194}
+  - {fileID: -1255211852624160355}
+  - {fileID: 1579047559870279366}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2184690548152606422}
   StringsBanks:
   - {fileID: -1502534025853531834}
-  stringsBankWriteTime: 637675230205560941
+  stringsBankWriteTime: 637685121183911161
   cacheVersion: 8
 --- !u!114 &181206511062692320
 MonoBehaviour:
@@ -315,13 +510,13 @@ MonoBehaviour:
   guid: 4de70cb0aeb3744296133cb4179f5287
   Banks:
   - {fileID: 2184690548152606422}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 420
 --- !u!114 &242930199545926176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,7 +562,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 4000
 --- !u!114 &374828399004879258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +654,52 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+  Length: 473
+--- !u!114 &1474466764337636967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Knife/Knife_ShowOff
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Knife/Knife_ShowOff
+  guid: 217cf1f1d11bbb4d8a87936b95556296
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1579047559870279366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Knife/Knife_Show
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Knife/Knife_Show
+  guid: ed675b1ecc8f3f498b3a723d5a6aaae4
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
   Length: 0
 --- !u!114 &1655052003155285178
 MonoBehaviour:
@@ -482,7 +723,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 487
 --- !u!114 &2184690548152606422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,11 +739,34 @@ MonoBehaviour:
   Path: FMOD/HiddenProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637675230205530942
+  lastModified: 637685121183871154
   FileSizes:
   - Name: Desktop
-    Value: 818912
+    Value: 1179296
   Exists: 1
+--- !u!114 &3075967085747773104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Grenade/Grenade_Idle
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Grenade/Grenade_Idle
+  guid: 809bfb6cd68b494ca869f3093d550f80
+  Banks:
+  - {fileID: 2184690548152606422}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3684371349893776289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,13 +783,13 @@ MonoBehaviour:
   guid: 3ec2c37feffc2a4ab664101f5615cf8d
   Banks:
   - {fileID: 2184690548152606422}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 420
 --- !u!114 &4158645380460216883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +812,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 2400
+  Length: 1940
 --- !u!114 &5422879026423401114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,7 +835,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 4000
 --- !u!114 &5546067576617985938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +858,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 373
 --- !u!114 &6882017928064841725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +881,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 255
 --- !u!114 &7096658635707649309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,7 +904,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 358
 --- !u!114 &7374505386366800300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,7 +973,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 4000
 --- !u!114 &9042600811295799827
 MonoBehaviour:
   m_ObjectHideFlags: 0

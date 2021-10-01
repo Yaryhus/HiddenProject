@@ -5,7 +5,7 @@
 			<value>Rifle_Reload</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{70f919ba-6d7e-4bdd-afdc-6c5f74505243}</destination>
@@ -62,17 +62,24 @@
 			<destination>{eb928966-6f5c-432b-af5b-96ca8e989473}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{65eab06c-75dd-42ad-9a09-c70e775745d8}" />
+	<object class="EventAutomatableProperties" id="{65eab06c-75dd-42ad-9a09-c70e775745d8}">
+		<property name="maxVoices">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{96634555-7370-4cc3-b5b0-3ab8104ec1aa}" />
 	<object class="GroupTrack" id="{abe55bcd-84f7-4c64-992d-ae6385d71bb1}">
+		<relationship name="modules">
+			<destination>{203cedb3-3faf-4f70-8953-be9e8c3559e4}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{839b8003-977c-4af5-a1dd-35aaf4cd7f75}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{2f37aa25-9111-4c2e-9ba2-ff8ce7707b7f}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{203cedb3-3faf-4f70-8953-be9e8c3559e4}</destination>
+		</relationship>
 	</object>
 	<object class="ActionSheet" id="{9a050957-21ac-48ba-9521-246831c3afb8}">
 		<relationship name="modules">
@@ -97,6 +104,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{1cd4eacb-6d4b-4423-8bec-3953de44df35}" />
+	<object class="SingleSound" id="{203cedb3-3faf-4f70-8953-be9e8c3559e4}">
+		<property name="length">
+			<value>0.48750566893424035</value>
+		</property>
+		<property name="volume">
+			<value>10</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{6dbb81ad-b5a0-467a-ac31-87c6b087b235}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{839b8003-977c-4af5-a1dd-35aaf4cd7f75}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -117,7 +135,11 @@
 			<destination>{9929b158-cf98-4ce0-ac48-5cca47a163b5}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{cfed82cc-ba22-44cd-b153-741ff77dae6f}" />
+	<object class="MixerBusPanner" id="{cfed82cc-ba22-44cd-b153-741ff77dae6f}">
+		<property name="overridingOutputFormat">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{dcd985da-2688-4d75-a412-2a203c78a221}" />
 	<object class="MixerBusEffectChain" id="{095d67e1-d91d-4f3a-b519-7dfb403eea42}">
 		<relationship name="effects">

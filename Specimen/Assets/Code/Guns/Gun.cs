@@ -8,5 +8,10 @@ public abstract class Gun : Item
     public abstract void Reload();
     public abstract void Aim();
 
+    //Animator events
+    public abstract void AttackEnd();
+    public abstract void AttackStart();
+    public abstract void DetectDamage();
+
     public GameObject bulletImpactPrefab;
 }

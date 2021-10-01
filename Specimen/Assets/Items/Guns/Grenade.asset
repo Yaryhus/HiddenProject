@@ -12,5 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6325c76f0de1d0647b6623d8dc960089, type: 3}
   m_Name: Grenade
   m_EditorClassIdentifier: 
-  itemName: Rifle
+  itemName: Grenade
   damage: 50
+  range: 15
+  impactForce: 20
+  isMelee: 0
+  specialDamage: 30
+  isThrowable: 1
+  delay: 3.5
+  radius: 6
+  bulletsPerShot: 1
+  magazineAmmo: 1
+  maxAmmo: 4
+  reloadTime: 0.5
+  spreadFactorX: 0
+  spreadFactorY: 0
+  isAutomatic: 0
+  fireRate: 15

@@ -14,15 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Rifle
   damage: 20
-  specialDamage: 30
   range: 50
+  impactForce: 30
   isMelee: 0
+  specialDamage: 30
+  isThrowable: 0
+  delay: 3
+  radius: 20
   bulletsPerShot: 1
   magazineAmmo: 30
   maxAmmo: 90
   reloadTime: 2.8
   spreadFactorX: 0.03
   spreadFactorY: 0.05
-  isAutomatic: 0
+  isAutomatic: 1
   fireRate: 15
-  impactForce: 30

@@ -19,6 +19,12 @@ public class MeleeGun : Gun
     Sound specialAttackSound = null;
     [SerializeField]
     Sound idleSound = null;
+    [SerializeField]
+    Sound showOffSound = null;
+    [SerializeField]
+    Sound showSound = null;
+    [SerializeField]
+    Sound hideSound = null;
 
     [Header("Particles")]
     [SerializeField]
@@ -42,7 +48,8 @@ public class MeleeGun : Gun
     [Header("HUD")]
     [SerializeField]
     TextMeshProUGUI text;
-
+    bool isShooting = false;
+    float damage = 0;
     PhotonView PV;
 
     void Start()
@@ -56,6 +63,7 @@ public class MeleeGun : Gun
     {
         anim = itemGameObject.GetComponent<Animator>();
         PV = GetComponent<PhotonView>();
+        showSound.PlayOneShot(transform);
     }
 
     //Shoot or hit
@@ -78,27 +86,67 @@ public class MeleeGun : Gun
 
     void Shoot(int typeOfAttack)
     {
-        //Standard damage used for the attack. Will be increased if special attack
-        float damage = ((GunInfo)itemInfo).damage;
-
-        //Camera shake if any
-        //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
-        CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
-
-        //Shoot animation
-        if (typeOfAttack == 0)
+        if (!isShooting)
         {
-            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+            //Standard damage used for the attack. Will be increased if special attack
+            damage = ((GunInfo)itemInfo).damage;
+
+            //Camera shake if any
+            //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
+            CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
+
+            //Shoot animation
+            if (typeOfAttack == 0)
+            {
+                anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+                //Sound
+                shootSound.PlayOneShot(transform);
+            }
+            else if (typeOfAttack == 1)
+            {
+                anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_SPECIALATTACK);
+                damage = ((GunInfo)itemInfo).specialDamage;
+                //Sound
+                specialAttackSound.PlayOneShot(transform);
+            }
+
+            //here on after, the animation is the one responsible for detecting hits and bullet holes, on DetectDamage() below
+
         }
-        else if (typeOfAttack == 1)
+    }
+
+    [PunRPC]
+    void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal)
+    {
+        Collider[] colliders = Physics.OverlapSphere(hitPosition, 0.3f);
+        if (colliders.Length != 0)
         {
-            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_SPECIALATTACK);
-            damage = ((GunInfo)itemInfo).specialDamage;
+            GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
+            //Destroy(bulletImpactObj, 10f);
+            bulletImpactObj.transform.SetParent(colliders[0].transform);
         }
+    }
+    //Instead of reload, the melee launches a taunt
+    public override void Reload()
+    {
+        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TAUNT);
+        showOffSound.PlayOneShot(transform);
+    }
 
-        //Sound
-        shootSound.PlayOneShot(transform);
 
+    //For animation events
+    public override void AttackStart()
+    {
+        isShooting = true;
+    }
+
+    public override void AttackEnd()
+    {
+        isShooting = false;
+    }
+
+    public override void DetectDamage()
+    {
         //Muzzle Flash VFX
         if (muzzleFlash != null)
             muzzleFlash.Play();
@@ -111,6 +159,7 @@ public class MeleeGun : Gun
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         ray.origin = cam.transform.position;
+        Debug.DrawRay(ray.origin, shootDirection * ((GunInfo)itemInfo).range, Color.blue, 3.0f);
 
         if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit))
         {
@@ -134,24 +183,4 @@ public class MeleeGun : Gun
             }
         }
     }
-
-    [PunRPC]
-    void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal)
-    {
-        Collider[] colliders = Physics.OverlapSphere(hitPosition, 0.3f);
-        if (colliders.Length != 0)
-        {
-            GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
-            //Destroy(bulletImpactObj, 10f);
-            bulletImpactObj.transform.SetParent(colliders[0].transform);
-        }
-    }
-    //Instead of reload, the melee launches a taunt
-    public override void Reload()
-    {
-        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TAUNT);
-    }
-
-
-
 }

@@ -62,17 +62,24 @@
 			<destination>{eb928966-6f5c-432b-af5b-96ca8e989473}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{d7430bea-6599-4f29-b912-504752355f8a}" />
+	<object class="EventAutomatableProperties" id="{d7430bea-6599-4f29-b912-504752355f8a}">
+		<property name="maxVoices">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{caec43db-3ec3-44d9-8b2b-a8b17f5b5460}" />
 	<object class="GroupTrack" id="{da6469fb-3571-4580-bb8d-bb7c110f8b69}">
+		<relationship name="modules">
+			<destination>{c98c60cf-b52f-4ba2-bb1c-e26ccc91747f}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{f8d612f2-2b63-4e3b-9654-891430266766}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{4b46bb7b-2ea8-4e60-99bd-84cc23da7af9}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{c98c60cf-b52f-4ba2-bb1c-e26ccc91747f}</destination>
+		</relationship>
 	</object>
 	<object class="ActionSheet" id="{13c9e0c7-af47-4a03-8009-b02db49bab64}">
 		<relationship name="modules">
@@ -97,6 +104,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8caffb19-051b-4f9f-92d8-42488d0318cd}" />
+	<object class="SingleSound" id="{c98c60cf-b52f-4ba2-bb1c-e26ccc91747f}">
+		<property name="start">
+			<value>0.082000000000000003</value>
+		</property>
+		<property name="length">
+			<value>0.276984126984127</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{24aa20a4-6a44-4cd2-a642-25dad584466b}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{f8d612f2-2b63-4e3b-9654-891430266766}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -116,7 +134,11 @@
 			<destination>{9e5ebe63-d50f-4691-894a-9ebe42b1c619}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{93bc22a9-004e-4a42-ad8c-ca4325f9f2ff}" />
+	<object class="MixerBusPanner" id="{93bc22a9-004e-4a42-ad8c-ca4325f9f2ff}">
+		<property name="overridingOutputFormat">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{72ce7bd4-9a27-4b8a-8982-e90be3cd4e23}" />
 	<object class="MixerBusEffectChain" id="{57a900b3-8034-423b-a5f2-70dad5542c26}">
 		<relationship name="effects">

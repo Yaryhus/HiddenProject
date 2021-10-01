@@ -62,7 +62,11 @@
 			<destination>{eb928966-6f5c-432b-af5b-96ca8e989473}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{483a44f9-8b1d-4b27-80db-a10b4dd49b27}" />
+	<object class="EventAutomatableProperties" id="{483a44f9-8b1d-4b27-80db-a10b4dd49b27}">
+		<property name="maxVoices">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{3d24588c-e3b9-465e-9213-b7d06d4e802b}" />
 	<object class="GroupTrack" id="{5508c5d0-c6d4-4182-8a04-fd7fe08d5196}">
 		<relationship name="mixerGroup">
@@ -116,7 +120,11 @@
 			<destination>{0809272e-7ba0-44f7-bda3-505359a7be2e}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{d947fdb5-bae9-4fe5-a157-3e10b59f901f}" />
+	<object class="MixerBusPanner" id="{d947fdb5-bae9-4fe5-a157-3e10b59f901f}">
+		<property name="overridingOutputFormat">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{7919e80f-d085-4b0e-bb14-3a1cc10be32b}" />
 	<object class="MixerBusEffectChain" id="{173470cd-f563-4724-a0d1-feac401a9c07}">
 		<relationship name="effects">
