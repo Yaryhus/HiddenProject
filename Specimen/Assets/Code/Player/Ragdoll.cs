@@ -31,7 +31,7 @@ public class Ragdoll : MonoBehaviour
 
     void Update()
     {
-        /*
+        
         if (Input.GetKeyDown(KeyCode.P))
         {
             SetEnabled(true);
@@ -41,7 +41,7 @@ public class Ragdoll : MonoBehaviour
         {
             SetEnabled(false);
         }
-        */
+        
     }
 
 }
