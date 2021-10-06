@@ -1,5 +1,6 @@
 using EZCameraShake;
 using Photon.Pun;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,9 +11,14 @@ public class SingleShotGun : Gun
     [Header("Required Components")]
     [SerializeField] Camera cam;
     [SerializeField] Animator anim;
-    [SerializeField] GameObject bullet;
-    [SerializeField] List<GameObject> bullets;
     [SerializeField] Transform initialBulletPos;
+
+    //Drop bullets from a pool of bullets from certain prefab
+    [ValueDropdown("TypeOfBullet")]
+    [SerializeField] string typeOfBullet;
+    string[] TypeOfBullet = { "RifleBullets", "ShotgunBullets", "PistolBullets" };
+    ObjectPooler objectPooler;
+
 
     [Header("Sounds")]
     [SerializeField]
@@ -48,32 +54,36 @@ public class SingleShotGun : Gun
     [Tooltip("Cuanto tarda en irse")]
     float shakeFadeOutTime = 1f;
 
-
     [Header("HUD")]
     [SerializeField]
     TextMeshProUGUI text;
 
-    public bool isAutomatic = false;
-    //Reload
-    private int currentAmmo, bulletShot;
-    private WaitForSeconds reloadWait;
-    private WaitForSeconds reloadWaitTransition;
-    private bool isReloading = false;
-
-
-    //Shoot automatic
-    private float nextTimeToFire = 0f;
-    public float fireRate = 0;
     [Header("Debug options to mess around")]
     [SerializeField]
     float maxAmmo;
     [SerializeField]
     bool infiniteAmmo = false;
 
-    PhotonView PV;
-    bool isShooting = false;
+    //Reload
+    private int currentAmmo, bulletShot;
+    private WaitForSeconds reloadWait;
+    private WaitForSeconds reloadWaitTransition;
+    private bool isReloading = false;
 
-    int bulletsDropIndex = 0;
+    //Shoot automatic
+    private float nextTimeToFire = 0f;
+    public float fireRate = 0;
+    bool isAutomatic = false;
+
+    //Shoot and aim
+    bool isShooting = false;
+    float spreadFactorX;
+    float spreadFactorY;
+    bool aiming = false;
+
+
+    //Photon and MP components
+    PhotonView PV;
 
     void Start()
     {
@@ -81,6 +91,13 @@ public class SingleShotGun : Gun
         isAutomatic = ((GunInfo)itemInfo).isAutomatic;
         maxAmmo = ((GunInfo)itemInfo).maxAmmo;
         fireRate = ((GunInfo)itemInfo).fireRate;
+        spreadFactorX = ((GunInfo)itemInfo).spreadFactorX;
+        spreadFactorY = ((GunInfo)itemInfo).spreadFactorY;
+        bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
+
+        //Bullets pool
+        objectPooler = ObjectPooler.Instance;
+
     }
 
     void Awake()
@@ -90,13 +107,19 @@ public class SingleShotGun : Gun
         PV = GetComponent<PhotonView>();
         isAutomatic = ((GunInfo)itemInfo).isAutomatic;
         fireRate = ((GunInfo)itemInfo).fireRate;
-
+        bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
         //Setting up ammo
         reloadWait = new WaitForSeconds(((GunInfo)itemInfo).reloadTime - .25f);
         reloadWaitTransition = new WaitForSeconds(.25f);
         currentAmmo = ((GunInfo)itemInfo).magazineAmmo;
         showSound.PlayOneShot(transform);
 
+        objectPooler = ObjectPooler.Instance;
+    }
+
+    public bool GetIsAutomatic()
+    {
+        return isAutomatic;
     }
 
     public override void Use()
@@ -110,30 +133,11 @@ public class SingleShotGun : Gun
                 emptySound.Play(transform);
             }
 
-            /*
-            //Shooting is automatic
-            else if (((GunInfo)itemInfo).isAutomatic)
+            //Shooting
+            if (currentAmmo > 0)
             {
-                if (Time.time >= nextTimeToFire && currentAmmo > 0)
-                {
-                    bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
-                    nextTimeToFire = Time.time + 1f / ((GunInfo)itemInfo).fireRate;
-                    Shoot();
-                }
-
-            }*/
-
-            //Shooting if semiautomatic
-          //  else
-            //{
-                if (currentAmmo > 0)
-                {
-                    bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
-                    Shoot();
-                }
-
-           // }
-
+                Shoot();
+            }
         }
 
 
@@ -160,31 +164,26 @@ public class SingleShotGun : Gun
 
     void Shoot()
     {
-        if (currentAmmo == 0)
-            emptySound.PlayOneShot(transform);
 
-        if (!isShooting)
-        {
-            //Debug.Log("I shot");
-            currentAmmo--;
-            bulletShot--;
-            //Camera shake if any
-            //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
-            CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
+        currentAmmo-= bulletShot;        
 
-            //Shoot animation
-            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+        //Camera shake if any
+        //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
+        CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
 
-            //Sound
-            shootSound.PlayOneShot(transform);
+        //Shoot animation
+        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
 
-            //Muzzle Flash VFX
-            if (muzzleFlash != null)
-                muzzleFlash.Play();
-            
-            //Normally we would call this method in animations but since shot animations are so short it does skip sometimes the event call
-            DetectDamage();          
-        }
+        //Sound
+        shootSound.PlayOneShot(transform);
+
+        //Muzzle Flash VFX
+        if (muzzleFlash != null)
+            muzzleFlash.Play();
+
+        //Normally we would call this method in animations but since shot animations are so short it does skip sometimes the event call
+        DetectDamage();
+        //}
     }
 
     [PunRPC]
@@ -204,7 +203,7 @@ public class SingleShotGun : Gun
         isReloading = true;
         anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_RELOAD);
         reloadSound.Play(transform);
-        
+
         //wait Reload Time
         yield return reloadWait;
         //wait for the transition to end
@@ -224,35 +223,47 @@ public class SingleShotGun : Gun
 
     public override void Aim()
     {
-        aimSound.Play(transform);
+        //If we are aiming we stop aiming, and viceversa. WE also are more accureate while aiming, but slower moving.
+        if (!aiming)
+        {
+            aiming = true;
+            aimSound.Play(transform);
+            anim.SetBool(GlobalVariablesAndStrings.ANIM1_BOOLEAN_AIM, true);
+
+            spreadFactorX = spreadFactorX / 2;
+            spreadFactorY = spreadFactorY / 2;
+            GetComponentInParent<FPSMovementController>().DecreaseSpeed(2.0f);
+        }
+        else
+        {
+            aiming = false;
+            aimSound.Play(transform);
+            anim.SetBool(GlobalVariablesAndStrings.ANIM1_BOOLEAN_AIM, false);
+            spreadFactorX = ((GunInfo)itemInfo).spreadFactorX;
+            spreadFactorY = ((GunInfo)itemInfo).spreadFactorY;
+            GetComponentInParent<FPSMovementController>().IncreaseSpeed(2.0f);
+
+        }
     }
 
+    //TO DO - CLEAN THIS METHODS AND THE ANIMATION EVENTS INSIDE THE RIFLE/PISTOL ANIMATOR
     //For animation events
     public override void AttackStart()
     {
-        isShooting = true;
+        //isShooting = true;
     }
 
     public override void AttackEnd()
     {
-        isShooting = false;
+        //isShooting = false;
     }
 
     public override void DetectDamage()
     {
-        Debug.Log("He disparado de verdad");
-        //Ciclic loop for getting a different bullet everytime
-        if (bulletsDropIndex == bullets.Capacity - 1)
-        {
-            bulletsDropIndex = 0;
-        }
-        else
-        {
-            bulletsDropIndex++;
-        }
-        //Throw Bullet
-        ThrowBullet(bulletsDropIndex);
+        //Debug.Log("He disparado de verdad");
 
+        //Throw Bullet prefab (from pool)
+        ThrowBullet();
 
         //Spray for weapon
         Vector3 shootDirection = cam.transform.forward;
@@ -286,27 +297,11 @@ public class SingleShotGun : Gun
             }
         }
     }
-    void ThrowBullet(int index)
+
+    //Throw bullet prefab from pool
+    void ThrowBullet()
     {
-        bullets[index].SetActive(true);
-        bullets[index].GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 0) * 3.0f, ForceMode.Impulse);
-        StartCoroutine(BulletReturn(bullets[index]));
-    }
-
-    IEnumerator BulletReturn(GameObject _bullet)
-    {
-        //Reset the bullet to their initial pos when 1 second passed.
-        Rigidbody rigidbody = _bullet.GetComponent<Rigidbody>();
-        yield return new WaitForSeconds(1.0f);
-        //Hide and reset the bullet
-
-        _bullet.SetActive(false);
-
-        rigidbody.velocity = new Vector3(0f, 0f, 0f);
-        rigidbody.angularVelocity = new Vector3(0f, 0f, 0f);
-
-        _bullet.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
-        _bullet.transform.position = initialBulletPos.position;
+        objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
 
     }
 }

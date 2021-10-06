@@ -408,15 +408,15 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.97624
-        functionName: AttackEnd
+      - time: 0.41103908
+        functionName: DetectDamage
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: bacb87dea1d70974aa0c6aa0830367b7, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.46135354
-        functionName: DetectDamage
+      - time: 0.97624
+        functionName: AttackEnd
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: bacb87dea1d70974aa0c6aa0830367b7, type: 3}
         floatParameter: 0

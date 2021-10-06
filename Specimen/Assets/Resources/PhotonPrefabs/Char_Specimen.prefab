@@ -1049,12 +1049,12 @@ CharacterJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876712480516438431}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 4940637139491337067}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.8370504, y: 1.4403061, z: -0.04600338}
+  m_ConnectedAnchor: {x: 0.00000008403781, y: 0.23190832, z: 0.000000024800972}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1319,12 +1319,12 @@ CharacterJoint:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721594618809277778}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 7021916974720034889}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.4427295, y: 1.4403043, z: -0.045803517}
+  m_ConnectedAnchor: {x: -0.000000044065622, y: 0.23198059, z: 0.000000038565872}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3593,6 +3593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8061888676810354587}
   - component: {fileID: 7697566388326735389}
+  - component: {fileID: 4314513038333227625}
   m_Layer: 0
   m_Name: Ch30
   m_TagString: Untagged
@@ -3719,6 +3720,28 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00026476383, y: -0.16646612, z: 0.04448241}
     m_Extent: {x: 0.91124403, y: 0.9440024, z: 0.25346297}
   m_DirtyAABB: 0
+--- !u!114 &4314513038333227625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7371395080021133659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7449290985133098200
 GameObject:
   m_ObjectHideFlags: 0

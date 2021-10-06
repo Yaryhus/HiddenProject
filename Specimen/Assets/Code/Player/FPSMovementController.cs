@@ -106,7 +106,6 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     Animator firstPersonAnimator;
 
     [Header("Body for third person")]
-    [Tooltip("Temporal: With this apporach local user does not see themself but there are no shadows or legs to look locally")]
     [SerializeField]
     GameObject userBody;
 
@@ -117,12 +116,18 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     Rigidbody body;
     bool playerIsMoving = false;
 
+    Transform objectInteracted;
+
     PhotonView PV;
 
-    Transform cam;
+    public Transform cam;
+
+    InteractManager interactManager;
 
     //Shooting variables needeed here because of the Update Method.
     private float nextTimeToFire = 0f;
+
+    public bool IsInteracting { get; private set; }
 
     void Start()
     {
@@ -137,12 +142,18 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         PV = GetComponent<PhotonView>();
         body = GetComponent<Rigidbody>();
         GlobalVariablesAndStrings.PLAYER = transform;
+        interactManager = GetComponent<InteractManager>();
+
+        //Find what body are we using to get the animator
+        thirdPersonAnimator = body.GetComponentInChildren<Animator>();
+
+
 
         if (PV.IsMine)
         {
             EquipItem(0);
             //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows)
-            //userBody.SetActive(false);
+            userBody.SetActive(false);
         }
         else
         {
@@ -164,6 +175,20 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         PV = GetComponent<PhotonView>();
         body = GetComponent<Rigidbody>();
         playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
+
+        cam = GetComponentInChildren<Camera>().transform;
+        currentHealth = maxHealth;
+        currentSpeed = speed;
+        currentStamina = maxStamina;
+
+        healthbarImage.fillAmount = currentHealth / maxHealth;
+        staminabarImage.fillAmount = currentStamina / maxStamina;
+        GlobalVariablesAndStrings.PLAYER = transform;
+        interactManager = GetComponent<InteractManager>();
+
+        //Find what body are we using to get the animator
+        thirdPersonAnimator = body.GetComponentInChildren<Animator>();
+
 
         jumpSound.Init();
         walkSound.Init();
@@ -204,8 +229,35 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         UpdateAmmoText();
 
         //Shooting and item usage
-        Shoot();
-        Aim();
+        //Shoot();
+
+        //Shooting while not carrying an object
+        if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic() && Input.GetButton("Shoot") && interactManager.isHolding.Equals(false))
+        {
+            ShootAuto();
+        }
+        else if (Input.GetButtonDown("Shoot") && interactManager.isHolding.Equals(false))
+        {
+            ShootSemi();
+        }
+
+
+        //Shooting while carrying an object attachs it to the wall
+        if (Input.GetButtonDown("Shoot") && interactManager.isHolding.Equals(true))
+        {
+            interactManager.AttachToObject();
+        }
+
+        //Aim
+        if (Input.GetButtonDown("Aim"))
+        {
+            Aim();
+        }
+
+        if (Input.GetButtonUp("Aim"))
+        {
+            //StopAim();
+        }
         Reload();
 
         //falling off the map
@@ -213,6 +265,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             Die();
         }
+
+        if (Input.GetButtonDown("Interact"))
+        {
+            interactManager.PickUpObject();
+        }
+
     }
 
     private void UpdateAmmoText()
@@ -244,43 +302,37 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     private void Aim()
     {
-        //Aim
-        if (Input.GetButtonDown("Aim"))
-        {
-            ((Gun)items[itemIndex]).Aim();
-        }
+        ((Gun)items[itemIndex]).Aim();
     }
 
-    private void Shoot()
+    private void ShootSemi()
     {
-        //Use item or shoot semi
-        if (Input.GetButtonDown("Shoot"))
-        {
-            if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().isAutomatic)
-                return;
+        items[itemIndex].Use();
+        Debug.Log("Disparo semi");
+    }
 
-            items[itemIndex].Use();
-        }
-
+    private void ShootAuto()
+    {
+        Debug.Log("Disparo auto");
 
         //Particular case: Automatic fire
-        if (Input.GetButton("Shoot") && items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().isAutomatic)
+        if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic())
         {
-            if (Time.time >= nextTimeToFire)
+            if (Time.time - nextTimeToFire > 1 / items[itemIndex].GetComponent<SingleShotGun>().fireRate)
             {
-                nextTimeToFire = Time.time + 1f / items[itemIndex].GetComponent<SingleShotGun>().fireRate;
+                nextTimeToFire = Time.time;
                 items[itemIndex].Use();
-                Debug.Log("Disparo");
+                //Debug.Log("Disparo");
             }
         }
 
     }
-
     void Sprint()
     {
         //Sprint
         if (Input.GetButton("Sprint") && currentStamina >= sprintStaminaCost)
         {
+            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 2f);
             currentSpeed = sprintSpeed;
             currentStamina -= sprintStaminaCost * Time.deltaTime;
             isSprinting = true;
@@ -289,6 +341,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         }
         if (Input.GetButtonUp("Sprint"))
         {
+            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 1f);
             currentSpeed = speed;
             isSprinting = false;
             //Debug.Log("Stopped Sprinting");
@@ -361,6 +414,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //Debug.Log("Salto y me queda " + currentStamina + " de estamina");
 
     }
+
     void Leap()
     {
         //Leap if Hidden
@@ -378,6 +432,46 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //After launching we reset the speed
         StartCoroutine(ResetVelocity());
     }
+
+    /*
+    void Interact(bool interact)
+    {
+
+        RaycastHit hit;
+
+        if (interact)
+        {
+
+            if (!IsInteracting)
+            {
+
+                IsInteracting = true;
+                Debug.DrawRay(cam.position, cam.forward, Color.blue, 3.0f);
+                if (Physics.Raycast(cam.position, cam.forward, out hit, 1.0f))
+                {
+                    Debug.Log("I interacted with " + hit.transform.name);
+                    objectInteracted = hit.transform;
+                    objectInteracted.transform.parent = transform;
+                    objectInteracted.transform.GetComponent<Rigidbody>().isKinematic = !enabled;
+                }
+
+            }
+        }
+        else
+        {
+            IsInteracting = false;
+            if (objectInteracted != null)
+            {
+
+                objectInteracted.transform.parent = null;
+                if (objectInteracted.GetComponent<Rigidbody>() != null)
+                    objectInteracted.GetComponent<Rigidbody>().isKinematic = enabled;
+            }
+            else
+                return;
+        }
+    }
+    */
 
     IEnumerator ResetVelocity()
     {
@@ -410,11 +504,13 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             {
                 //Debug.Log ("Player is moving");
                 playerIsMoving = true;
+                firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 1f);
             }
             else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
             {
                 //Debug.Log ("Player is not moving");
                 playerIsMoving = false;
+                firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 0f);
             }
 
             //Basic Movement
@@ -515,10 +611,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         deadSound.Play(transform);
 
         //Activate Ragdoll and unparent to all server
+        userBody.SetActive(true);
         userBody.gameObject.SetActive(true);
-        userBody.GetComponentInChildren<Ragdoll>().SetEnabled(true);
         userBody.transform.parent = null;
         userBody.name = "Ragdoll";
+
+        userBody.GetComponentInChildren<Ragdoll>().SetEnabled(true);
 
     }
 
@@ -580,5 +678,17 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         }
 
 
+    }
+
+    public void DecreaseSpeed(float ammount)
+    {
+        speed -= ammount;
+        sprintSpeed -= ammount;
+    }
+
+    public void IncreaseSpeed(float ammount)
+    {
+        speed += ammount;
+        sprintSpeed += ammount;
     }
 }

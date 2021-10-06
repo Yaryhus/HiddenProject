@@ -14,4 +14,5 @@ public abstract class Gun : Item
     public abstract void DetectDamage();
 
     public GameObject bulletImpactPrefab;
+    public GameObject parent;
 }

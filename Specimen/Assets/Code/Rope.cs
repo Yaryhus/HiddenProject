@@ -10,7 +10,7 @@ public class Rope : MonoBehaviour
     private SpringJoint joint;
 
 
-    public LayerMask whatIsGrappleable;
+    //public LayerMask whatIsGrappleable;
     public Transform origin, endObject;
 
     public float spring=4.5F;
@@ -22,8 +22,15 @@ public class Rope : MonoBehaviour
         lr = GetComponent<LineRenderer>();
     }
 
+    private void Start()
+    {
+        lr = GetComponent<LineRenderer>();
+
+    }
+
     void Update()
     {
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             StartGrapple();
@@ -33,6 +40,7 @@ public class Rope : MonoBehaviour
         {
             StopGrapple();
         }
+        */
     }
 
     //Called after Update
@@ -44,7 +52,7 @@ public class Rope : MonoBehaviour
     /// <summary>
     /// Call whenever we want to start a grapple
     /// </summary>
-    void StartGrapple()
+    public void StartGrapple()
     {
         grapplePoint = endObject.position;
         joint = origin.gameObject.AddComponent<SpringJoint>();

@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   itemName: Pistol
-  damage: 10
+  damage: 15
   range: 10
+  impactForce: 20
+  isMelee: 0
+  specialDamage: 30
+  isThrowable: 0
+  delay: 3
+  radius: 20
   bulletsPerShot: 1
   magazineAmmo: 10
   maxAmmo: 50
@@ -22,5 +28,4 @@ MonoBehaviour:
   spreadFactorX: 0.08
   spreadFactorY: 0.05
   isAutomatic: 0
-  fireRate: 15
-  impactForce: 20
+  fireRate: 1
