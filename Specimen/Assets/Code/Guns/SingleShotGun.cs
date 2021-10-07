@@ -12,6 +12,7 @@ public class SingleShotGun : Gun
     [SerializeField] Camera cam;
     [SerializeField] Animator anim;
     [SerializeField] Transform initialBulletPos;
+    [SerializeField] LayerMask ignoreLayers;
 
     //Drop bullets from a pool of bullets from certain prefab
     [ValueDropdown("TypeOfBullet")]
@@ -165,7 +166,7 @@ public class SingleShotGun : Gun
     void Shoot()
     {
 
-        currentAmmo-= bulletShot;        
+        currentAmmo -= bulletShot;
 
         //Camera shake if any
         //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
@@ -275,7 +276,7 @@ public class SingleShotGun : Gun
         ray.origin = cam.transform.position;
 
         Debug.DrawRay(ray.origin, shootDirection * ((GunInfo)itemInfo).range, Color.blue, 3.0f);
-        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit))
+        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ignoreLayers))
         {
             //if hit is in range
             if (hit.distance <= ((GunInfo)itemInfo).range)
@@ -286,9 +287,35 @@ public class SingleShotGun : Gun
                     hit.rigidbody.AddForce(-hit.normal * ((GunInfo)itemInfo).impactForce);
                 }
 
-                hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage);
+                float _damage = ((GunInfo)itemInfo).damage;
+
+                //Apply damage to players
+                if (hit.collider.gameObject.GetComponent<HitBoxBodyPart>())
+                {
+                    Debug.Log("Detected a body part");
+                    string bodypart = hit.collider.gameObject.GetComponent<HitBoxBodyPart>().GetBodyPartType();
+                    Debug.Log(bodypart);
+
+                    switch (bodypart)
+                    {
+                        case "ArmsOrLegs":
+                            _damage = _damage * GlobalVariablesAndStrings.DAMAGE_MULT_ARMORLEG;
+                            break;
+                        case "Torso":
+                            _damage = _damage * GlobalVariablesAndStrings.DAMAGE_MULT_TORSO;
+                            break;
+                        case "Head":
+                            _damage = _damage * GlobalVariablesAndStrings.DAMAGE_MULT_HEAD;
+                            break;
+                        case "null":
+                            break;
+
+                    }
+                }
+                Debug.Log("I hit " + hit.collider.gameObject.name + " with this damage " + _damage);
+                //We apply the damage to the owner of the body if any
+                hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(_damage);                
                 PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
-                Debug.Log(hit.collider.gameObject.name);
 
             }
             else

@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 2206099866455575280}
   - component: {fileID: 9168584039345377751}
   - component: {fileID: 3868690516583357771}
+  - component: {fileID: 453831296378418420}
   m_Layer: 0
   m_Name: swat:LeftUpLeg
   m_TagString: Untagged
@@ -862,7 +863,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.09633798, y: -0.03273301, z: -0.000000016435333}
+  m_ConnectedAnchor: {x: -0.09633798, y: -0.03273301, z: -8.9388635e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -896,6 +897,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &453831296378418420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614519756149741840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &896905690462692891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1106,7 @@ GameObject:
   - component: {fileID: 3160454257636363060}
   - component: {fileID: 515369789262885156}
   - component: {fileID: 751606719578096838}
+  - component: {fileID: 1942346995059854143}
   m_Layer: 0
   m_Name: swat:RightForeArm
   m_TagString: Untagged
@@ -1156,7 +1171,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.27686998, y: 0.00000007769138, z: 0.0000000018626425}
+  m_ConnectedAnchor: {x: 0.27686998, y: 0.00000007769138, z: -0.000000005587938}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -1190,6 +1205,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1942346995059854143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021491881276909909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &2084560340578543423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1419,7 @@ GameObject:
   - component: {fileID: 1408594348085901007}
   - component: {fileID: 2722985145758973443}
   - component: {fileID: 570357233240538555}
+  - component: {fileID: 5372747368139855434}
   m_Layer: 0
   m_Name: swat:RightHand
   m_TagString: Untagged
@@ -1428,10 +1457,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.099220544
-  m_Height: 0.19844109
-  m_Direction: 1
-  m_Center: {x: 0.11591169, y: -0.009823024, z: -6.307298e-15}
+  m_Radius: 0.045859594
+  m_Height: 0.21479774
+  m_Direction: 0
+  m_Center: {x: 0.113185346, y: 0.007079512, z: -0.0065580346}
 --- !u!54 &2722985145758973443
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1494,6 +1523,19 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5372747368139855434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656000430972396446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &2925411192049548572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,6 +1746,7 @@ GameObject:
   - component: {fileID: 300925923765532875}
   - component: {fileID: 8151222587825007971}
   - component: {fileID: 6658177048858916248}
+  - component: {fileID: 1846363056172444136}
   m_Layer: 0
   m_Name: swat:LeftArm
   m_TagString: Untagged
@@ -1768,7 +1811,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.18463299, y: 0.090740025, z: -0.055867005}
+  m_ConnectedAnchor: {x: -0.184633, y: 0.090740025, z: -0.055866998}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -1802,6 +1845,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1846363056172444136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3142541435253842284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &3207879560193744583
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,6 +2110,7 @@ GameObject:
   - component: {fileID: 8748738005146134034}
   - component: {fileID: 3477092693532483096}
   - component: {fileID: 6220702288185373291}
+  - component: {fileID: 4837444162986904440}
   m_Layer: 0
   m_Name: swat:Spine2
   m_TagString: Untagged
@@ -2119,7 +2176,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000020993704, y: 0.39119905, z: 0.0011919548}
+  m_ConnectedAnchor: {x: 0.00000020815037, y: 0.39119905, z: 0.0011919998}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2153,6 +2210,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4837444162986904440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3648616114948695427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: Torso
 --- !u!1 &3651071838785246471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,6 +2235,7 @@ GameObject:
   - component: {fileID: 4036312792357923738}
   - component: {fileID: 4885907338088157068}
   - component: {fileID: 8860262753311607288}
+  - component: {fileID: 5546327091524371769}
   m_Layer: 0
   m_Name: swat:RightLeg
   m_TagString: Untagged
@@ -2229,7 +2300,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000649016, y: -0.41761833, z: -0.0057859262}
+  m_ConnectedAnchor: {x: 0.00006489415, y: -0.41761833, z: -0.0057858936}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -2263,6 +2334,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &5546327091524371769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3651071838785246471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &3838719929742686899
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,6 +2500,7 @@ GameObject:
   - component: {fileID: 6796674802475308324}
   - component: {fileID: 2281152476497258063}
   - component: {fileID: 3106083616836975717}
+  - component: {fileID: 1908311415051692648}
   m_Layer: 0
   m_Name: swat:LeftForeArm
   m_TagString: Untagged
@@ -2480,7 +2565,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.27686998, y: 0.000000035929975, z: -0.000000007450582}
+  m_ConnectedAnchor: {x: -0.27686998, y: 0.000000035929975, z: -2.1057955e-15}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -2514,6 +2599,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1908311415051692648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284301035523866349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &4383447394565821000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,6 +2748,7 @@ GameObject:
   - component: {fileID: 3854853889109241168}
   - component: {fileID: 6905640466912538552}
   - component: {fileID: 6677327800890062649}
+  - component: {fileID: 6204439632798234202}
   m_Layer: 0
   m_Name: swat:LeftFoot
   m_TagString: Untagged
@@ -2748,6 +2847,19 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6204439632798234202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4883627705654912322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &4934362660508211319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2974,6 +3086,7 @@ GameObject:
   - component: {fileID: 8851861539770931725}
   - component: {fileID: 7257954553181984725}
   - component: {fileID: 7347871367760896557}
+  - component: {fileID: 7767361442451066348}
   m_Layer: 0
   m_Name: swat:LeftHand
   m_TagString: Untagged
@@ -3010,10 +3123,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.10287836
-  m_Height: 0.20575675
-  m_Direction: 1
-  m_Center: {x: -0.11608037, y: -0.008729503, z: 1.04749956e-14}
+  m_Radius: 0.050346497
+  m_Height: 0.22105014
+  m_Direction: 0
+  m_Center: {x: -0.10941702, y: 0.007642016, z: -0.0028274357}
 --- !u!54 &7257954553181984725
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3042,7 +3155,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.278738, y: 0.000000035705387, z: 0.0000000023089641}
+  m_ConnectedAnchor: {x: -0.278738, y: 0.000000035705387, z: -0.000000005141617}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3076,6 +3189,19 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &7767361442451066348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212767248293680105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &5252029913850342425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3231,6 +3357,7 @@ GameObject:
   - component: {fileID: 2094029264649915445}
   - component: {fileID: 8604001242943655510}
   - component: {fileID: 153330273925645255}
+  - component: {fileID: 1928723521712266577}
   m_Layer: 0
   m_Name: swat:Head
   m_TagString: Untagged
@@ -3297,7 +3424,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000000017865769, y: 0.2224401, z: -0.025687978}
+  m_ConnectedAnchor: {x: 1.01846334e-13, y: 0.2224401, z: -0.025688}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3331,6 +3458,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1928723521712266577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6091221369776866657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: Head
 --- !u!1 &6173318846158176810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,6 +3635,7 @@ GameObject:
   - component: {fileID: 934841805179084918}
   - component: {fileID: 3880750878496851184}
   - component: {fileID: 8045129645032269243}
+  - component: {fileID: 880132792075976386}
   m_Layer: 0
   m_Name: swat:RightFoot
   m_TagString: Untagged
@@ -3559,7 +3700,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000064938584, y: -0.39148232, z: -0.019976646}
+  m_ConnectedAnchor: {x: -0.000064946034, y: -0.39148232, z: -0.019976638}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 1, z: 0}
   m_TwistLimitSpring:
@@ -3593,6 +3734,19 @@ CharacterJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &880132792075976386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071271156929807446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &7188208411292006626
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,6 +3790,7 @@ GameObject:
   - component: {fileID: 1577973239831164185}
   - component: {fileID: 2232258195507303395}
   - component: {fileID: 6006666201377594842}
+  - component: {fileID: 3336430774929769162}
   m_Layer: 0
   m_Name: swat:RightArm
   m_TagString: Untagged
@@ -3700,7 +3855,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.18463302, y: 0.090740025, z: -0.055866998}
+  m_ConnectedAnchor: {x: 0.184633, y: 0.090740025, z: -0.055867005}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -3734,6 +3889,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3336430774929769162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7260903096101811724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &7310566492141077698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,6 +4099,7 @@ GameObject:
   - component: {fileID: 106563469521371579}
   - component: {fileID: 4401865045289504382}
   - component: {fileID: 7388367674012983252}
+  - component: {fileID: 1052835866859998941}
   m_Layer: 0
   m_Name: swat:Hips
   m_TagString: Untagged
@@ -3984,6 +4153,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1052835866859998941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256695621850822205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: Torso
 --- !u!1 &8292842112273222844
 GameObject:
   m_ObjectHideFlags: 0
@@ -4087,6 +4269,7 @@ GameObject:
   - component: {fileID: 550551899966733507}
   - component: {fileID: 875358969885755218}
   - component: {fileID: 8819654150697600979}
+  - component: {fileID: 4844298703543692951}
   m_Layer: 0
   m_Name: swat:LeftLeg
   m_TagString: Untagged
@@ -4151,7 +4334,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00006489887, y: -0.41761896, z: -0.0057419753}
+  m_ConnectedAnchor: {x: 0.00006489887, y: -0.41761896, z: -0.00574203}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -4185,6 +4368,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4844298703543692951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445973544696257031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &8448410931746829038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4289,6 +4485,7 @@ GameObject:
   - component: {fileID: 1555255252691923230}
   - component: {fileID: 5824444229685305148}
   - component: {fileID: 5935740957936483431}
+  - component: {fileID: 2855610721480673127}
   m_Layer: 0
   m_Name: swat:RightUpLeg
   m_TagString: Untagged
@@ -4353,7 +4550,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.09633801, y: -0.03273298, z: -0.000000021283235}
+  m_ConnectedAnchor: {x: 0.096338004, y: -0.03273298, z: 8.938856e-10}
   serializedVersion: 2
   m_SwingAxis: {x: 0, y: 0, z: 1}
   m_TwistLimitSpring:
@@ -4387,6 +4584,19 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &2855610721480673127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8820546472636920129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d920125b7559b04caac4774e63c72bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodypart: ArmsOrLegs
 --- !u!1 &8823291673082245376
 GameObject:
   m_ObjectHideFlags: 0

@@ -108,6 +108,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [Header("Body for third person")]
     [SerializeField]
     GameObject userBody;
+    [SerializeField]
+    GameObject firsPersonWeapons;
 
     //Private variables
     Vector3 velocity;
@@ -160,6 +162,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             Destroy(cam.gameObject);
             Destroy(body);
             Destroy(ui);
+            controller.enabled = false;
+            firsPersonWeapons.SetActive(false);
         }
 
 
@@ -308,12 +312,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     private void ShootSemi()
     {
         items[itemIndex].Use();
-        Debug.Log("Disparo semi");
+        //Debug.Log("Disparo semi");
     }
 
     private void ShootAuto()
     {
-        Debug.Log("Disparo auto");
+        //Debug.Log("Disparo auto");
 
         //Particular case: Automatic fire
         if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic())
@@ -327,6 +331,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         }
 
     }
+
     void Sprint()
     {
         //Sprint

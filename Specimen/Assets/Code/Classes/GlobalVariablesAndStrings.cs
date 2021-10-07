@@ -14,6 +14,9 @@ public class GlobalVariablesAndStrings : MonoBehaviour
 
     //---------------- PLAYER ------------------------------
     public static Transform PLAYER;
+    public static float DAMAGE_MULT_ARMORLEG = 0.5f;
+    public static float DAMAGE_MULT_TORSO = 1f;
+    public static float DAMAGE_MULT_HEAD = 2.0f;
 
     //------------ MAPS IDs in Build Settings --------------
     public static int  MAP_MAINMENU = 0;
