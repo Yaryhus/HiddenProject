@@ -161,7 +161,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             EquipItem(0);
             //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows)
-            userBody.SetActive(false);
+            //userBody.SetActive(false);
         }
         else
         {
@@ -252,6 +252,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             ShootSemi();
         }
 
+        //if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic() && Input.GetButtonUp("Shoot") && interactManager.isHolding.Equals(false))
+            //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 0.0f);
 
         //Shooting while carrying an object attachs it to the wall
         if (Input.GetButtonDown("Shoot") && interactManager.isHolding.Equals(true))
@@ -326,6 +328,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     private void ShootSemi()
     {
         items[itemIndex].Use();
+        //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
         thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
         //Debug.Log("Disparo semi");
     }
@@ -341,7 +344,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             {
                 nextTimeToFire = Time.time;
                 items[itemIndex].Use();
+                //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
                 thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
+
                 //Debug.Log("Disparo");
             }
         }
@@ -351,7 +356,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     void Sprint()
     {
         //Sprint
-        if (Input.GetButton("Sprint") && currentStamina >= sprintStaminaCost)
+        if (Input.GetButton("Sprint") && playerIsMoving && currentStamina >= sprintStaminaCost)
         {
             firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 2f);
             currentSpeed = sprintSpeed;
@@ -359,6 +364,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             isSprinting = true;
             //Debug.Log("Sprinting");
             CheckStamina();
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL) + 1.0f);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) + 1.0f);
+
         }
         if (Input.GetButtonUp("Sprint"))
         {
@@ -367,6 +375,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             isSprinting = false;
             //Debug.Log("Stopped Sprinting");
             CheckStamina();
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL) - 1.0f);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) - 1.0f);
+
+
         }
     }
 
@@ -377,6 +389,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             controller.height = 1.0f;
             thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, true);
+            userBody.transform.position = new Vector3(userBody.transform.position.x, userBody.transform.position.y + 0.9f, userBody.transform.position.z);
             controller.center = new Vector3(controller.center.x, 0.2f, controller.center.z);
         }
         if (Input.GetButtonUp("Crouch"))
@@ -384,6 +397,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             transform.position = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
             controller.height = 1.9f;
             controller.center = new Vector3(controller.center.x, -0.1f, controller.center.z);
+            userBody.transform.position = new Vector3(userBody.transform.position.x, userBody.transform.position.y - 0.9f, userBody.transform.position.z);
             //this.transform.position.y += 1.0f;
             thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, false);
 
@@ -406,16 +420,28 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0f)
         {
             if (itemIndex >= items.Capacity - 1)
+            {
                 EquipItem(0);
+                //thirdPersonAnimator.SetLayerWeight(1, 1.0f);
+            }
             else
+            {
                 EquipItem(itemIndex + 1);
+                //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
+            }
         }
         else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0f)
         {
             if (itemIndex <= 0)
+            {
                 EquipItem(items.Capacity - 1);
+                //thirdPersonAnimator.SetLayerWeight(items.Capacity - 1, 1.0f);
+            }
             else
+            {
                 EquipItem(itemIndex - 1);
+                //thirdPersonAnimator.SetLayerWeight(itemIndex - 1, 1.0f);
+            }
         }
 
         //delete the Weapon (grenades) if they are all used from list
@@ -433,9 +459,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     {
         //Jump
 
+        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
         jumpSound.Play(transform, body);
         velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
-        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
         thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, true);
         //Stamina lost
         //currentStamina -= jumpStaminaCost;
@@ -541,6 +567,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
                 //Debug.Log ("Player is not moving");
                 playerIsMoving = false;
                 firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 0f);
+                thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, 0);
+                thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, 0);
             }
 
             //Basic Movement
@@ -582,11 +610,11 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         itemIndex = _index;
         items[itemIndex].itemGameObject.SetActive(true);
         firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
-        thirdPersonAnimator.SetLayerWeight(itemIndex, 1.0f);
+        thirdPersonAnimator.SetLayerWeight(itemIndex+1, 1.0f);
 
         if (previousItemIndex != -1)
         {
-            thirdPersonAnimator.SetLayerWeight(itemIndex, 0.0f);
+            thirdPersonAnimator.SetLayerWeight(previousItemIndex+1, 0.0f);
             items[previousItemIndex].itemGameObject.SetActive(false);
 
         }
