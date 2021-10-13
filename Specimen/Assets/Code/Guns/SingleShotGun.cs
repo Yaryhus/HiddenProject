@@ -11,6 +11,8 @@ public class SingleShotGun : Gun
     [Header("Required Components")]
     [SerializeField] Camera cam;
     [SerializeField] Animator anim;
+    [SerializeField] GameObject thirdPersonAnimObject;
+    [SerializeField] Animator thirdPersonAnim;
     [SerializeField] Transform initialBulletPos;
     [SerializeField] LayerMask ignoreLayers;
 
@@ -95,10 +97,22 @@ public class SingleShotGun : Gun
         spreadFactorX = ((GunInfo)itemInfo).spreadFactorX;
         spreadFactorY = ((GunInfo)itemInfo).spreadFactorY;
         bulletShot = ((GunInfo)itemInfo).bulletsPerShot;
+        thirdPersonAnim = thirdPersonAnimObject.GetComponentInChildren<Animator>();
+
 
         //Bullets pool
         objectPooler = ObjectPooler.Instance;
 
+    }
+
+    private void OnEnable()
+    {
+        //thirdPersonAnim.GetLayerIndex()
+    }
+
+    private void OnDisable()
+    {
+        
     }
 
     void Awake()

@@ -90,6 +90,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [Header("Weapons and Items")]
     [SerializeField]
     List<Item> items;
+    List<GameObject> thirdPersonItems;
 
     int itemIndex;
     int previousItemIndex = -1;
@@ -110,6 +111,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     GameObject userBody;
     [SerializeField]
     GameObject firsPersonWeapons;
+    [SerializeField]
+    GameObject thirdPersonWeapons;
 
     //Private variables
     Vector3 velocity;
@@ -145,6 +148,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         body = GetComponent<Rigidbody>();
         GlobalVariablesAndStrings.PLAYER = transform;
         interactManager = GetComponent<InteractManager>();
+        //thirdPersonWeapons = transform.Find("WeaponHolder").gameObject;
+
+
 
         //Find what body are we using to get the animator
         thirdPersonAnimator = body.GetComponentInChildren<Animator>();
@@ -210,6 +216,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         Move();
         Sprint();
         Crouch();
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
@@ -277,6 +284,11 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     }
 
+    private void FixedUpdate()
+    {
+
+    }
+
     private void UpdateAmmoText()
     {
         //update text for ammo
@@ -307,11 +319,14 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     private void Aim()
     {
         ((Gun)items[itemIndex]).Aim();
+        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SPECIAL_ATTACK);
+
     }
 
     private void ShootSemi()
     {
         items[itemIndex].Use();
+        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
         //Debug.Log("Disparo semi");
     }
 
@@ -326,6 +341,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             {
                 nextTimeToFire = Time.time;
                 items[itemIndex].Use();
+                thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
                 //Debug.Log("Disparo");
             }
         }
@@ -360,10 +376,17 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         if (Input.GetButtonDown("Crouch"))
         {
             controller.height = 1.0f;
+            thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, true);
+            controller.center = new Vector3(controller.center.x, 0.2f, controller.center.z);
         }
         if (Input.GetButtonUp("Crouch"))
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.9f, transform.position.z);
             controller.height = 1.9f;
+            controller.center = new Vector3(controller.center.x, -0.1f, controller.center.z);
+            //this.transform.position.y += 1.0f;
+            thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, false);
+
         }
     }
 
@@ -412,7 +435,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         jumpSound.Play(transform, body);
         velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
-
+        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
+        thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, true);
         //Stamina lost
         //currentStamina -= jumpStaminaCost;
         //CheckStamina();
@@ -426,9 +450,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         jumpSound.Play(transform, body);
         velocity.x = cam.forward.x * leapForce;
-        velocity.z = cam.transform.forward.z * leapForce;
-        velocity.y = cam.transform.forward.y * leapForce;
-
+        velocity.z = cam.forward.z * leapForce;
+        velocity.y = cam.forward.y * leapForce;
+        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
+        thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, true);
         //Stamina lost
         currentStamina -= jumpStaminaCost;
         CheckStamina();
@@ -480,8 +505,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     IEnumerator ResetVelocity()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.3f);
         velocity = Vector3.zero;
+        thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, false);
         //Debug.Log("Reseteamos velocidad!");
     }
 
@@ -495,6 +521,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             if (isGrounded && velocity.y < 0)
             {
+                thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, false);
                 velocity.y = -2.0f;
             }
 
@@ -502,8 +529,6 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
-            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, x);
-            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, z);
 
             if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
             {
@@ -521,6 +546,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             //Basic Movement
             Vector3 move = transform.right * x + transform.forward * z;
             controller.Move(move * currentSpeed * Time.deltaTime);
+
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, move.x);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, move.z);
+
         }
 
     }
@@ -553,9 +582,11 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         itemIndex = _index;
         items[itemIndex].itemGameObject.SetActive(true);
         firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
+        thirdPersonAnimator.SetLayerWeight(itemIndex, 1.0f);
 
         if (previousItemIndex != -1)
         {
+            thirdPersonAnimator.SetLayerWeight(itemIndex, 0.0f);
             items[previousItemIndex].itemGameObject.SetActive(false);
 
         }

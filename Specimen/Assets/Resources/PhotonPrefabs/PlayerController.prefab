@@ -843,6 +843,8 @@ MonoBehaviour:
   parent: {fileID: 0}
   cam: {fileID: 7870157674146229273}
   anim: {fileID: 0}
+  thirdPersonAnimObject: {fileID: 7870157672782258099}
+  thirdPersonAnim: {fileID: 0}
   initialBulletPos: {fileID: 3892344433178035393}
   ignoreLayers:
     serializedVersion: 2
@@ -1635,6 +1637,7 @@ MonoBehaviour:
   thirdPersonAnimator: {fileID: 8212669653952987343}
   userBody: {fileID: 7870157672782258099}
   firsPersonWeapons: {fileID: 7353909370033617295}
+  thirdPersonWeapons: {fileID: 0}
   cam: {fileID: 0}
 --- !u!114 &7130725397019557495
 MonoBehaviour:
@@ -1882,6 +1885,8 @@ MonoBehaviour:
   parent: {fileID: 0}
   cam: {fileID: 7870157674146229273}
   anim: {fileID: 0}
+  thirdPersonAnimObject: {fileID: 7870157672782258099}
+  thirdPersonAnim: {fileID: 0}
   initialBulletPos: {fileID: 7286130482767738796}
   ignoreLayers:
     serializedVersion: 2
