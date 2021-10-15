@@ -120,7 +120,7 @@ public class ThrowGun : Gun
             
             //We autoreload
             Reload();
-            Debug.Log("He terminado de disparar");
+            //Debug.Log("He terminado de disparar");
         }
     }
 

@@ -326,7 +326,7 @@ public class SingleShotGun : Gun
 
                     }
                 }
-                Debug.Log("I hit " + hit.collider.gameObject.name + " with this damage " + _damage);
+                //Debug.Log("I hit " + hit.collider.gameObject.name + " with this damage " + _damage);
                 //We apply the damage to the owner of the body if any
                 hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(_damage);                
                 PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);

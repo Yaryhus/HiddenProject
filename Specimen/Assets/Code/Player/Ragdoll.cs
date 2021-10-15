@@ -13,7 +13,7 @@ public class Ragdoll : MonoBehaviour
     void Start()
     {
         rigidbodies = transform.GetComponentsInChildren<Rigidbody>();
-        Debug.Log(rigidbodies.Length);
+        //Debug.Log(rigidbodies.Length);
         //SetEnabled(false);
     }
 

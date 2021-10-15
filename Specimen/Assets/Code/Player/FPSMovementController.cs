@@ -90,6 +90,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [Header("Weapons and Items")]
     [SerializeField]
     List<Item> items;
+    [SerializeField]
     List<GameObject> thirdPersonItems;
 
     int itemIndex;
@@ -153,7 +154,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
 
         //Find what body are we using to get the animator
-        thirdPersonAnimator = body.GetComponentInChildren<Animator>();
+        thirdPersonAnimator = userBody.GetComponentInChildren<Animator>();
 
 
 
@@ -193,11 +194,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         healthbarImage.fillAmount = currentHealth / maxHealth;
         staminabarImage.fillAmount = currentStamina / maxStamina;
+
         GlobalVariablesAndStrings.PLAYER = transform;
         interactManager = GetComponent<InteractManager>();
 
         //Find what body are we using to get the animator
-        thirdPersonAnimator = body.GetComponentInChildren<Animator>();
+        thirdPersonAnimator = userBody.GetComponentInChildren<Animator>();
 
 
         jumpSound.Init();
@@ -253,7 +255,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         }
 
         //if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic() && Input.GetButtonUp("Shoot") && interactManager.isHolding.Equals(false))
-            //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 0.0f);
+        //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 0.0f);
 
         //Shooting while carrying an object attachs it to the wall
         if (Input.GetButtonDown("Shoot") && interactManager.isHolding.Equals(true))
@@ -283,11 +285,6 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             interactManager.PickUpObject();
         }
-
-    }
-
-    private void FixedUpdate()
-    {
 
     }
 
@@ -321,22 +318,18 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     private void Aim()
     {
         ((Gun)items[itemIndex]).Aim();
-        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SPECIAL_ATTACK);
-
+        ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SPECIAL_ATTACK);
     }
 
     private void ShootSemi()
     {
         items[itemIndex].Use();
-        //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
-        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
-        //Debug.Log("Disparo semi");
+        ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
+
     }
 
     private void ShootAuto()
     {
-        //Debug.Log("Disparo auto");
-
         //Particular case: Automatic fire
         if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic())
         {
@@ -344,10 +337,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             {
                 nextTimeToFire = Time.time;
                 items[itemIndex].Use();
-                //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
-                thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
-
-                //Debug.Log("Disparo");
+                ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
             }
         }
 
@@ -358,27 +348,25 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //Sprint
         if (Input.GetButton("Sprint") && playerIsMoving && currentStamina >= sprintStaminaCost)
         {
-            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 2f);
             currentSpeed = sprintSpeed;
             currentStamina -= sprintStaminaCost * Time.deltaTime;
             isSprinting = true;
-            //Debug.Log("Sprinting");
             CheckStamina();
+
+            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 2f);
             thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL) + 1.0f);
             thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) + 1.0f);
 
         }
         if (Input.GetButtonUp("Sprint"))
         {
-            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 1f);
             currentSpeed = speed;
             isSprinting = false;
-            //Debug.Log("Stopped Sprinting");
             CheckStamina();
+
+            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 1f);
             thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL) - 1.0f);
             thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) - 1.0f);
-
-
         }
     }
 
@@ -387,10 +375,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //Crouch
         if (Input.GetButtonDown("Crouch"))
         {
+            //transform.position = new Vector3(transform.position.x, transform.position.y - 0.9f, transform.position.z);
             controller.height = 1.0f;
-            thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, true);
             userBody.transform.position = new Vector3(userBody.transform.position.x, userBody.transform.position.y + 0.9f, userBody.transform.position.z);
             controller.center = new Vector3(controller.center.x, 0.2f, controller.center.z);
+
+            thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, true);
         }
         if (Input.GetButtonUp("Crouch"))
         {
@@ -398,7 +388,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             controller.height = 1.9f;
             controller.center = new Vector3(controller.center.x, -0.1f, controller.center.z);
             userBody.transform.position = new Vector3(userBody.transform.position.x, userBody.transform.position.y - 0.9f, userBody.transform.position.z);
-            //this.transform.position.y += 1.0f;
+
             thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_CROUCHED, false);
 
         }
@@ -422,12 +412,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             if (itemIndex >= items.Capacity - 1)
             {
                 EquipItem(0);
-                //thirdPersonAnimator.SetLayerWeight(1, 1.0f);
             }
             else
             {
                 EquipItem(itemIndex + 1);
-                //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
             }
         }
         else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0f)
@@ -435,12 +423,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             if (itemIndex <= 0)
             {
                 EquipItem(items.Capacity - 1);
-                //thirdPersonAnimator.SetLayerWeight(items.Capacity - 1, 1.0f);
             }
             else
             {
                 EquipItem(itemIndex - 1);
-                //thirdPersonAnimator.SetLayerWeight(itemIndex - 1, 1.0f);
             }
         }
 
@@ -457,33 +443,29 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     void Jump()
     {
-        //Jump
-
-        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
+        ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
         jumpSound.Play(transform, body);
-        velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
-        thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, true);
-        //Stamina lost
-        //currentStamina -= jumpStaminaCost;
-        //CheckStamina();
-        //Debug.Log("Salto y me queda " + currentStamina + " de estamina");
 
+        velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+
+        thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, true);
     }
 
+    //Leap if Hidden
     void Leap()
     {
-        //Leap if Hidden
-
         jumpSound.Play(transform, body);
+
         velocity.x = cam.forward.x * leapForce;
         velocity.z = cam.forward.z * leapForce;
+
         velocity.y = cam.forward.y * leapForce;
-        thirdPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
+        ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_JUMP);
         thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, true);
+
         //Stamina lost
         currentStamina -= jumpStaminaCost;
         CheckStamina();
-        //Debug.Log("Leap");
 
         //After launching we reset the speed
         StartCoroutine(ResetVelocity());
@@ -534,7 +516,6 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         yield return new WaitForSeconds(0.3f);
         velocity = Vector3.zero;
         thirdPersonAnimator.SetBool(GlobalVariablesAndStrings.ANIM3_BOOLEAN_INAIR, false);
-        //Debug.Log("Reseteamos velocidad!");
     }
 
     void Move()
@@ -542,7 +523,6 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //If we artifically leave the player without movement
         if (canMove)
         {
-
             //Check if player is grounded
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             if (isGrounded && velocity.y < 0)
@@ -561,6 +541,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
                 //Debug.Log ("Player is moving");
                 playerIsMoving = true;
                 firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 1f);
+                thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, x);
+                thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, z);
             }
             else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
             {
@@ -575,8 +557,6 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             Vector3 move = transform.right * x + transform.forward * z;
             controller.Move(move * currentSpeed * Time.deltaTime);
 
-            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, move.x);
-            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, move.z);
 
         }
 
@@ -609,13 +589,18 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         itemIndex = _index;
         items[itemIndex].itemGameObject.SetActive(true);
+        thirdPersonItems[itemIndex].SetActive(true);
+        Debug.Log(itemIndex);
+
         firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
-        thirdPersonAnimator.SetLayerWeight(itemIndex+1, 1.0f);
+        thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
 
         if (previousItemIndex != -1)
         {
-            thirdPersonAnimator.SetLayerWeight(previousItemIndex+1, 0.0f);
+            thirdPersonAnimator.SetLayerWeight(previousItemIndex + 1, 0.0f);
+
             items[previousItemIndex].itemGameObject.SetActive(false);
+            thirdPersonItems[previousItemIndex].SetActive(false);
 
         }
         previousItemIndex = itemIndex;
@@ -658,6 +643,30 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             Die();
         }
+    }
+
+    void ChangeAnimationTrigger(string name)
+    {
+        PV.RPC("RPC_ChangeAnimationTrigger", RpcTarget.All, name);
+
+    }
+
+    [PunRPC]
+    void RPC_ChangeAnimationTrigger(string triggerName)
+    {
+        thirdPersonAnimator.SetTrigger(triggerName);
+    }
+
+    void ChangeAnimationBool(string name, bool state)
+    {
+        string[] parameters = { name, state.ToString() };
+        PV.RPC("RPC_ChangeAnimationTrigger", RpcTarget.All, parameters);
+
+    }
+    [PunRPC]
+    void RPC_ChangeAnimationBool(string triggerName, bool bo)
+    {
+        thirdPersonAnimator.SetBool(triggerName, bo);
     }
 
     void Die()
