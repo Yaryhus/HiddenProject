@@ -172,7 +172,8 @@ public class MeleeGun : Gun
                     hit.rigidbody.AddForce(-hit.normal * ((GunInfo)itemInfo).impactForce);
                 }
 
-                hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
+               //hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
+                hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(damage);
                 PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
                 Debug.Log(hit.collider.gameObject.name);
 

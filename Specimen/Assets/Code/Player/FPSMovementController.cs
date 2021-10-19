@@ -111,7 +111,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField]
     GameObject userBody;
     [SerializeField]
-    GameObject firsPersonWeapons;
+    GameObject firstPersonWeapons;
     [SerializeField]
     GameObject thirdPersonWeapons;
 
@@ -162,7 +162,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             EquipItem(0);
             //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows)
-            //userBody.SetActive(false);
+            userBody.SetActive(false);
         }
         else
         {
@@ -170,7 +170,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             Destroy(body);
             Destroy(ui);
             controller.enabled = false;
-            firsPersonWeapons.SetActive(false);
+            firstPersonWeapons.SetActive(false);
         }
 
 
