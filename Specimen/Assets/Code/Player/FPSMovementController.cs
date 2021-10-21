@@ -161,8 +161,13 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         if (PV.IsMine)
         {
             EquipItem(0);
-            //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows)
-            userBody.SetActive(false);
+            //For now, deactivate 3rd person view (Will have to change this later so the user can see their feet or have shadows). We use a 
+            Transform[] children = userBody.GetComponentsInChildren<Transform>();
+            foreach (Transform g in children)
+            {
+                g.gameObject.layer = GlobalVariablesAndStrings.LAYER_PLAYERCAMERAIGNORE;
+            }
+            transform.gameObject.layer = GlobalVariablesAndStrings.LAYER_PLAYERCAMERAIGNORE;
         }
         else
         {
@@ -171,6 +176,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             Destroy(ui);
             controller.enabled = false;
             firstPersonWeapons.SetActive(false);
+            //userBody.SetActive(true);
         }
 
 

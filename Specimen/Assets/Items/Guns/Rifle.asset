@@ -25,7 +25,7 @@ MonoBehaviour:
   magazineAmmo: 30
   maxAmmo: 90
   reloadTime: 2.8
-  spreadFactorX: 0.04
-  spreadFactorY: 0.05
+  spreadFactorX: 0.004
+  spreadFactorY: 0.005
   isAutomatic: 1
   fireRate: 10

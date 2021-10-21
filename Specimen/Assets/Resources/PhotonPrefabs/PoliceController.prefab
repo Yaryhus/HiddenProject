@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531523403074401103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.172}
+  m_LocalPosition: {x: 0, y: 0, z: 0.063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7870157674146229278}
@@ -848,7 +848,7 @@ MonoBehaviour:
   initialBulletPos: {fileID: 3892344433178035393}
   ignoreLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   typeOfBullet: PistolBullets
   shootSound:
     name: 
@@ -1137,6 +1137,9 @@ MonoBehaviour:
   parent: {fileID: 0}
   cam: {fileID: 7870157674146229273}
   anim: {fileID: 0}
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 128
   shootSound:
     name: 
     fmodFile: event:/Weapons/Knife/Knife_SimpleAttack
@@ -1818,7 +1821,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 127
+    m_Bits: 639
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1948,7 +1951,7 @@ MonoBehaviour:
   initialBulletPos: {fileID: 7286130482767738796}
   ignoreLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   typeOfBullet: RifleBullets
   shootSound:
     name: 

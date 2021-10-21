@@ -10,7 +10,7 @@ public class MeleeGun : Gun
     [Header("Required Components")]
     [SerializeField] Camera cam;
     [SerializeField] Animator anim;
-
+    [SerializeField] LayerMask ignoreLayers;
 
     [Header("Sounds")]
     [SerializeField]
@@ -161,7 +161,7 @@ public class MeleeGun : Gun
         ray.origin = cam.transform.position;
         Debug.DrawRay(ray.origin, shootDirection * ((GunInfo)itemInfo).range, Color.blue, 3.0f);
 
-        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit))
+        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ~ignoreLayers))
         {
             //if hit is in range
             if (hit.distance <= ((GunInfo)itemInfo).range)

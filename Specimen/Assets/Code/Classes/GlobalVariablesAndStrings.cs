@@ -17,6 +17,20 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     public static float DAMAGE_MULT_ARMORLEG = 0.5f;
     public static float DAMAGE_MULT_TORSO = 1f;
     public static float DAMAGE_MULT_HEAD = 2.0f;
+    public static string PLAYERNAME_HIDDEN = "HiddenController";
+    public static string PLAYERNAME_POLICE = "PoliceController";
+
+    //---------------- PLAYER ------------------------------
+    public static int LAYER_DEFAULT = 0;
+    public static int LAYER_TRANSPARENTFX = 1;
+    public static int LAYER_IGNORERAYCAST = 2;
+    public static int LAYER_PLAYER = 3;
+    public static int LAYER_WATER = 4;
+    public static int LAYER_UI = 5;
+    public static int LAYER_GROUND = 6;
+    public static int LAYER_PLAYERCAMERAIGNORE = 7;
+    public static int LAYER_FPSLAYER = 8;
+    public static int LAYER_RAGDOLL = 9;
 
     //------------ MAPS IDs in Build Settings --------------
     public static int  MAP_MAINMENU = 0;

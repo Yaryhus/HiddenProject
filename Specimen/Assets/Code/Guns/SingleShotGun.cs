@@ -290,7 +290,7 @@ public class SingleShotGun : Gun
         ray.origin = cam.transform.position;
 
         Debug.DrawRay(ray.origin, shootDirection * ((GunInfo)itemInfo).range, Color.blue, 3.0f);
-        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ignoreLayers))
+        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ((GunInfo)itemInfo).range, ~ignoreLayers))
         {
             //if hit is in range
             if (hit.distance <= ((GunInfo)itemInfo).range)
@@ -326,7 +326,7 @@ public class SingleShotGun : Gun
 
                     }
                 }
-                //Debug.Log("I hit " + hit.collider.gameObject.name + " with this damage " + _damage);
+                Debug.Log("I hit " + hit.collider.gameObject.name + " with layer " + hit.collider.gameObject.layer + " and with this damage " + _damage);
                 //We apply the damage to the owner of the body if any
                 hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(_damage);                
                 PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
