@@ -9,7 +9,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 {
 
     public static Launcher Instance;
-
+    [SerializeField] int mapToLoad;
     [SerializeField] TMP_InputField roomNameInputField;
     [SerializeField] TMP_Text errorText;
     [SerializeField] TMP_Text roomNameText;
@@ -127,7 +127,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(GlobalVariablesAndStrings.MAP_FPSTESTMAP);
+        PhotonNetwork.LoadLevel(mapToLoad);
     }
 
     public void ExitGame()

@@ -99,6 +99,7 @@ public class MeleeGun : Gun
             if (typeOfAttack == 0)
             {
                 anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+                Debug.Log(damage);
                 //Sound
                 shootSound.PlayOneShot(transform);
             }
@@ -106,6 +107,7 @@ public class MeleeGun : Gun
             {
                 anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_SPECIALATTACK);
                 damage = ((GunInfo)itemInfo).specialDamage;
+                Debug.Log(damage);
                 //Sound
                 specialAttackSound.PlayOneShot(transform);
             }
@@ -153,15 +155,15 @@ public class MeleeGun : Gun
 
         //Spray for weapon
         Vector3 shootDirection = cam.transform.forward;
-        shootDirection.x += Random.Range(-((GunInfo)itemInfo).spreadFactorX, ((GunInfo)itemInfo).spreadFactorX);
-        shootDirection.y += Random.Range(-((GunInfo)itemInfo).spreadFactorY, ((GunInfo)itemInfo).spreadFactorY);
+        //shootDirection.x += Random.Range(-((GunInfo)itemInfo).spreadFactorX, ((GunInfo)itemInfo).spreadFactorX);
+        //shootDirection.y += Random.Range(-((GunInfo)itemInfo).spreadFactorY, ((GunInfo)itemInfo).spreadFactorY);
 
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
         ray.origin = cam.transform.position;
         Debug.DrawRay(ray.origin, shootDirection * ((GunInfo)itemInfo).range, Color.blue, 3.0f);
 
-        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ~ignoreLayers))
+        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ((GunInfo)itemInfo).range, ~ignoreLayers))
         {
             //if hit is in range
             if (hit.distance <= ((GunInfo)itemInfo).range)

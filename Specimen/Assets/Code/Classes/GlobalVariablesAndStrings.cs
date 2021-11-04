@@ -35,7 +35,7 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     //------------ MAPS IDs in Build Settings --------------
     public static int  MAP_MAINMENU = 0;
     public static int MAP_FPSTESTMAP = 1;
-
+    public static int MAP_DISCOVERY = 2;
     //----------- ANIMATIONS NAMES AND VARIABLES----------
     // Third Person animation variables
     public static string ANIM3_TRIGGER_SHOOTSEMI = "Shoot Semi";

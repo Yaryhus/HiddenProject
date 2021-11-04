@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: Knife
   m_EditorClassIdentifier: 
   itemName: Knife
-  damage: 35
-  specialDamage: 30
+  damage: 30
   range: 3
+  impactForce: 30
   isMelee: 1
+  specialDamage: 40
+  isThrowable: 0
+  delay: 3
+  radius: 20
   bulletsPerShot: 1
   magazineAmmo: 10
   maxAmmo: 100
@@ -25,4 +29,3 @@ MonoBehaviour:
   spreadFactorY: 0
   isAutomatic: 0
   fireRate: 15
-  impactForce: 30
