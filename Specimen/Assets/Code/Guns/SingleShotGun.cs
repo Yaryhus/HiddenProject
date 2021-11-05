@@ -194,7 +194,11 @@ public class SingleShotGun : Gun
 
         //Muzzle Flash VFX
         if (muzzleFlash != null)
+        {
+            muzzleFlash.gameObject.SetActive(true);
             muzzleFlash.Play();
+            muzzleFlash.gameObject.SetActive(false);
+        }
 
         //Normally we would call this method in animations but since shot animations are so short it does skip sometimes the event call
         DetectDamage();

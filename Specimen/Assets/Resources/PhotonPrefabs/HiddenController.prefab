@@ -293,7 +293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531523403074401103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.172}
+  m_LocalPosition: {x: 0, y: 0, z: 0.063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7870157674146229278}
@@ -1476,7 +1476,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5008965685852813271}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1628,7 +1629,7 @@ CharacterController:
   m_Height: 1.8
   m_Radius: 0.18
   m_SlopeLimit: 45
-  m_StepOffset: 0.7
+  m_StepOffset: 0.4
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: -0.1, z: 0}
@@ -1645,21 +1646,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHidden: 1
-  speed: 6
-  sprintSpeed: 10
+  speed: 5.5
+  sprintSpeed: 9
   canMove: 1
   jumpHeight: 2.5
   leapForce: 20
   maxHealth: 100
   maxStamina: 20
-  sprintStaminaCost: 2
-  jumpStaminaCost: 5
-  staminaRegenSpeed: 0.1
+  sprintStaminaCost: 0.25
+  jumpStaminaCost: 4
+  staminaRegenSpeed: 0.05
   staminaRegenAmmount: 0.3
   healthbarImage: {fileID: 6129522607831783590}
   staminabarImage: {fileID: 2350010290630481312}
   gravity: -40
-  groundDistance: 0.4
+  groundDistance: 0.3
   groundCheck: {fileID: 7870157673517638844}
   groundMask:
     serializedVersion: 2
@@ -1838,7 +1839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c26c36fc3bba84d967394969f744da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 200
+  mouseSensitivity: 100
   playerBody: {fileID: 7870157673947130996}
   parent: {fileID: 8438277652774587764}
 --- !u!114 &7870157674146229277
@@ -3292,14 +3293,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4363180837782968574, guid: b3bb1488a5a764b428af406b0f79b875, type: 3}
   m_PrefabInstance: {fileID: 7432743437192418791}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &6114903539537686744 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3745561781348885823, guid: b3bb1488a5a764b428af406b0f79b875, type: 3}
-  m_PrefabInstance: {fileID: 7432743437192418791}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7286130482767738796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 160970514850669131, guid: b3bb1488a5a764b428af406b0f79b875, type: 3}
+  m_PrefabInstance: {fileID: 7432743437192418791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6114903539537686744 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3745561781348885823, guid: b3bb1488a5a764b428af406b0f79b875, type: 3}
   m_PrefabInstance: {fileID: 7432743437192418791}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6605453663904301652 stripped

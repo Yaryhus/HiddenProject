@@ -355,7 +355,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         if (Input.GetButton("Sprint") && playerIsMoving && currentStamina >= sprintStaminaCost)
         {
             currentSpeed = sprintSpeed;
-            currentStamina -= sprintStaminaCost * Time.deltaTime;
+            currentStamina -= sprintStaminaCost * Time.deltaTime * 10f;
             isSprinting = true;
             CheckStamina();
 
@@ -364,6 +364,30 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) + 1.0f);
 
         }
+        //Run out of sprint but I am still pressing the sprint button, or any other action
+        else if(Input.GetButton("Sprint") && playerIsMoving && currentStamina < sprintStaminaCost)
+        {
+            currentSpeed = speed;
+            isSprinting = false;
+            CheckStamina();
+
+            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 1f);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL) - 1.0f);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) - 1.0f);
+        }
+        /*
+        else
+        {
+            currentSpeed = speed;
+            isSprinting = false;
+            CheckStamina();
+
+            firstPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM1_FLOAT_WALK, 0f);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_VERTICAL) - 1.0f);
+            thirdPersonAnimator.SetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL, thirdPersonAnimator.GetFloat(GlobalVariablesAndStrings.ANIM3_FLOAT_HORIZONTAL) - 1.0f);
+        }
+        */
+
         if (Input.GetButtonUp("Sprint"))
         {
             currentSpeed = speed;
@@ -669,6 +693,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         PV.RPC("RPC_ChangeAnimationTrigger", RpcTarget.All, parameters);
 
     }
+
     [PunRPC]
     void RPC_ChangeAnimationBool(string triggerName, bool bo)
     {
@@ -701,7 +726,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     void RegenStamina()
     {
-        if (Time.time - lastRegen > staminaRegenSpeed && !isSprinting && currentStamina < maxStamina)
+        if (Time.time - lastRegen > staminaRegenSpeed && !isSprinting && currentStamina < maxStamina && !Input.GetButton("Jump") && !Input.GetButton("Sprint"))
         {
             currentStamina += staminaRegenAmmount;
             lastRegen = Time.time;
@@ -722,16 +747,21 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (!isGrounded && hit.normal.y < 0.3f)
+        if (!isGrounded && hit.normal.y < 0.3f && isHidden)
         {
-            if (Input.GetButton("Jump"))
+            if (Input.GetButton("Jump") && currentStamina >= jumpStaminaCost)
             {
                 //Able to wall jump
                 Debug.DrawRay(hit.point, hit.normal, Color.red);
                 Jump();
+
+                //Stamina lost, as this jump does take stamina
+                currentStamina -= jumpStaminaCost;
+                CheckStamina();
+
                 Debug.Log("Jumping off a wall!");
             }
-            if (Input.GetButtonDown("Leap"))
+            if (Input.GetButtonDown("Leap") && currentStamina >= jumpStaminaCost)
             {
                 Leap();
             }

@@ -15,11 +15,11 @@ D:/Git/HiddenProject/Specimen
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58611
+59478
 Successfully changed project path to: D:/Git/HiddenProject/Specimen
 D:/Git/HiddenProject/Specimen
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 115.26 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 116.91 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56684
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003082 seconds.
+Registered in 0.003060 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 96.25 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 99.39 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.780 seconds
+- Completed reload, in  1.725 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1780ms)
-		BeginReloadAssembly (79ms)
+	ReloadAssembly (1725ms)
+		BeginReloadAssembly (77ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (623ms)
-			LoadAssemblies (75ms)
+		EndReloadAssembly (656ms)
+			LoadAssemblies (73ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (193ms)
+			SetupTypeCache (221ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (276ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (281ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (96ms)
+				RefreshPlugins (99ms)
 				BeforeProcessingInitializeOnLoad (23ms)
 				ProcessInitializeOnLoadAttributes (113ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.012719 seconds.
+Registered in 0.012180 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 100.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 100.56 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.408 seconds
+- Completed reload, in  2.486 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2409ms)
-		BeginReloadAssembly (197ms)
+	ReloadAssembly (2492ms)
+		BeginReloadAssembly (192ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (22ms)
-		EndReloadAssembly (2124ms)
-			LoadAssemblies (140ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (2215ms)
+			LoadAssemblies (134ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (493ms)
+			SetupTypeCache (481ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (104ms)
-			SetupLoadedEditorAssemblies (1187ms)
+			RebuildScriptCaches (101ms)
+			SetupLoadedEditorAssemblies (1300ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (111ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (101ms)
-				BeforeProcessingInitializeOnLoad (142ms)
-				ProcessInitializeOnLoadAttributes (879ms)
-				ProcessInitializeOnLoadMethodAttributes (47ms)
-				AfterProcessingInitializeOnLoad (10ms)
+				BeforeProcessingInitializeOnLoad (141ms)
+				ProcessInitializeOnLoadAttributes (887ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (15ms)
+			AwakeInstancesAfterBackupRestoration (27ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.51 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3421 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3422 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 158.0 MB.
 System memory in use after: 158.2 MB.
 
-Unloading 90 unused Assets to reduce memory usage. Loaded Objects now: 3861.
-Total: 34.674500 ms (FindLiveObjects: 0.431100 ms CreateObjectMapping: 0.110800 ms MarkObjects: 33.949600 ms  DeleteObjects: 0.180500 ms)
+Unloading 89 unused Assets to reduce memory usage. Loaded Objects now: 3863.
+Total: 34.226000 ms (FindLiveObjects: 0.421000 ms CreateObjectMapping: 0.109000 ms MarkObjects: 33.613900 ms  DeleteObjects: 0.079900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   requireTextureImportCompression: false -> true
@@ -132,17 +132,1363 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green1.mat
-  artifactKey: Guid(74117f645ca87544896e430b75e9a316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green1.mat using Guid(74117f645ca87544896e430b75e9a316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f942d0ea82384108eb6291183cbdb14') in 0.347555 seconds 
-  Import took 0.354334 seconds .
+  path: Assets/Mixamo/Animations
+  artifactKey: Guid(67ab1d029e75c5f4ca043ce01c13c64a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations using Guid(67ab1d029e75c5f4ca043ce01c13c64a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a747d4c0832218b979417e93fc174d19') in 0.463158 seconds 
+  Import took 0.469713 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green1 1.mat
-  artifactKey: Guid(5ae2614ead8e5e142b66e12d40f9978a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Thirdparty/Ciathyza/Gridbox Prototype Materials/Materials/URP/Prototype_512x512_Green1 1.mat using Guid(5ae2614ead8e5e142b66e12d40f9978a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a3e3b6138b0c6ebae46f8612fd96d42') in 0.027971 seconds 
-  Import took 0.039720 seconds .
+  Time since last request: 47.991491 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx
+  artifactKey: Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx using Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10993ff4e3face1f0c39a74ef383e807') in 0.071744 seconds 
+  Import took 0.186514 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001732 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx
+  artifactKey: Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx using Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10993ff4e3face1f0c39a74ef383e807') in 0.011315 seconds 
+  Import took 0.018405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.985519 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx
+  artifactKey: Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx using Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '114b6e5a80fa010800eb057d68c149e8') in 0.016228 seconds 
+  Import took 0.034577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001510 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx
+  artifactKey: Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx using Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '114b6e5a80fa010800eb057d68c149e8') in 0.011099 seconds 
+  Import took 0.017555 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011620 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.61 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.265 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2265ms)
+		BeginReloadAssembly (183ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (1993ms)
+			LoadAssemblies (139ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (524ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (1064ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (131ms)
+				ProcessInitializeOnLoadAttributes (883ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.70 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.1 MB.
+System memory in use after: 147.3 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3866.
+Total: 34.363300 ms (FindLiveObjects: 0.406300 ms CreateObjectMapping: 0.106400 ms MarkObjects: 33.722100 ms  DeleteObjects: 0.126000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 88.765038 seconds.
+  path: Assets/Mixamo/Avatar Masks and Anim Controller/Standard Controller.controller
+  artifactKey: Guid(c385ed2501aff33479bff53afa6aacc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Avatar Masks and Anim Controller/Standard Controller.controller using Guid(c385ed2501aff33479bff53afa6aacc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76ac75f1f43094f60b574667a7fae1cc') in 0.077980 seconds 
+  Import took 0.103730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025468 seconds.
+  path: Assets/Mixamo/Avatar Masks and Anim Controller/Standard Controller.controller
+  artifactKey: Guid(c385ed2501aff33479bff53afa6aacc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Avatar Masks and Anim Controller/Standard Controller.controller using Guid(c385ed2501aff33479bff53afa6aacc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76ac75f1f43094f60b574667a7fae1cc') in 0.034223 seconds 
+  Import took 0.043168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 122.273703 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx
+  artifactKey: Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx using Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece7e52a0b8698cefde60681875c2177') in 0.026625 seconds 
+  Import took 0.033765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003419 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx
+  artifactKey: Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing(1).fbx using Guid(bfa7dcce7c245984ca793383e0570015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece7e52a0b8698cefde60681875c2177') in 0.009988 seconds 
+  Import took 0.016638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.048178 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx
+  artifactKey: Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx using Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd96d22f8de751673dbb39845c91ccc') in 0.009800 seconds 
+  Import took 0.257979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015867 seconds.
+  path: Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx
+  artifactKey: Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Mixamo/Animations/gadget knife and grenade/Stabbing.fbx using Guid(4d5fefb391b5d614689fa61565f6c951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fd96d22f8de751673dbb39845c91ccc') in 0.009879 seconds 
+  Import took 0.016592 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011642 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.62 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.213 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2214ms)
+		BeginReloadAssembly (184ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (68ms)
+		EndReloadAssembly (1939ms)
+			LoadAssemblies (137ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (474ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (1066ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (883ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.59 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.1 MB.
+System memory in use after: 147.4 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3869.
+Total: 34.159300 ms (FindLiveObjects: 0.412200 ms CreateObjectMapping: 0.110400 ms MarkObjects: 33.569100 ms  DeleteObjects: 0.065000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 375.231194 seconds.
+  path: Assets/Scenes/Discovery.unity
+  artifactKey: Guid(d7621aa06bf9a8b4d979c0824c9fe59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Discovery.unity using Guid(d7621aa06bf9a8b4d979c0824c9fe59e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3b601d2abca0f5a834209694ffffe7f') in 0.042008 seconds 
+  Import took 0.064723 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 173.552198 seconds.
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4183de449c6bf6e40824517230c522') in 0.008549 seconds 
+  Import took 0.014900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.718130 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c506607411ef88d8bd0b5fec9fa888') in 1.222185 seconds 
+  Import took 1.281589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.053259 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bc2d1331082cc84b936560110424925') in 0.161354 seconds 
+  Import took 0.192121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.393599 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71b75c194421c5dfbac92338f4a0da71') in 0.149021 seconds 
+  Import took 0.162804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.147439 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b30aab9408fe92fca248f5178ab2b0c') in 0.143420 seconds 
+  Import took 0.157443 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.357889 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7edbc759339a33028732b684aada3c02') in 0.139705 seconds 
+  Import took 0.162794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.066092 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f740f5cacd7eeac3e06bb02efc05d4b') in 0.138924 seconds 
+  Import took 0.152505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.232724 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d83e484b38e8a265c05d70c921c081') in 0.136254 seconds 
+  Import took 0.149913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.449434 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2f6f7b2b811105f0d8eb9d9fa15966') in 0.136912 seconds 
+  Import took 0.174136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.244884 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49b73a904ce8fa1e08346a8be27a7de5') in 0.134812 seconds 
+  Import took 0.149044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.083100 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20408b8210aa77afcc9826368e09d4d6') in 0.134953 seconds 
+  Import took 0.159594 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011941 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.61 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.228 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2228ms)
+		BeginReloadAssembly (211ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (1927ms)
+			LoadAssemblies (133ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (471ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (1024ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (136ms)
+				ProcessInitializeOnLoadAttributes (839ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (33ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.65 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 167.9 MB.
+System memory in use after: 168.2 MB.
+
+Unloading 86 unused Assets to reduce memory usage. Loaded Objects now: 3921.
+Total: 34.632100 ms (FindLiveObjects: 0.384600 ms CreateObjectMapping: 0.106900 ms MarkObjects: 34.032900 ms  DeleteObjects: 0.105800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011590 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.211 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2212ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (65ms)
+		EndReloadAssembly (1938ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (461ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (1041ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (139ms)
+				ProcessInitializeOnLoadAttributes (849ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (37ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 168.0 MB.
+System memory in use after: 168.2 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3924.
+Total: 36.354400 ms (FindLiveObjects: 0.390500 ms CreateObjectMapping: 0.108200 ms MarkObjects: 35.781100 ms  DeleteObjects: 0.072400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 211.727982 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController 1.prefab
+  artifactKey: Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController 1.prefab using Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2312d73bf12cd071189efe7bb44e7e73') in 1.070104 seconds 
+  Import took 1.187454 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.168983 seconds.
+  path: Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab
+  artifactKey: Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab using Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73a1e986b3a37b08820f3d3f6bf5f575') in 0.567322 seconds 
+  Import took 0.610958 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.413512 seconds.
+  path: Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab
+  artifactKey: Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab using Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c86fb7c596202adf2bfd9acfff548afd') in 0.655066 seconds 
+  Import took 0.706244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044995 seconds.
+  path: Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab
+  artifactKey: Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab using Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c86fb7c596202adf2bfd9acfff548afd') in 0.642471 seconds 
+  Import took 0.692195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.980586 seconds.
+  path: Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab
+  artifactKey: Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/Hidden2Controller.prefab using Guid(0b1bf0764a67da649afe9eaa582c01c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa4b53d9381acf5e1116aaa66980ccdf') in 0.504950 seconds 
+  Import took 0.566478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.614747 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce30b0b4822c0dab98f364c290997b61') in 0.420202 seconds 
+  Import took 0.475604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.750754 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f47195ec82f41b07250ae5bc2ec14e49') in 0.405801 seconds 
+  Import took 0.445799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.395293 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b53ff687cdaac4b7d9aaad880e75c32') in 0.410627 seconds 
+  Import took 0.444328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.332271 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e45445c6dc09c991da3769d72afce7a') in 0.398050 seconds 
+  Import took 0.435642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.709986 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd769b98e6fc3e4f9fd56e1f3af0be0c') in 0.420754 seconds 
+  Import took 0.452854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.913601 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c51c8c0d915c6f948d44500257aeae6') in 0.411400 seconds 
+  Import took 0.488477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.798516 seconds.
+  path: Assets/Resources/PhotonPrefabs/HiddenController.prefab
+  artifactKey: Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/HiddenController.prefab using Guid(c9c717d9e54410f4b9a589ae13dd0ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b1b876c688ff1a122938ce1962ff22b') in 0.146783 seconds 
+  Import took 0.170022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.025898 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce43e2c66f73192b05220457366b30fc') in 0.689547 seconds 
+  Import took 0.732983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.220060 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ca5a4a6a9efa109aa29bed3e956b09f') in 0.575121 seconds 
+  Import took 0.648004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.161181 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be4cfc93651598c8b879d958ceb0b44d') in 0.567843 seconds 
+  Import took 0.640709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.447699 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec72a70541ef90f4eb8429d7ff5b8d8') in 0.569700 seconds 
+  Import took 0.646581 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.778920 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2195ab8fbe21948ed06fc571e2f4b07') in 0.581582 seconds 
+  Import took 0.677847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.694634 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e541eeead519261965904da53b529a9') in 0.568385 seconds 
+  Import took 0.611844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.423342 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f496174ac0a3e6e31ebf5374e10f22e') in 0.615955 seconds 
+  Import took 0.659391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.624507 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95c5582890ac35bb2bf30f237f55ece7') in 0.570325 seconds 
+  Import took 0.630713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.746262 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb8e43d6929dfa6b6ae7a323987d584c') in 0.625879 seconds 
+  Import took 0.669798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.741829 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baee83ba58aa8cba594ed0e97fdbcfe7') in 0.582362 seconds 
+  Import took 0.627693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.937250 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c1bcd14311d2c8cdba0c1d24ca310a') in 0.635351 seconds 
+  Import took 0.694685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.961527 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6258bdbbe1eca2b1833b6868487e99b1') in 0.575349 seconds 
+  Import took 0.634904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.140342 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce32bc34b49189979742b60d8c399917') in 0.594983 seconds 
+  Import took 0.639902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.513090 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5ec9c51df329b8d529263cc8f681608') in 0.590283 seconds 
+  Import took 0.644619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.349715 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b782e63aab49ef6aff9b0c93b5848d7') in 0.570337 seconds 
+  Import took 0.640557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.356138 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3fe416a0abee81486722aab60c80367') in 0.580239 seconds 
+  Import took 0.638780 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.522606 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec4cb1aa7c463ae18f696407d48825d2') in 0.580245 seconds 
+  Import took 0.649150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.069499 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad77ee8163c37ffc9c0624de685c4db4') in 0.589194 seconds 
+  Import took 0.639551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.302986 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a466a1e6cdc88f08a3ecc28af3cf344') in 0.581203 seconds 
+  Import took 0.643708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.900908 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb2ac85d447a0df45d2ec2e19c0d2954') in 0.574496 seconds 
+  Import took 0.640162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.364616 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8f2509969a6c645510c0edc41748613') in 0.571900 seconds 
+  Import took 0.618969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.144138 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f8e1d8e2184b9711173f1d3689d202') in 0.614318 seconds 
+  Import took 0.672705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.849481 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11255b1f25c15d590f16e12eed155164') in 0.569484 seconds 
+  Import took 0.623768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.401237 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ce936f57fc708dcbadd96fe8050e71') in 0.582205 seconds 
+  Import took 0.632808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.328635 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32726b2de8b487f4304159555c38e237') in 0.584182 seconds 
+  Import took 0.629284 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.223085 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf771db9d416e4649ce7b4b606bd50cd') in 0.587907 seconds 
+  Import took 0.771813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.746864 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c57193af09a189c2057877c7fa029ffa') in 0.558114 seconds 
+  Import took 0.600894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.971062 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46dcd70820c08a420ef340f85e62c372') in 0.576655 seconds 
+  Import took 0.619898 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.294515 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe116fe5f3ea23b579a31d4cd5de639') in 0.561364 seconds 
+  Import took 0.662821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.801156 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ec69da7c14e710f53f45484015d988') in 0.570357 seconds 
+  Import took 0.621456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.007905 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0d3bbce40f8a0136e702560835bf925') in 0.564497 seconds 
+  Import took 0.628692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.387494 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c184b9edcc502d4d7b710ab76e02df8d') in 0.579284 seconds 
+  Import took 0.624027 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.567483 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70898c5f12346baa4d778ffe5a7fdca4') in 0.559752 seconds 
+  Import took 0.628436 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.004313 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29be97ccda5760437d609d5f925333ac') in 0.583969 seconds 
+  Import took 0.629227 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.288203 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8635928d0eb98b4763abc1991fa3d1') in 0.581535 seconds 
+  Import took 0.639550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.685228 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '098779400f0d1705f9346828d391c7d9') in 0.575043 seconds 
+  Import took 0.635044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.899166 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365cc7a41fff8a9a12d4ec8f8846dc9c') in 0.579440 seconds 
+  Import took 0.629489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.142027 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b45904d078ae12f3e98a3725fce5269') in 0.566911 seconds 
+  Import took 0.610667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.038958 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e702e8f5812caba0e27eb631547e95') in 0.566636 seconds 
+  Import took 0.612159 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.272322 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0418ca246e2174012a52fd520e5eacaa') in 0.562670 seconds 
+  Import took 0.613029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.533517 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0077db6ccbef178d33aba4f10adffa08') in 0.558537 seconds 
+  Import took 0.613687 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.774733 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d7a9f7d68ca47cc5f9d721ea46f3390') in 0.570519 seconds 
+  Import took 0.621897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.588384 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1a94c772cc426ac7bace733e41cb8d') in 0.577242 seconds 
+  Import took 0.632029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.357212 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a9e645364964889c065f0abd7b489a9') in 0.565432 seconds 
+  Import took 0.609757 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.976131 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdd61d875b1b81e5f37f521f02e78828') in 0.562391 seconds 
+  Import took 0.621631 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.676102 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff5139202776d9af33a8d5f8855ea865') in 0.586970 seconds 
+  Import took 0.631011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.156980 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '761d5532ab5fe2df4569896be97c22bf') in 0.571908 seconds 
+  Import took 0.625967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.195480 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1482cefbd7bd3043f81860c35d15e4bd') in 0.580333 seconds 
+  Import took 0.630629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.409037 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3491af0067da630262f8e1cdb689a700') in 0.572949 seconds 
+  Import took 0.627302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.003974 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edbfdfd52b5f6f6998845c1eb26a8820') in 0.568369 seconds 
+  Import took 0.632347 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.806602 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1426ff807381ba9233400f8481f9576b') in 0.567378 seconds 
+  Import took 0.630635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.923394 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4b4d1f37b1b1cddc5fc58bca91d4da') in 0.573854 seconds 
+  Import took 0.618573 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.953346 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80ae0c4eb966109b36f3bfeab3a5d8aa') in 0.559655 seconds 
+  Import took 0.619803 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.188277 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9343715b3cba7ea5624ecf74cdb16f4d') in 0.575564 seconds 
+  Import took 0.662484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.207299 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbbf10dd9a3bc092b26c22fb2ffdf3bd') in 0.594322 seconds 
+  Import took 0.656988 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.499507 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68ced293c980c5dff10072c9256caa2b') in 0.589569 seconds 
+  Import took 0.651596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.081942 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8bc32143b43515f404dcad8aa3bcd89') in 0.563738 seconds 
+  Import took 0.612044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.732303 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ada84ddbb4e139efae4e423fb93c0f42') in 0.580415 seconds 
+  Import took 0.627350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.231582 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77d7ad5d7f02fe96c52186781b429dda') in 0.651241 seconds 
+  Import took 0.743485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.652682 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c95bb92de1f809df790c6b66aedf7c82') in 0.569196 seconds 
+  Import took 0.617120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.499856 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '970bb0dfe940d7e176bf09df6862ef02') in 0.562550 seconds 
+  Import took 0.606417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.056919 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '970bb0dfe940d7e176bf09df6862ef02') in 0.586251 seconds 
+  Import took 0.630444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.670335 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a01ac9050e96c93acb4190a41227026f') in 0.578579 seconds 
+  Import took 0.622583 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.891541 seconds.
+  path: Assets/Resources/PhotonPrefabs/PoliceController.prefab
+  artifactKey: Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/PhotonPrefabs/PoliceController.prefab using Guid(4e8c6b24ef71d084987429018ea55511) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1828cd313c4f837c7cba4b3bc3ddb65b') in 0.586506 seconds 
+  Import took 0.641363 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012574 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.07 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.243 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2244ms)
+		BeginReloadAssembly (203ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (70ms)
+		EndReloadAssembly (1949ms)
+			LoadAssemblies (135ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (470ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (76ms)
+			SetupLoadedEditorAssemblies (1037ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (134ms)
+				ProcessInitializeOnLoadAttributes (849ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (35ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.62 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.0 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 86 unused Assets to reduce memory usage. Loaded Objects now: 3963.
+Total: 35.597300 ms (FindLiveObjects: 0.399300 ms CreateObjectMapping: 0.107200 ms MarkObjects: 34.978700 ms  DeleteObjects: 0.109500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013007 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.203 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2203ms)
+		BeginReloadAssembly (184ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (1933ms)
+			LoadAssemblies (134ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (483ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (70ms)
+			SetupLoadedEditorAssemblies (1022ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (836ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (36ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.0 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3966.
+Total: 35.663100 ms (FindLiveObjects: 0.392100 ms CreateObjectMapping: 0.107600 ms MarkObjects: 35.060500 ms  DeleteObjects: 0.100400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011739 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.210 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2211ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (1945ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (465ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (1051ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (867ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (36ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.1 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3969.
+Total: 36.697700 ms (FindLiveObjects: 0.420000 ms CreateObjectMapping: 0.141300 ms MarkObjects: 36.051700 ms  DeleteObjects: 0.082400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011746 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.216 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2216ms)
+		BeginReloadAssembly (176ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (64ms)
+		EndReloadAssembly (1947ms)
+			LoadAssemblies (124ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (473ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (1042ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (136ms)
+				ProcessInitializeOnLoadAttributes (856ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (37ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.64 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.1 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3972.
+Total: 35.179400 ms (FindLiveObjects: 0.437800 ms CreateObjectMapping: 0.113400 ms MarkObjects: 34.561300 ms  DeleteObjects: 0.064400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011467 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.190 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2191ms)
+		BeginReloadAssembly (171ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1931ms)
+			LoadAssemblies (127ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (463ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (1035ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (848ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (37ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.70 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.1 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3975.
+Total: 35.788300 ms (FindLiveObjects: 0.403400 ms CreateObjectMapping: 0.106700 ms MarkObjects: 35.213300 ms  DeleteObjects: 0.063100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011706 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.65 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.196 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2196ms)
+		BeginReloadAssembly (175ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (63ms)
+		EndReloadAssembly (1933ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (457ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (1048ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (132ms)
+				ProcessInitializeOnLoadAttributes (861ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (37ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.65 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3274 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.1 MB.
+System memory in use after: 174.3 MB.
+
+Unloading 84 unused Assets to reduce memory usage. Loaded Objects now: 3978.
+Total: 34.284500 ms (FindLiveObjects: 0.440700 ms CreateObjectMapping: 0.111700 ms MarkObjects: 33.654000 ms  DeleteObjects: 0.076200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  requireTextureImportCompression: false -> true
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
