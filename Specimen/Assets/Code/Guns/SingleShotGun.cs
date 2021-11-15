@@ -112,7 +112,7 @@ public class SingleShotGun : Gun
 
     private void OnDisable()
     {
-        
+
     }
 
     void Awake()
@@ -195,9 +195,9 @@ public class SingleShotGun : Gun
         //Muzzle Flash VFX
         if (muzzleFlash != null)
         {
-            muzzleFlash.gameObject.SetActive(true);
+            //muzzleFlash.gameObject.SetActive(true);
             muzzleFlash.Play();
-            muzzleFlash.gameObject.SetActive(false);
+            //muzzleFlash.gameObject.SetActive(false);
         }
 
         //Normally we would call this method in animations but since shot animations are so short it does skip sometimes the event call
@@ -205,6 +205,23 @@ public class SingleShotGun : Gun
         //}
     }
 
+    [PunRPC]
+    void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal, System.String sharedM)
+    {
+        Collider[] colliders = Physics.OverlapSphere(hitPosition, 0.3f);
+        if (colliders.Length != 0)
+        {
+            GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
+            //Destroy(bulletImpactObj, 10f);
+            bulletImpactObj.transform.SetParent(colliders[0].transform);
+            if (colliders[0].GetComponent<Collider>().sharedMaterial != null)
+            {
+                Debug.Log(colliders[0].GetComponent<Collider>().sharedMaterial);
+                bulletImpactObj.GetComponent<BulletImpact>().ChangeVisuals(sharedM);
+            }
+        }
+    }
+    /*
     [PunRPC]
     void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal)
     {
@@ -216,6 +233,8 @@ public class SingleShotGun : Gun
             bulletImpactObj.transform.SetParent(colliders[0].transform);
         }
     }
+    */
+
 
     IEnumerator ReloadW()
     {
@@ -330,10 +349,17 @@ public class SingleShotGun : Gun
 
                     }
                 }
-                Debug.Log("I hit " + hit.collider.gameObject.name + " with layer " + hit.collider.gameObject.layer + " and with this damage " + _damage);
+                Debug.Log("I hit " + hit.collider.gameObject.name + " with layer " + hit.collider.gameObject.layer + " and its material is " + hit.collider.sharedMaterial.name + " and with this damage " + _damage);
                 //We apply the damage to the owner of the body if any
-                hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(_damage);                
-                PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
+                hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(_damage);
+
+               // if (hit.collider.sharedMaterial !=null)
+               // {
+                    PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal, hit.collider.sharedMaterial.name);
+
+               // }
+                //else
+                   // PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
 
             }
             else
