@@ -96,7 +96,7 @@ public class ThrowGun : Gun
     }
 
     //To update the ammo counter and weapon ammo
-    public void UpdateText()
+    public override void UpdateText()
     {
         //update text. If max size is below 0 (should not happen), it resets to 0.
         if (maxAmmo < 0)

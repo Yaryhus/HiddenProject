@@ -79,7 +79,7 @@ public class MeleeGun : Gun
     }
 
     //To update the HUD if neccesary
-    public void UpdateText()
+    public override void UpdateText()
     {
         text.SetText(" -  / - ");
     }
@@ -118,7 +118,7 @@ public class MeleeGun : Gun
     }
 
     [PunRPC]
-    void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal)
+    void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal, System.String sharedM)
     {
         Collider[] colliders = Physics.OverlapSphere(hitPosition, 0.3f);
         if (colliders.Length != 0)
@@ -126,6 +126,11 @@ public class MeleeGun : Gun
             GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
             //Destroy(bulletImpactObj, 10f);
             bulletImpactObj.transform.SetParent(colliders[0].transform);
+            if (colliders[0].GetComponent<Collider>().sharedMaterial != null)
+            {
+                Debug.Log(colliders[0].GetComponent<Collider>().sharedMaterial);
+                bulletImpactObj.GetComponent<BulletImpact>().ChangeVisuals(sharedM);
+            }
         }
     }
     //Instead of reload, the melee launches a taunt
@@ -176,8 +181,8 @@ public class MeleeGun : Gun
 
                //hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
                 hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(damage);
-                PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
-                Debug.Log(hit.collider.gameObject.name);
+                PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal, hit.collider.sharedMaterial?.name);
+                //Debug.Log(hit.collider.gameObject.name);
 
             }
             else

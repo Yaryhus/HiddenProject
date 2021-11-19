@@ -21,8 +21,6 @@ public class GrenadeObject : MonoBehaviour
     private void Awake()
     {
         PV = GetComponent<PhotonView>();
-
-
     }
 
     // Start is called before the first frame update
@@ -35,15 +33,31 @@ public class GrenadeObject : MonoBehaviour
     void Explode()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-        foreach(Collider col in colliders)
+        foreach (Collider col in colliders)
         {
             Rigidbody rig = col.GetComponent<Rigidbody>();
             //we collide with something that is not a Player
             if (rig != null && !col.transform.tag.Equals("Player"))
-            {               
+            {
                 rig.AddExplosionForce(explosionForce, transform.position, radius, 1f, ForceMode.Impulse);
             }
-            col.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
+
+            //Distance between grenade and user
+            float distance = Vector3.Distance(transform.position, col.transform.position);
+            distance = Mathf.Clamp01(1 - (distance / radius));
+            if (col.transform.tag.Equals("Player"))
+            {
+
+                Debug.Log("The grenade did " + damage * distance);
+            }
+
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, (col.transform.position - transform.position), out hit))
+            {
+                //if grenade is in Line of Sight of the collision
+                if (hit.transform.gameObject == col.gameObject)
+                    col.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage * distance);
+            }
         }
         explosionSound.PlayOneShot(transform);
         Instantiate(explosionEffect, transform.position, transform.rotation);
@@ -53,6 +67,6 @@ public class GrenadeObject : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.cyan;
-        Gizmos.DrawSphere(transform.position, radius);    
+        Gizmos.DrawSphere(transform.position, radius);
     }
 }

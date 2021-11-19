@@ -15,6 +15,11 @@ public class GunInfo : ItemInfo
     [Tooltip("Fuerza con la que mueve el ente impactado")]
     public float impactForce = 30f;
 
+    [Header("Shotgun")]
+    public bool isShotgun = false;
+    [ShowIf("isShotgun")]
+    public int pelletsPerShot = 5;
+
     [Header("Melee")]
     public bool isMelee = false;
     [ShowIf("isMelee")]

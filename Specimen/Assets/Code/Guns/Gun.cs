@@ -7,6 +7,7 @@ public abstract class Gun : Item
     public abstract override void Use();
     public abstract void Reload();
     public abstract void Aim();
+    public abstract void UpdateText();
 
     //Animator events
     public abstract void AttackEnd();

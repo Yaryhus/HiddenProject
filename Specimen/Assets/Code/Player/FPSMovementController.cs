@@ -21,6 +21,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [Header("Hidden Options")]
     [SerializeField]
     bool isHidden = false;
+    [ShowIf("isHidden")]
+    [SerializeField]
+    GameObject ThermalCameraGO;
 
     [Header("Main Movement")]
     [SerializeField]
@@ -134,6 +137,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     private float nextTimeToFire = 0f;
 
     public bool IsInteracting { get; private set; }
+
+    bool usingThermalVision = false;
 
     void Start()
     {
@@ -292,23 +297,26 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             interactManager.PickUpObject();
         }
 
+        if (Input.GetButtonDown("ThermalVision") && ThermalCameraGO != null)
+        {
+            if (usingThermalVision)
+            {
+                usingThermalVision = false;
+                ThermalCameraGO.SetActive(false);
+            }
+            else
+            {
+                usingThermalVision = true;
+                ThermalCameraGO.SetActive(true);
+
+            }
+        }
+
     }
 
     private void UpdateAmmoText()
     {
-        //update text for ammo
-        if (items[itemIndex].GetComponent<SingleShotGun>() != null)
-        {
-            ((SingleShotGun)items[itemIndex]).UpdateText();
-        }
-        else if (items[itemIndex].GetComponent<ThrowGun>() != null)
-        {
-            ((ThrowGun)items[itemIndex]).UpdateText();
-        }
-        else if (items[itemIndex].GetComponent<MeleeGun>() != null)
-        {
-            ((MeleeGun)items[itemIndex]).UpdateText();
-        }
+        ((Gun)items[itemIndex]).UpdateText();
     }
 
     private void Reload()
@@ -365,7 +373,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
         }
         //Run out of sprint but I am still pressing the sprint button, or any other action
-        else if(Input.GetButton("Sprint") && playerIsMoving && currentStamina < sprintStaminaCost)
+        else if (Input.GetButton("Sprint") && playerIsMoving && currentStamina < sprintStaminaCost)
         {
             currentSpeed = speed;
             isSprinting = false;
@@ -618,8 +626,10 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             return;
 
         itemIndex = _index;
-        items[itemIndex].itemGameObject.SetActive(true);
-        thirdPersonItems[itemIndex].SetActive(true);
+        if (items[itemIndex].itemGameObject != null)
+            items[itemIndex].itemGameObject.SetActive(true);
+        if (thirdPersonItems[itemIndex] != null)
+            thirdPersonItems[itemIndex].SetActive(true);
         Debug.Log(itemIndex);
 
         firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();

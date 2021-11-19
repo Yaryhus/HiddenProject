@@ -46,10 +46,10 @@ MonoBehaviour:
   pools:
   - tag: RifleBullets
     prefab: {fileID: 1097197732294350, guid: 2794c9c3d328b024284e7e7ca00891e7, type: 3}
-    size: 30
+    size: 10
   - tag: PistolBullets
     prefab: {fileID: 1396099150414888, guid: 0578a40c7a8c80b429b69500cea51a4c, type: 3}
-    size: 10
+    size: 5
   - tag: ShotgunBullets
-    prefab: {fileID: 100000, guid: 509ef1c9e1db885449182215a8d7d716, type: 3}
-    size: 10
+    prefab: {fileID: 961273987525507676, guid: 8515643625ce4ee449a345de61e773dd, type: 3}
+    size: 5

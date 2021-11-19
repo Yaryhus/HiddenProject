@@ -158,17 +158,10 @@ public class SingleShotGun : Gun
 
     }
 
-    public override void Reload()
-    {
-        //We are not reloading, we have less than the whole magazine and we have more than 0 bullets
-        if (currentAmmo != ((GunInfo)itemInfo).magazineAmmo && !isReloading && maxAmmo > 0)
-        {
-            StartCoroutine(ReloadW());
-        }
-    }
+
 
     //To update the ammo counter and weapon ammo
-    public void UpdateText()
+    public override void UpdateText()
     {
         //update text. If max size is below 0 (should not happen), it resets to 0.
         if (maxAmmo < 0)
@@ -179,15 +172,15 @@ public class SingleShotGun : Gun
 
     void Shoot()
     {
-
-        currentAmmo -= bulletShot;
-
         //Camera shake if any
         //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
         CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
 
         //Shoot animation
-        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
+        if (currentAmmo == 1)
+            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOTLAST);
+        else
+            anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_SHOOT);
 
         //Sound
         shootSound.PlayOneShot(transform);
@@ -195,14 +188,13 @@ public class SingleShotGun : Gun
         //Muzzle Flash VFX
         if (muzzleFlash != null)
         {
-            //muzzleFlash.gameObject.SetActive(true);
             muzzleFlash.Play();
-            //muzzleFlash.gameObject.SetActive(false);
         }
+
+        currentAmmo -= bulletShot;
 
         //Normally we would call this method in animations but since shot animations are so short it does skip sometimes the event call
         DetectDamage();
-        //}
     }
 
     [PunRPC]
@@ -235,6 +227,14 @@ public class SingleShotGun : Gun
     }
     */
 
+    public override void Reload()
+    {
+        //We are not reloading, we have less than the whole magazine and we have more than 0 bullets
+        if (currentAmmo != ((GunInfo)itemInfo).magazineAmmo && !isReloading && maxAmmo > 0)
+        {
+            StartCoroutine(ReloadW());
+        }
+    }
 
     IEnumerator ReloadW()
     {
@@ -349,17 +349,17 @@ public class SingleShotGun : Gun
 
                     }
                 }
-                Debug.Log("I hit " + hit.collider.gameObject.name + " with layer " + hit.collider.gameObject.layer + " and its material is " + hit.collider.sharedMaterial.name + " and with this damage " + _damage);
+                //Debug.Log("I hit " + hit.collider.gameObject.name + " with layer " + hit.collider.gameObject.layer + " and its material is " + hit.collider.sharedMaterial.name + " and with this damage " + _damage);
                 //We apply the damage to the owner of the body if any
                 hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(_damage);
 
-               // if (hit.collider.sharedMaterial !=null)
-               // {
-                    PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal, hit.collider.sharedMaterial.name);
+                // if (hit.collider.sharedMaterial !=null)
+                // {
+                PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal, hit.collider.sharedMaterial?.name);
 
-               // }
+                // }
                 //else
-                   // PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
+                // PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal);
 
             }
             else

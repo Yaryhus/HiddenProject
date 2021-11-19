@@ -106,26 +106,26 @@ MonoBehaviour:
   woodMaterial: {fileID: 2100000, guid: 39babc0a61c17df41bca722640cfc289, type: 2}
   sandMaterial: {fileID: 2100000, guid: 0a35d64bb8fd24f47b8bf3802f71313b, type: 2}
   metalMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
-  waterMaterial: {fileID: 0}
-  clothMaterial: {fileID: 0}
-  cristalMaterial: {fileID: 0}
+  waterMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
+  clothMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
+  cristalMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
   mudMaterial: {fileID: 2100000, guid: a4fb36ebf7c724a4e81eeb1c5d70935c, type: 2}
-  grassMaterial: {fileID: 0}
-  paperboardMaterial: {fileID: 0}
-  iceMaterial: {fileID: 0}
+  grassMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
+  paperboardMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
+  iceMaterial: {fileID: 2100000, guid: 094e76e620df5714eb3946120657e1f6, type: 2}
   fleshParticle: {fileID: 2312949217096335947}
   snowParticle: {fileID: 4662777155554905115}
   concreteParticle: {fileID: 8964330093629457171}
   woodParticle: {fileID: 4591468098126516998}
   sandParticle: {fileID: 6193699153914241119}
   metalParticle: {fileID: 6337327494747118728}
-  waterParticle: {fileID: 0}
-  clothParticle: {fileID: 0}
-  cristalParticle: {fileID: 0}
-  mudParticle: {fileID: 0}
-  grassParticle: {fileID: 0}
-  paperboardParticle: {fileID: 0}
-  iceParticle: {fileID: 0}
+  waterParticle: {fileID: 6337327494747118728}
+  clothParticle: {fileID: 6337327494747118728}
+  cristalParticle: {fileID: 6337327494747118728}
+  mudParticle: {fileID: 6337327494747118728}
+  grassParticle: {fileID: 6337327494747118728}
+  paperboardParticle: {fileID: 6337327494747118728}
+  iceParticle: {fileID: 6337327494747118728}
 --- !u!1001 &232794842115769806
 PrefabInstance:
   m_ObjectHideFlags: 0

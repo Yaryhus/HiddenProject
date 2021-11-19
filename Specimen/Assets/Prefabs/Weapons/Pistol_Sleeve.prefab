@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8705368477593432159}
   - component: {fileID: 1016600234794735401}
   - component: {fileID: 5206298754846696571}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Pistol_Sleeve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &5206298754846696571
 CapsuleCollider:
   m_ObjectHideFlags: 0

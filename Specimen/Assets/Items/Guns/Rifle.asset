@@ -16,6 +16,8 @@ MonoBehaviour:
   damage: 20
   range: 50
   impactForce: 30
+  isShotgun: 0
+  pelletsPerShot: 5
   isMelee: 0
   specialDamage: 30
   isThrowable: 0
@@ -24,7 +26,7 @@ MonoBehaviour:
   bulletsPerShot: 1
   magazineAmmo: 30
   maxAmmo: 90
-  reloadTime: 2.8
+  reloadTime: 4
   spreadFactorX: 0.004
   spreadFactorY: 0.005
   isAutomatic: 1

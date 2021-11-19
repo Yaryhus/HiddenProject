@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Grenade
   m_EditorClassIdentifier: 
   itemName: Grenade
-  damage: 50
+  damage: 70
   range: 15
   impactForce: 20
+  isShotgun: 0
+  pelletsPerShot: 5
   isMelee: 0
   specialDamage: 30
   isThrowable: 1
