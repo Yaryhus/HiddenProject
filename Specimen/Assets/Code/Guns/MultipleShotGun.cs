@@ -331,6 +331,7 @@ public class MultipleShotGun : Gun
 
     public override void Aim()
     {
+        /*
         //If we are aiming we stop aiming, and viceversa. We also are slower moving.
         if (!aiming)
         {
@@ -347,6 +348,7 @@ public class MultipleShotGun : Gun
             GetComponentInParent<FPSMovementController>().IncreaseSpeed(2.0f);
 
         }
+        */
     }
 
     //TO DO - CLEAN THIS METHODS AND THE ANIMATION EVENTS INSIDE THE RIFLE/PISTOL ANIMATOR
@@ -430,6 +432,13 @@ public class MultipleShotGun : Gun
     {
         objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
 
+    }
+
+    public override void OnChangeWeapon()
+    {
+        isShooting = false;
+        isReloading = false;
+        StopAllCoroutines();
     }
 }
 

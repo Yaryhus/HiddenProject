@@ -7,6 +7,9 @@ public class Ragdoll : MonoBehaviour
 
     [SerializeField] private Animator animator;
 
+    //Times a body can be utilized for food
+    [SerializeField] public float healUses = 3;
+
     private Rigidbody[] rigidbodies;
 
     // Start is called before the first frame update
@@ -50,4 +53,9 @@ public class Ragdoll : MonoBehaviour
 
     }
 
+    public void DecreaseHealUses(bool hasHiddenHealed)
+    {
+        if (hasHiddenHealed)
+            healUses--;
+    }
 }

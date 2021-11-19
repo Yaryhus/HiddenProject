@@ -172,6 +172,7 @@ public class SingleShotGun : Gun
 
     void Shoot()
     {
+        Debug.Log("I shoot");
         //Camera shake if any
         //StartCoroutine(cameraShake.Shake(shakeDuration, shakeMagnitude));
         CameraShaker.Instance.ShakeOnce(shakeMagnitude, shakeRoughness, shakeFadeInTime, shakeFadeOutTime);
@@ -208,24 +209,11 @@ public class SingleShotGun : Gun
             bulletImpactObj.transform.SetParent(colliders[0].transform);
             if (colliders[0].GetComponent<Collider>().sharedMaterial != null)
             {
-                Debug.Log(colliders[0].GetComponent<Collider>().sharedMaterial);
+                //Debug.Log(colliders[0].GetComponent<Collider>().sharedMaterial);
                 bulletImpactObj.GetComponent<BulletImpact>().ChangeVisuals(sharedM);
             }
         }
     }
-    /*
-    [PunRPC]
-    void RPC_Shoot(Vector3 hitPosition, Vector3 hitNormal)
-    {
-        Collider[] colliders = Physics.OverlapSphere(hitPosition, 0.3f);
-        if (colliders.Length != 0)
-        {
-            GameObject bulletImpactObj = Instantiate(bulletImpactPrefab, hitPosition + hitNormal * 0.001f, Quaternion.LookRotation(hitNormal, Vector3.up) * bulletImpactPrefab.transform.rotation);
-            //Destroy(bulletImpactObj, 10f);
-            bulletImpactObj.transform.SetParent(colliders[0].transform);
-        }
-    }
-    */
 
     public override void Reload()
     {
@@ -261,6 +249,7 @@ public class SingleShotGun : Gun
 
     public override void Aim()
     {
+        /*
         //If we are aiming we stop aiming, and viceversa. WE also are more accureate while aiming, but slower moving.
         if (!aiming)
         {
@@ -282,6 +271,7 @@ public class SingleShotGun : Gun
             GetComponentInParent<FPSMovementController>().IncreaseSpeed(2.0f);
 
         }
+        */
     }
 
     //TO DO - CLEAN THIS METHODS AND THE ANIMATION EVENTS INSIDE THE RIFLE/PISTOL ANIMATOR
@@ -329,9 +319,9 @@ public class SingleShotGun : Gun
                 //Apply damage to players
                 if (hit.collider.gameObject.GetComponent<HitBoxBodyPart>())
                 {
-                    Debug.Log("Detected a body part");
+                    //Debug.Log("Detected a body part");
                     string bodypart = hit.collider.gameObject.GetComponent<HitBoxBodyPart>().GetBodyPartType();
-                    Debug.Log(bodypart);
+                    // Debug.Log(bodypart);
 
                     switch (bodypart)
                     {
@@ -374,5 +364,12 @@ public class SingleShotGun : Gun
     {
         objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
 
+    }
+
+    //Reset values and stops coroutines like reloading
+    public override void OnChangeWeapon()
+    {
+        isReloading = false;
+        StopAllCoroutines();
     }
 }

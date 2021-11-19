@@ -50,4 +50,9 @@ public class PlaceableGun : Gun
     {
 
     }
+
+    public override void OnChangeWeapon()
+    {
+        StopAllCoroutines();
+    }
 }

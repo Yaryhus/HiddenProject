@@ -24,8 +24,6 @@ public class InteractManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         //If we holding an object, we move it with us
         if (heldObj != null)
         {

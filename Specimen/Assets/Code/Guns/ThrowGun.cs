@@ -189,4 +189,8 @@ public class ThrowGun : Gun
         //we launch it
         grenade.GetComponent<Rigidbody>().AddForce(throwPoint.forward * ((GunInfo)itemInfo).range, ForceMode.Impulse);
     }
+    public override void OnChangeWeapon()
+    {
+        StopAllCoroutines();
+    }
 }

@@ -20,7 +20,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     [Header("Hidden Options")]
     [SerializeField]
-    bool isHidden = false;
+    public bool isHidden = false;
     [ShowIf("isHidden")]
     [SerializeField]
     GameObject ThermalCameraGO;
@@ -42,6 +42,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     [ShowIf("isHidden")]
     [SerializeField]
     float leapForce = 20.0f;
+    [SerializeField]
+    float hiddenHealAmmount = 15.0f;
 
     [Header("Health and Stamina Stats")]
     [SerializeField]
@@ -258,21 +260,26 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //Shooting while not carrying an object
         if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic() && Input.GetButton("Shoot") && interactManager.isHolding.Equals(false))
         {
+            //Debug.Log("Holding the mouse button down");
             ShootAuto();
         }
         else if (Input.GetButtonDown("Shoot") && interactManager.isHolding.Equals(false))
         {
+            //Debug.Log("Clicking the mouse button ");
             ShootSemi();
         }
 
         //if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic() && Input.GetButtonUp("Shoot") && interactManager.isHolding.Equals(false))
         //thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 0.0f);
 
+
+        /*
         //Shooting while carrying an object attachs it to the wall
         if (Input.GetButtonDown("Shoot") && interactManager.isHolding.Equals(true))
         {
             interactManager.AttachToObject();
         }
+        */
 
         //Aim
         if (Input.GetButtonDown("Aim"))
@@ -284,6 +291,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             //StopAim();
         }
+
         Reload();
 
         //falling off the map
@@ -337,6 +345,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     private void ShootSemi()
     {
+        //Debug.Log("ShootSemi");
         items[itemIndex].Use();
         ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
 
@@ -345,16 +354,13 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     private void ShootAuto()
     {
         //Particular case: Automatic fire
-        if (items[itemIndex].GetComponent<SingleShotGun>() != null && items[itemIndex].GetComponent<SingleShotGun>().GetIsAutomatic())
+        if (Time.time - nextTimeToFire > 1 / items[itemIndex].GetComponent<SingleShotGun>().fireRate)
         {
-            if (Time.time - nextTimeToFire > 1 / items[itemIndex].GetComponent<SingleShotGun>().fireRate)
-            {
-                nextTimeToFire = Time.time;
-                items[itemIndex].Use();
-                ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
-            }
+            //Debug.Log("Shooting Auto");
+            nextTimeToFire = Time.time;
+            items[itemIndex].Use();
+            ChangeAnimationTrigger(GlobalVariablesAndStrings.ANIM3_TRIGGER_SHOOTSEMI);
         }
-
     }
 
     void Sprint()
@@ -478,6 +484,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             }
         }
     }
+
 
     void Jump()
     {
@@ -630,7 +637,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             items[itemIndex].itemGameObject.SetActive(true);
         if (thirdPersonItems[itemIndex] != null)
             thirdPersonItems[itemIndex].SetActive(true);
-        Debug.Log(itemIndex);
+        //Debug.Log(itemIndex);
 
         firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
         thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
@@ -639,6 +646,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             thirdPersonAnimator.SetLayerWeight(previousItemIndex + 1, 0.0f);
 
+            ((Gun)items[previousItemIndex]).OnChangeWeapon();
             items[previousItemIndex].itemGameObject.SetActive(false);
             thirdPersonItems[previousItemIndex].SetActive(false);
 
@@ -685,6 +693,22 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         }
     }
 
+    public bool HiddenHeal()
+    {
+        //We heal, unless we have max heal in which case we wont heal.
+        if (currentHealth == maxHealth)
+        {
+            healthbarImage.fillAmount = currentHealth / maxHealth;
+            return false;
+        }
+        else
+        {
+            currentHealth = Mathf.Min(currentHealth + hiddenHealAmmount, maxHealth);
+            healthbarImage.fillAmount = currentHealth / maxHealth;
+            return true;
+        }
+    }
+
     void ChangeAnimationTrigger(string name)
     {
         PV.RPC("RPC_ChangeAnimationTrigger", RpcTarget.All, name);
@@ -725,12 +749,31 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         deadSound.Play(transform);
 
         //Activate Ragdoll and unparent to all server
-        userBody.SetActive(true);
-        userBody.gameObject.SetActive(true);
-        userBody.transform.parent = null;
-        userBody.name = "Ragdoll";
+        // userBody.SetActive(true);
+        //userBody.gameObject.SetActive(true);
+        //userBody.transform.parent = null;
 
-        userBody.GetComponentInChildren<Ragdoll>().SetEnabled(true);
+        GameObject ragdollChild = userBody.GetComponentInChildren<Ragdoll>().gameObject;
+        ragdollChild.SetActive(true);
+        ragdollChild.gameObject.SetActive(true);
+        ragdollChild.transform.parent = null;
+
+        //Name and Ragdoll tag
+        ragdollChild.name = "Ragdoll";
+        ragdollChild.layer = 9;
+        Transform[] allChildren = ragdollChild.GetComponentsInChildren<Transform>();
+
+        foreach (Transform child in allChildren)
+        {
+            //First we hide the "Thermal version" of the model
+            if (child.gameObject.layer == 11)
+                child.gameObject.SetActive(false);
+            //We give everything the ragdoll layer
+            child.gameObject.layer = 9;
+        }
+
+        ragdollChild.GetComponentInChildren<Ragdoll>().SetEnabled(true);
+        //userBody.GetComponentInChildren<Ragdoll>().SetEnabled(true);
 
     }
 
@@ -769,7 +812,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
                 currentStamina -= jumpStaminaCost;
                 CheckStamina();
 
-                Debug.Log("Jumping off a wall!");
+                //Debug.Log("Jumping off a wall!");
             }
             if (Input.GetButtonDown("Leap") && currentStamina >= jumpStaminaCost)
             {

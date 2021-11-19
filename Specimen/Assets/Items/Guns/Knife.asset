@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Knife
   damage: 30
-  range: 3
+  range: 0.5
   impactForce: 30
+  isShotgun: 0
+  pelletsPerShot: 5
   isMelee: 1
   specialDamage: 40
   isThrowable: 0

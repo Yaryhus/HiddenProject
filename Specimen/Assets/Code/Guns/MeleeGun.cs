@@ -11,6 +11,7 @@ public class MeleeGun : Gun
     [SerializeField] Camera cam;
     [SerializeField] Animator anim;
     [SerializeField] LayerMask ignoreLayers;
+    [SerializeField] Transform HitDetectionCenter;
 
     [Header("Sounds")]
     [SerializeField]
@@ -107,7 +108,7 @@ public class MeleeGun : Gun
             {
                 anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_SPECIALATTACK);
                 damage = ((GunInfo)itemInfo).specialDamage;
-                Debug.Log(damage);
+                //Debug.Log(damage);
                 //Sound
                 specialAttackSound.PlayOneShot(transform);
             }
@@ -165,10 +166,11 @@ public class MeleeGun : Gun
 
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
-        ray.origin = cam.transform.position;
+        //ray.origin = cam.transform.position;
         Debug.DrawRay(ray.origin, shootDirection * ((GunInfo)itemInfo).range, Color.blue, 3.0f);
 
-        if (Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ((GunInfo)itemInfo).range, ~ignoreLayers))
+        //Physics.Raycast(ray.origin, shootDirection, out RaycastHit hit, ((GunInfo)itemInfo).range, ~ignoreLayers)
+        if (Physics.SphereCast(HitDetectionCenter.position, ((GunInfo)itemInfo).range, shootDirection, out RaycastHit hit, ((GunInfo)itemInfo).range, ~ignoreLayers))
         {
             //if hit is in range
             if (hit.distance <= ((GunInfo)itemInfo).range)
@@ -179,7 +181,16 @@ public class MeleeGun : Gun
                     hit.rigidbody.AddForce(-hit.normal * ((GunInfo)itemInfo).impactForce);
                 }
 
-               //hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
+                //Debug.Log(hit.rigidbody + " , " + hit.transform.tag + " , " + GetComponentInParent<FPSMovementController>().isHidden + " , " + hit.transform.GetComponentInParent<Ragdoll>().healUses);
+                //We hit a ragdoll being hidden = we heal. Ragdolls have certain ammount of meat for the Hidden so we decrease the quantity each attack
+                if (hit.rigidbody != null && hit.transform.gameObject.layer == 9 && GetComponentInParent<FPSMovementController>().isHidden && hit.transform.GetComponentInParent<Ragdoll>().healUses > 0)
+                {
+                    Debug.Log("Me curo");
+                    bool hasHiddenHealed = false;
+                    hasHiddenHealed = GetComponentInParent<FPSMovementController>().HiddenHeal();
+                    hit.transform.GetComponentInParent<Ragdoll>().DecreaseHealUses(hasHiddenHealed);
+                }
+
                 hit.collider.transform.gameObject.GetComponentInParent<IDamageable>()?.TakeDamage(damage);
                 PV.RPC("RPC_Shoot", RpcTarget.All, hit.point, hit.normal, hit.collider.sharedMaterial?.name);
                 //Debug.Log(hit.collider.gameObject.name);
@@ -190,5 +201,21 @@ public class MeleeGun : Gun
                 Debug.Log("I missed, its too far");
             }
         }
+    }
+
+    public void HiddenHeal()
+    {
+        //We heal instead of doing damage
+    }
+
+    public override void OnChangeWeapon()
+    {
+        StopAllCoroutines();
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(HitDetectionCenter.position, ((GunInfo)itemInfo).range);
     }
 }

@@ -14,6 +14,9 @@ public abstract class Gun : Item
     public abstract void AttackStart();
     public abstract void DetectDamage();
 
+    //Change weapons
+    public abstract void OnChangeWeapon();
+
     public GameObject bulletImpactPrefab;
     public GameObject parent;
 }
