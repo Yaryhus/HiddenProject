@@ -42,6 +42,8 @@ public class SingleShotGun : Gun
     [Header("Particles")]
     [SerializeField]
     ParticleSystem muzzleFlash = null;
+    [SerializeField]
+    ParticleSystem bulletDrop = null;
 
     [Header("Shake")]
     [SerializeField]
@@ -362,7 +364,12 @@ public class SingleShotGun : Gun
     //Throw bullet prefab from pool
     void ThrowBullet()
     {
-        objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
+        if (bulletDrop != null)
+        {
+            bulletDrop.Play();
+        }
+
+        //objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
 
     }
 

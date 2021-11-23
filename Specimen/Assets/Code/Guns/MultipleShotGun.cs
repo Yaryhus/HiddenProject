@@ -43,6 +43,8 @@ public class MultipleShotGun : Gun
     [Header("Particles")]
     [SerializeField]
     ParticleSystem muzzleFlash = null;
+    [SerializeField]
+    ParticleSystem bulletDrop = null;
 
     [Header("Shake")]
     [SerializeField]
@@ -430,7 +432,12 @@ public class MultipleShotGun : Gun
     //Throw bullet prefab from pool
     void ThrowBullet()
     {
-        objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
+        //Muzzle Flash VFX
+        if (bulletDrop != null)
+        {
+            bulletDrop.Play();
+        }
+        //objectPooler.SpawnFromPool(typeOfBullet, initialBulletPos.position, initialBulletPos.rotation);
 
     }
 
