@@ -853,4 +853,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         speed += ammount;
         sprintSpeed += ammount;
     }
+
+    public void ChangeWeapon(int primary, int second, int gadget)
+    {
+        Debug.Log(primary + " " + second + " " + gadget);
+    }
 }

@@ -2444,7 +2444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6464441266135404712, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 6464441266135404712, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2478,9 +2478,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: VFX_PistolBulletDrop
       objectReference: {fileID: 0}
+    - target: {fileID: 7861498244496966315, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926430659186955438, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8926430659186955438, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926430659186955438, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0b47cbf9bd04bd419807e88775d17c2, type: 3}

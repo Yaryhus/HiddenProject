@@ -32,6 +32,14 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     public static int LAYER_FPSLAYER = 8;
     public static int LAYER_RAGDOLL = 9;
 
+    //---------------- WEAPONS ------------------------------
+    public static int WEAPON_RIFLE = 0;
+    public static int WEAPON_SHOTGUN = 1;
+
+    public static int WEAPON_PISTOL = 0;
+
+    public static int WEAPON_SONICALARM = 0;
+
     //------------ MAPS IDs in Build Settings --------------
     public static int  MAP_MAINMENU = 0;
     public static int MAP_FPSTESTMAP = 1;

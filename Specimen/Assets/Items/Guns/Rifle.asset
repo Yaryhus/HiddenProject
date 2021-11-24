@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Rifle
   damage: 20
-  range: 50
+  range: 100
   impactForce: 30
   isShotgun: 0
   pelletsPerShot: 5
@@ -27,7 +27,7 @@ MonoBehaviour:
   magazineAmmo: 30
   maxAmmo: 90
   reloadTime: 4
-  spreadFactorX: 0.004
-  spreadFactorY: 0.005
+  spreadFactorX: 0.02
+  spreadFactorY: 0.02
   isAutomatic: 1
   fireRate: 10
