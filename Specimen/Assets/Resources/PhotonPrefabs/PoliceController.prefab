@@ -6370,6 +6370,18 @@ MonoBehaviour:
     name: 
     fmodFile: event:/Player/P_Die
     parameters: []
+  availableGunsFP:
+  - {fileID: 8239987711844593086}
+  - {fileID: 6760943413238452458}
+  - {fileID: 7525968622997630740}
+  - {fileID: 2523116699889786080}
+  - {fileID: 3904826781417554573}
+  availableGunsTP:
+  - {fileID: 900456249866825817}
+  - {fileID: 900456249866825817}
+  - {fileID: 8015758760559393065}
+  - {fileID: 8015758760896300740}
+  - {fileID: 8015758760273661093}
   items:
   - {fileID: 8239987711844593086}
   - {fileID: 6760943413238452458}
@@ -7713,7 +7725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4172234436648268100, guid: 45e8d7951f8dce74fac6af1ec5a9a04c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4174944094768091382, guid: 45e8d7951f8dce74fac6af1ec5a9a04c, type: 3}
       propertyPath: m_RootOrder

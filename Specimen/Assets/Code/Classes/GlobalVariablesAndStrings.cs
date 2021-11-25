@@ -33,12 +33,13 @@ public class GlobalVariablesAndStrings : MonoBehaviour
     public static int LAYER_RAGDOLL = 9;
 
     //---------------- WEAPONS ------------------------------
+    //This has to be in the same order as elements in the Lists for the FPS Movement Controller's Third Person and first person weapons
     public static int WEAPON_RIFLE = 0;
     public static int WEAPON_SHOTGUN = 1;
-
-    public static int WEAPON_PISTOL = 0;
-
-    public static int WEAPON_SONICALARM = 0;
+    public static int WEAPON_PISTOL = 2;
+    public static int WEAPON_KNIFE = 3;
+    public static int WEAPON_SONICALARM = 4;
+    public static int WEAPON_GRENADE = 5;
 
     //------------ MAPS IDs in Build Settings --------------
     public static int  MAP_MAINMENU = 0;

@@ -94,6 +94,12 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     [Header("Weapons and Items")]
     [SerializeField]
+    List<Gun> availableGunsFP;
+    [SerializeField]
+    List<GameObject> availableGunsTP;
+
+
+    [SerializeField]
     List<Item> items;
     [SerializeField]
     List<GameObject> thirdPersonItems;
@@ -633,6 +639,9 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             return;
 
         itemIndex = _index;
+        if (items[itemIndex].itemGameObject == null)
+            return;
+
         if (items[itemIndex].itemGameObject != null)
             items[itemIndex].itemGameObject.SetActive(true);
         if (thirdPersonItems[itemIndex] != null)
@@ -856,6 +865,30 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     public void ChangeWeapon(int primary, int second, int gadget)
     {
+        //Clean equipment in both first and third person
+        items.Clear();
+        thirdPersonItems.Clear();
+
+        //Add equipment based on selection on first and third person
+        if (isHidden)
+        {
+            //We add knife and grenades
+            items.Add(availableGunsFP[3]);
+            items.Add(availableGunsFP[4]);
+            thirdPersonItems.Add(availableGunsTP[3]);
+            thirdPersonItems.Add(availableGunsTP[4]);
+        }
+        else
+        {
+            //Variable items depending on selection
+            items.Add(availableGunsFP[primary]);
+            items.Add(availableGunsFP[second]);
+            items.Add(availableGunsFP[gadget]);
+            thirdPersonItems.Add(availableGunsTP[primary]);
+            thirdPersonItems.Add(availableGunsTP[second]);
+            thirdPersonItems.Add(availableGunsTP[gadget]);
+        }
+
         Debug.Log(primary + " " + second + " " + gadget);
     }
 }
