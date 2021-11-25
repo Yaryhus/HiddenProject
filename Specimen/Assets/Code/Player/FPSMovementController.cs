@@ -330,7 +330,8 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
 
     private void UpdateAmmoText()
     {
-        ((Gun)items[itemIndex]).UpdateText();
+        if (itemIndex <= items.Count + 1)
+            ((Gun)items[itemIndex]).UpdateText();
     }
 
     private void Reload()
@@ -447,7 +448,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
     void ManageInventory()
     {
         //Switching Items and weapons via numbers
-        for (int i = 0; i < items.Capacity; i++)
+        for (int i = 0; i < items.Count; i++)
         {
             if (Input.GetKeyDown((i + 1).ToString()))
             {
@@ -459,7 +460,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         //ScrollWheel change weapon
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0f)
         {
-            if (itemIndex >= items.Capacity - 1)
+            if (itemIndex >= items.Count - 1)
             {
                 EquipItem(0);
             }
@@ -472,7 +473,7 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         {
             if (itemIndex <= 0)
             {
-                EquipItem(items.Capacity - 1);
+                EquipItem(items.Count - 1);
             }
             else
             {
@@ -481,12 +482,15 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
         }
 
         //delete the Weapon (grenades) if they are all used from list
-        if (items[itemIndex].GetComponent<ThrowGun>() != null)
+        if (items.Count >= itemIndex + 1)
         {
-            if (items[itemIndex].GetComponent<ThrowGun>().GetCurrentAmmo() == 0 && items[itemIndex].GetComponent<ThrowGun>().GetTotalAmmo() == 0)
+            if (items[itemIndex].GetComponent<ThrowGun>() != null)
             {
-                EquipItem(0);
-                items.RemoveAt(items.Capacity - 1);
+                if (items[itemIndex].GetComponent<ThrowGun>().GetCurrentAmmo() == 0 && items[itemIndex].GetComponent<ThrowGun>().GetTotalAmmo() == 0)
+                {
+                    EquipItem(0);
+                    items.RemoveAt(items.Count - 1);
+                }
             }
         }
     }
@@ -639,26 +643,28 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             return;
 
         itemIndex = _index;
-        if (items[itemIndex].itemGameObject == null)
-            return;
 
-        if (items[itemIndex].itemGameObject != null)
-            items[itemIndex].itemGameObject.SetActive(true);
-        if (thirdPersonItems[itemIndex] != null)
-            thirdPersonItems[itemIndex].SetActive(true);
-        //Debug.Log(itemIndex);
+        if (itemIndex > items.Count + 1 || itemIndex > thirdPersonItems.Count + 1)
+            if (items[itemIndex].itemGameObject == null || thirdPersonItems[itemIndex] == null)
+                return;
 
-        firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
-        thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
 
         if (previousItemIndex != -1)
         {
-            thirdPersonAnimator.SetLayerWeight(previousItemIndex + 1, 0.0f);
 
-            ((Gun)items[previousItemIndex]).OnChangeWeapon();
-            items[previousItemIndex].itemGameObject.SetActive(false);
-            thirdPersonItems[previousItemIndex].SetActive(false);
+            StartCoroutine(EquipItemAnim(previousItemIndex, itemIndex));
 
+            //items[previousItemIndex].itemGameObject.SetActive(false);
+            //thirdPersonItems[previousItemIndex].SetActive(false);
+
+        }
+        else
+        {
+            items[itemIndex].itemGameObject.SetActive(true);
+            thirdPersonItems[itemIndex].SetActive(true);
+
+            firstPersonAnimator = items[itemIndex].itemGameObject.GetComponent<Animator>();
+            thirdPersonAnimator.SetLayerWeight(itemIndex + 1, 1.0f);
         }
         previousItemIndex = itemIndex;
 
@@ -669,6 +675,30 @@ public class FPSMovementController : MonoBehaviourPunCallbacks, IDamageable
             PhotonNetwork.LocalPlayer.SetCustomProperties(hash);
         }
 
+    }
+
+    IEnumerator EquipItemAnim(int previousIndex, int index)
+    {
+        //Hide current weapon and wait until anim is finished
+        firstPersonAnimator.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_HIDEWEAPON);
+            
+        yield return new WaitForSeconds(1f);
+
+        ((Gun)items[previousItemIndex]).OnChangeWeapon();
+
+        //Hide older weapon
+        thirdPersonAnimator.SetLayerWeight(previousItemIndex + 1, 0.0f);
+        ((Gun)items[previousIndex]).OnChangeWeapon();
+
+        items[previousIndex].itemGameObject.SetActive(false);
+        thirdPersonItems[previousIndex].SetActive(false);
+
+        //Show new weapon
+        items[index].itemGameObject.SetActive(true);
+        thirdPersonItems[index].SetActive(true);
+
+        firstPersonAnimator = items[index].itemGameObject.GetComponent<Animator>();
+        thirdPersonAnimator.SetLayerWeight(index + 1, 1.0f);
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)

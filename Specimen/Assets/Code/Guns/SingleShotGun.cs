@@ -376,7 +376,21 @@ public class SingleShotGun : Gun
     //Reset values and stops coroutines like reloading
     public override void OnChangeWeapon()
     {
+        //StartCoroutine(ChangeWeaponAnimation());
         isReloading = false;
         StopAllCoroutines();
+    }
+
+    private IEnumerator ChangeWeaponAnimation()
+    {
+        anim.SetTrigger(GlobalVariablesAndStrings.ANIM1_TRIGGER_HIDEWEAPON);
+        float length;
+        AnimatorStateInfo info = anim.GetCurrentAnimatorStateInfo(0);
+        length = info.length;
+
+        yield return new WaitForSeconds(length);
+        isReloading = false;
+        StopAllCoroutines();
+
     }
 }
